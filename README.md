@@ -1,6 +1,12 @@
 # 2020-hackthon
 
-> 2020-hackthon-frontend, by zhangze & wangppengyun
+2020-hackthon-frontend, by zhangze & wangppengyun  
+  
+2020 南昌大学黑客马拉松 第二组项目 前端仓库
+
+## 开发
+
+分为 dev 分支和 master 分支，主要开发在 dev 分支，发布测试版本再 merge 到 master 分支
 
 ## Build Setup
 
