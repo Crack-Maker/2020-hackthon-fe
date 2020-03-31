@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="drawer">
     <drawer
       width="200px;"
       :show.sync="isshow"
@@ -42,5 +42,8 @@
   .btn2{
     width: 60px;
     height: 60px;
+  }
+  .drawer {
+    position: fixed;
   }
 </style>
