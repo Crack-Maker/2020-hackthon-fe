@@ -14,7 +14,7 @@
         222222
       </div>
       <div class="btn2">
-        <x-button @click.native="isshow=!isshow" type="primary" plain>{{this.isshow?'<-':'->'}}</x-button>
+        <x-button @click.native="isshow=!isshow" type="primary" plain>{{this.isshow?'-':'+'}}</x-button>
       </div>
       <div>
         <router-view>22222</router-view>
@@ -26,6 +26,7 @@
 <script>
   import { XButton,Drawer } from 'vux'
   export default {
+    name: "drawerDemo",
     components: {
        XButton,Drawer
     },

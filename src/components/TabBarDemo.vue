@@ -24,6 +24,7 @@
 import { Tabbar, TabbarItem } from 'vux'
 
 export default {
+  name: "tabBarDemo",
   components: {
     Tabbar,
     TabbarItem
@@ -31,5 +32,7 @@ export default {
 }
 </script>
 <style scoped>
-
+  .weui-tabbar {
+    position: fixed;
+  }
 </style>

@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from '@/views/Login.vue'
+import LogIn from '@/views/LogIn.vue'
 import Home from '@/views/Home.vue'
-import Tabbardemo from '@/components/Tabbar-demo.vue'
-import Drawerdemo from '@/components/Drawer-demo.vue'
+import TabBarDemo from '@/components/TabBarDemo.vue'
+import DrawerDemo from '@/components/DrawerDemo.vue'
 
 Vue.use(Router)
 
@@ -22,18 +22,18 @@ export default new Router({
     },
     {
       path: '/login',
-      name: 'login',
-      component: Login
+      name: 'logIn',
+      component: LogIn
     },
     {
       path: '/tabbar',
-      name: 'tabbar-demo',
-      component: Tabbardemo
+      name: 'tabBarDemo',
+      component: TabBarDemo
     },
     {
       path: '/drawer',
-      name: 'drawer-demo',
-      component: Drawerdemo
+      name: 'drawerDemo',
+      component: DrawerDemo
     }
   ]
 })
