@@ -48,12 +48,14 @@
         <cell-box is-link @click.native="linkHistory">最近浏览</cell-box>
 		<cell-box is-link @click.native="linkSetup">我的设置</cell-box>
       </group>
+	  <!-- 之后再去用这个组件，具体方法还没写 -->
+	   <panel :header="'最近发布的内容'" :list="list" :type="'4'"></panel>
 	</div>
 </template>
 
 <script>
 import { Group, Cell, CellBox, Divider, Card} from 'vux'
-import { Grid, GridItem, GroupTitle } from 'vux'
+import { Grid, GridItem, GroupTitle, Panel } from 'vux'
 
 export default {
   components: {
@@ -64,7 +66,8 @@ export default {
     GridItem,
     GroupTitle,
 	Card,
-	Divider
+	Divider,
+	Panel
   },
   methods:{
   	//页面跳转方法
@@ -83,6 +86,16 @@ export default {
 			path:'/Setup'
 		})
 	},
+  },
+  data () {
+    return {
+      list: [{
+        src: '../assets/logo.png',
+        title: '星球',
+        desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
+        url: '/'
+      }]
+    }
   }
 }
 </script>

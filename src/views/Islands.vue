@@ -80,7 +80,7 @@ export default {
 <style lang="less">
 .m-img {
   // padding-bottom: 33%;
-  padding-bottom: 40%;
+  padding-bottom: 45%;
   display: block;
   position: relative;
   max-width: 100%;

@@ -1,76 +1,35 @@
 <template>
   <div>
-<!-- 测边框先注释掉不要 -->
-	<!-- <DrawerDemo></DrawerDemo> -->
-	<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;":title="Home":transition="headerTransition">
-    <span @click="drawerVisibility = !drawerVisibility">岛遇</span>
-      <x-icon slot="overwrite-left" type="navicon" size="25" style="fill:#fff;
-	  position:relative;top:-8px;left:-3px;"></x-icon>
-    </x-header>
-<!--   <h1>island</h1> -->
-	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
-      <masker style="border-radius: 2px;">
-        <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
-        <div slot="content" class="m-title">
-          <router-link :to="{path: '/' + item.island}">{{item.title}}</router-link>
-          <br/>
-          <span class="m-time">2020-04-01</span>
-        </div>
-      </masker>
-    </div>
-<!-- 	4.1日注释掉，暂时不需要第四个模块,可以作为有需要时候的例子 -->
-<!--    <div style="margin: 10px;overflow: hidden;">
-      <masker style="border-radius: 2px;" color="F9C90C" :opacity="0.8">
-        <div class="m-img" style="background-image:url(https://cdn.xiaotaojiang.com/uploads/56/4b3601364b86fdfd234ef11d8712ad/_.jpg)"></div>
-        <div slot="content" class="m-title">
-          <router-link to="/Login">VUX</router-link>
-          <br/>
-          <span class="m-time">2020-04-01</span>
-        </div>
-      </masker>
-    </div> -->
+	  <panel :header="最近文章展示" :list="list" :type="type"></panel>
   </div>
 </template>
 <script>
 import { XHeader, Masker } from 'vux'
 import DrawerDemo from '../components/DrawerDemo.vue'
+import { Panel, Group, Radio } from 'vux'
 
 export default {
   name: "Home",
   components: {
 	  XHeader,
 	  DrawerDemo,
-	  Masker
-  },
-  computed: {
-	// leftOptions () {
- //      return {
- //        showBack: this.route.path !== '/'
- //      }
- //    },
- //    rightOptions () {
- //      return {
- //        showMore: true
- //      }
- //    },
-	// title () {
- //      if (this.route.path === '/') return 'Home'
-	// }
+	  Masker,
+	  Panel,
+	  Group,
+	  Radio
   },
   data () {
     return {
       list: [{
-        title: '故事之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
-		island:"island1"
+        src: '../assets/logo.png',
+        title: '标题一',
+        desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
+        url: '/'
       }, {
-        title: '分享之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1512/241458078300.jpg',
-		island:"island2"
-      }, {
-        title: '回忆之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1603/111016232050.jpg',
-		island:"island3"
+        src: '../assets/logo.png',
+        title: '标题二',
+        desc: '由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。',
+        url: '/'
       }]
     }
   }
@@ -80,7 +39,7 @@ export default {
 <style lang="less">
 .m-img {
   // padding-bottom: 33%;
-  padding-bottom: 40%;
+  padding-bottom: 45%;
   display: block;
   position: relative;
   max-width: 100%;
