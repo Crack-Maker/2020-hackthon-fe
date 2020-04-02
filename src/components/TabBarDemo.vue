@@ -1,38 +1,40 @@
 <template>
   <div>
-    <tabbar>
-      <tabbar-item>
-        <img slot="icon" src="../assets/logo.png">
-        <span slot="label">Wechat</span>
-      </tabbar-item>
-      <tabbar-item>
-        <img slot="icon" src="../assets/logo.png">
-        <span slot="label">Message</span>
-      </tabbar-item>
-      <tabbar-item selected>
-        <img slot="icon" src="../assets/logo.png">
-        <span slot="label">Explore</span>
-      </tabbar-item>
-      <tabbar-item>
-        <img slot="icon" src="../assets/logo.png">
-        <span slot="label">News</span>
-      </tabbar-item>
-    </tabbar>
+      <tabbar slot="bottom" class="footerGuide">
+        <tabbar-item :link="{path:'/User'}" :selected="isLogin" badge="9">
+          <img slot="icon" src="../assets/logo.png" />
+          <span slot="label">推荐</span>
+        </tabbar-item>
+        <tabbar-item :link="{path:'/'}" selected>
+          <img slot="icon" src="../assets/logo.png"/>
+          <span slot="label">岛屿</span>
+        </tabbar-item>
+        <tabbar-item :link="{path:'/User'}" :selected="isLogin" badge="1">
+          <img slot="icon" src="../assets/logo.png" />
+          <span slot="label">我的</span>
+        </tabbar-item>
+      </tabbar>
   </div>
 </template>
 <script>
-import { Tabbar, TabbarItem } from 'vux'
+import { Tabbar, TabbarItem, ViewBox } from "vux";
 
 export default {
-  name: "tabBarDemo",
+  name: "TabBarDemo",
+  data() {
+    return {
+      isLogin: false
+    }
+  },
   components: {
     Tabbar,
-    TabbarItem
+    TabbarItem,
+    ViewBox
   }
-}
+};
 </script>
 <style scoped>
-  .weui-tabbar {
-    position: fixed;
-  }
+.footerGuide {
+  position: fixed;
+}
 </style>
