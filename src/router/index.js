@@ -10,6 +10,7 @@ import DrawerDemo from '@/components/DrawerDemo.vue'
 import IsLand1 from '@/views/island/IsLand1.vue'
 import IsLand2 from '@/views/island/IsLand2.vue'
 import IsLand3 from '@/views/island/IsLand3.vue'
+import Setup from '@/views/user/Setup.vue'
 
 Vue.use(Router)
 
@@ -65,6 +66,11 @@ export default new Router({
       path: '/IsLand3',
       name: 'IsLand3',
       component: IsLand3
-    }
+    },
+	{
+	  path: '/Setup',
+	  name: 'Setup',
+	  component: Setup
+	}
   ]
 })
