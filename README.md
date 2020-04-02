@@ -20,10 +20,10 @@ CSS class名称为全小写 用短横线 "-" 连接
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# 运行测试版本 http://localhost:8080
 npm run dev
 
-# 运行线上版本
+# 运行线上版本 http://localhost:8080
 npm run prod
 
 # build for production with minification
