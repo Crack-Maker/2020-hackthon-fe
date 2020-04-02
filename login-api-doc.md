@@ -17,6 +17,6 @@
 7. 如果手机号重复，返回`status='wphone'`
 8. 如果手机号不重复，发送给`'phone'`一个验证码短信，并返回`cbname({status='sms_success'，msg='验证码'}) `
 9. 前端确认验证码相符后，第二次发post请求给`/api/regist_confirm`,                    --第二次post写入数据库
-    data格式为json，包括 `{'phone':'xx', 'nickname':'xx', 'phone':'xx', ‘cbname’:'xx'}`，写入数据库
+    data格式为json，包括 `{'phone':'xx', 'nickname':'xx', 'phone':'xx', 'cbname':'xx'}`，写入数据库
 10.（第二次不需要返回token，注册成功用户自行登陆获取
 
