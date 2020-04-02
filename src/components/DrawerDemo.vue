@@ -58,7 +58,7 @@
 <script>
   import { XButton,Drawer, Group, Cell } from 'vux'
   export default {
-    name: "drawerDemo",
+    name: "DrawerDemo",
     components: {
        XButton,Drawer,Group,Cell
     },
