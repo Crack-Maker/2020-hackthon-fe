@@ -27,43 +27,43 @@ export default new Router({
       // ]
     },
     {
-      path: '/login',
-      name: 'logIn',
+      path: '/LogIn',
+      name: 'LogIn',
       component: LogIn
     },
     {
-      path: '/tabbar',
-      name: 'tabBarDemo',
+      path: '/TabBarDemo',
+      name: 'TabBarDemo',
       component: TabBarDemo
     },
     {
-      path: '/drawer',
-      name: 'drawerDemo',
+      path: '/DrawerDemo',
+      name: 'DrawerDemo',
       component: DrawerDemo
     },
     {
-      path: '/user',
-      name: 'user',
+      path: '/User',
+      name: 'User',
       component: User
     },
     {
-      path:'/regist',
-      name:'regist',
+      path:'/Regist',
+      name:'Regist',
       component:Regist
     },
     {
-      path: '/island1',
-      name: 'isLand1',
+      path: '/IsLand1',
+      name: 'IsLand1',
       component: IsLand1
     },
     {
-      path: '/island2',
-      name: 'isLand2',
+      path: '/IsLand2',
+      name: 'IsLand2',
       component: IsLand2
     },
     {
-      path: '/island3',
-      name: 'isLand3',
+      path: '/IsLand3',
+      name: 'IsLand3',
       component: IsLand3
     }
   ]
