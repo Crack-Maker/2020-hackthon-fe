@@ -1,11 +1,11 @@
 <template>
   <div>
       <tabbar slot="bottom" class="footerGuide">
-        <tabbar-item :link="{path:'/User'}" :selected="isLogin" badge="9">
+        <tabbar-item :link="{path:'/'}" :selected="isLogin" badge="9">
           <img slot="icon" src="../assets/logo.png" />
           <span slot="label">推荐</span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/'}" selected>
+        <tabbar-item :link="{path:'/Islands'}" selected>
           <img slot="icon" src="../assets/logo.png"/>
           <span slot="label">岛屿</span>
         </tabbar-item>

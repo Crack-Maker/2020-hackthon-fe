@@ -4,6 +4,7 @@ import LogIn from '@/views/LogIn.vue'
 import Home from '@/views/Home.vue'
 import Regist from '@/views/Regist.vue'
 import User from '@/views/User.vue'
+import Islands from '@/views/Islands.vue'
 import TabBarDemo from '@/components/TabBarDemo.vue'
 import DrawerDemo from '@/components/DrawerDemo.vue'
 import IsLand1 from '@/views/island/IsLand1.vue'
@@ -19,12 +20,6 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-      // children: [
-      //   {
-      //     path: '/',
-      //     component: UserProfile
-      //   },
-      // ]
     },
     {
       path: '/LogIn',
@@ -55,6 +50,11 @@ export default new Router({
       path: '/IsLand1',
       name: 'IsLand1',
       component: IsLand1
+    },
+	{
+      path: '/Islands',
+      name: 'Islands',
+      component: Islands
     },
     {
       path: '/IsLand2',
