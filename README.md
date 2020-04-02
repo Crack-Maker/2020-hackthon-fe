@@ -8,14 +8,23 @@
 
 分为 dev 分支和 master 分支，主要开发在 dev 分支，发布测试版本再 merge 到 master 分支
 
+## 命名规范  
+
+组件文件名, 路由, name属性 采用帕斯卡（Pascal）命名法，首字母全大写  
+CSS class名称为全小写 用短横线 "-" 连接
+
+
 ## Build Setup
 
 ``` bash
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# 运行测试版本 http://localhost:8080
 npm run dev
+
+# 运行线上版本 http://localhost:8080
+npm run prod
 
 # build for production with minification
 npm run build
