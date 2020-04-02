@@ -1,8 +1,8 @@
 <template>
 	<div class="login" style="width: 100%;">
 		<group>
-	      <x-input title="" name="mobile" placeholder="请输入手机号码" 
-		  v-model="mobile" keyboard="number" is-type="china-mobile" required></x-input>
+	      <x-input title="" name="phone" placeholder="请输入手机号码" 
+		  v-model="phone" keyboard="number" is-type="china-mobile" required></x-input>
 	      <x-input title="" type="text" placeholder="请输入密码" 
 		  v-model="password" :min="6" :max="16" @on-change="change" required></x-input>
 	    </group>
@@ -21,7 +21,7 @@
 		name: 'login',
 		data() {
 			return {
-				mobile:'',//用户手机号
+				phone:'',//用户手机号
 				password:'',//用户密码
 			}
 		},

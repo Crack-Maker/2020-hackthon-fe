@@ -3,9 +3,9 @@
     <group>
       <x-input
         title
-        name="mobile"
+        name="phone"
         placeholder="请输入手机号"
-        v-model="mobile"
+        v-model="phone"
         keyboard="number"
         is-type="china-mobile"
         required
@@ -58,7 +58,7 @@ export default {
   name: "regist",
   data() {
     return {
-      mobile: "", //手机号
+      phone: "", //手机号
       code: "", //验证码
       password: "", //密码
       passwordC: "", //确认密码
@@ -70,7 +70,7 @@ export default {
   },
   methods: {
     handleGetCode() {
-      if (this.mobile) {
+      if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
         let seconds = 60;
@@ -89,7 +89,7 @@ export default {
       }
     },
     handleRegist() {
-      if (!this.mobile || !this.code || !this.password || !this.passwordC) {
+      if (!this.phone || !this.code || !this.password || !this.passwordC) {
         this.$vux.toast.text("您有未填项，不能注册");
       } else if (this.password != this.passwordC) {
         this.$vux.toast.text("两次输入的密码不一致");
