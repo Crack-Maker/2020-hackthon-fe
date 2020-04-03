@@ -20,13 +20,13 @@
 			</div>
         </div>
         <div class="vux-1px-r">
-			<div class="normal-font-size">
+			<div class="normal-font-size" @click="linkMyFocus()">
 			  <span>15</span>
 			  <br/>关注
 			</div>
         </div>
         <div class="vux-1px-r">
-			<div class="normal-font-size">
+			<div class="normal-font-size" @click="linkCollect()">
 			  <span>1</span>
 			  <br/>收藏
 			</div>
@@ -75,9 +75,19 @@ export default {
   	//页面跳转方法
   	linkFriend(){
   		this.$router.push({
-  			path:'/'
+  			path:'/Friend'
   		})
   	},
+	linkMyFocus(){
+		this.$router.push({
+			path:'/MyFocus'
+		})
+	},
+	linkCollect(){
+		this.$router.push({
+			path:'/Collect'
+		})
+	},
   	linkHistory(){
   		this.$router.push({
   			path:'/History'

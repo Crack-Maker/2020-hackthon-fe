@@ -13,6 +13,9 @@ import IsLand3 from '@/views/island/IsLand3.vue'
 import Setup from '@/views/user/Setup.vue'
 import Ability from '@/views/user/Ability.vue'
 import History from '@/views/user/History.vue'
+import Friend from '@/views/user/Friend.vue'
+import MyFocus from '@/views/user/MyFocus.vue'
+import Collect from '@/views/user/Collect.vue'
 
 Vue.use(Router)
 
@@ -83,6 +86,26 @@ export default new Router({
 	  path: '/History',
 	  name: 'History',
 	  component: History
+	},
+	{
+	  path: '/Friend',
+	  name: 'Friend',
+	  component: Friend
+	},
+	{
+	  path: '/MyFocus',
+	  name: 'MyFocus',
+	  component: MyFocus 
+	},
+	{
+	  path: '/Collect',
+	  name: 'Collect',
+	  component: Collect 
 	}
+	// {
+	//   path: '/',
+	//   name: '',
+	//   component: 
+	// },
   ]
 })
