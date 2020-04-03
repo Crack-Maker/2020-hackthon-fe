@@ -1,34 +1,6 @@
 <template>
   <div>
-<!-- 测边框先注释掉不要 -->
-	<!-- <DrawerDemo></DrawerDemo> -->
-	<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;":title="Home":transition="headerTransition">
-    <span @click="drawerVisibility = !drawerVisibility">岛遇</span>
-      <x-icon slot="overwrite-left" type="navicon" size="25" style="fill:#fff;
-	  position:relative;top:-8px;left:-3px;"></x-icon>
-    </x-header>
-<!--   <h1>island</h1> -->
-	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
-      <masker style="border-radius: 2px;">
-        <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
-        <div slot="content" class="m-title">
-          <router-link :to="{path: '/' + item.island}">{{item.title}}</router-link>
-          <br/>
-          <span class="m-time">2020-04-01</span>
-        </div>
-      </masker>
-    </div>
-<!-- 	4.1日注释掉，暂时不需要第四个模块,可以作为有需要时候的例子 -->
-<!--    <div style="margin: 10px;overflow: hidden;">
-      <masker style="border-radius: 2px;" color="F9C90C" :opacity="0.8">
-        <div class="m-img" style="background-image:url(https://cdn.xiaotaojiang.com/uploads/56/4b3601364b86fdfd234ef11d8712ad/_.jpg)"></div>
-        <div slot="content" class="m-title">
-          <router-link to="/Login">VUX</router-link>
-          <br/>
-          <span class="m-time">2020-04-01</span>
-        </div>
-      </masker>
-    </div> -->
+
   </div>
 </template>
 <script>
