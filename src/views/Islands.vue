@@ -16,6 +16,14 @@ export default {
 	  Masker,
 	  IslandSlider
   },
+  // 接受App.vue传递过来的reload方法
+  inject:	['reload'],
+  // 将方法提供给下层组件
+  provide(){
+  	  return{
+  		  reload: this.reload
+  	  }
+  },
   data () {
     return {
       list: [{

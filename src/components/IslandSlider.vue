@@ -19,6 +19,8 @@
 // import slider components
 import { slider, slideritem } from 'vue-concise-slider'
 export default {
+// 接受Islands.vue传递过来的reload方法
+inject:	['reload'],
 data () {
    return {
      //data list [array]
@@ -77,7 +79,9 @@ data () {
         // console.log(this.list[data.currentPage])
 		this.$router.push({
 			path:'/'+ this.someList[data.currentPage].LinkTo
-		})
+		}),
+		//强制刷新页面实现内容加载
+		this.$router.go(0)
       }
     }
 }
