@@ -14,11 +14,12 @@ import { Radio, Group, Cell, Badge, Drawer, Actionsheet,
 		 TabbarItem, Loading, TransferDom} from 'vux'
 import TabBarDemo from './components/TabBarDemo.vue'
 import DrawerDemo from './components/DrawerDemo.vue'
+
 export default {
   components: { 
-	  TabBarDemo,
-	  DrawerDemo,
-	  Radio,
+	TabBarDemo,
+	DrawerDemo,
+    Radio,
     Group,
     Cell,
     Badge,

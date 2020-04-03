@@ -1,33 +1,20 @@
 <template>
   <div>
-
+	  <island-slider></island-slider>
   </div>
 </template>
 <script>
 import { XHeader, Masker } from 'vux'
 import DrawerDemo from '../components/DrawerDemo.vue'
+import IslandSlider from '../components/IslandSlider.vue'
 
 export default {
   name: "Islands",
   components: {
 	  XHeader,
 	  DrawerDemo,
-	  Masker
-  },
-  computed: {
-	// leftOptions () {
- //      return {
- //        showBack: this.route.path !== '/'
- //      }
- //    },
- //    rightOptions () {
- //      return {
- //        showMore: true
- //      }
- //    },
-	// title () {
- //      if (this.route.path === '/') return 'Home'
-	// }
+	  Masker,
+	  IslandSlider
   },
   data () {
     return {
