@@ -11,6 +11,7 @@ import IsLand1 from '@/views/island/IsLand1.vue'
 import IsLand2 from '@/views/island/IsLand2.vue'
 import IsLand3 from '@/views/island/IsLand3.vue'
 import Setup from '@/views/user/Setup.vue'
+import Ability from '@/views/user/Ability.vue'
 
 Vue.use(Router)
 
@@ -71,6 +72,11 @@ export default new Router({
 	  path: '/Setup',
 	  name: 'Setup',
 	  component: Setup
+	},
+	{
+	  path: '/Ability',
+	  name: 'Ability',
+	  component: Ability
 	}
   ]
 })

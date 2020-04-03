@@ -44,7 +44,7 @@
 			</div>
 	      </grid> -->
       <group>
-		<cell-box is-link>我的属性</cell-box>
+		<cell-box is-link @click.native="linkAbility">我的属性</cell-box>
         <cell-box is-link @click.native="linkHistory">最近浏览</cell-box>
 		<cell-box is-link @click.native="linkSetup">我的设置</cell-box>
       </group>
@@ -86,6 +86,11 @@ export default {
 			path:'/Setup'
 		})
 	},
+	linkAbility(){
+		this.$router.push({
+			path:'/Ability'
+		})
+	}
   },
   data () {
     return {
