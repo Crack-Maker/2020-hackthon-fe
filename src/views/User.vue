@@ -80,7 +80,7 @@ export default {
   	},
   	linkHistory(){
   		this.$router.push({
-  			path:'/'
+  			path:'/History'
   		})
   	},
 	linkSetup(){

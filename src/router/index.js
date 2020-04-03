@@ -12,6 +12,7 @@ import IsLand2 from '@/views/island/IsLand2.vue'
 import IsLand3 from '@/views/island/IsLand3.vue'
 import Setup from '@/views/user/Setup.vue'
 import Ability from '@/views/user/Ability.vue'
+import History from '@/views/user/History.vue'
 
 Vue.use(Router)
 
@@ -77,6 +78,11 @@ export default new Router({
 	  path: '/Ability',
 	  name: 'Ability',
 	  component: Ability
+	},
+	{
+	  path: '/History',
+	  name: 'History',
+	  component: History
 	}
   ]
 })
