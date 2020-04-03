@@ -1,5 +1,7 @@
 <template>
 	<div>
+		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
+		 @on-click-more="showMenus = true">设置</x-header>
 		<group>
 			<br /><br /><br /><br /><br />
 			<cell title="账号登陆" @click.native="handleLogin"></cell>

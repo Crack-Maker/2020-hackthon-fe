@@ -1,9 +1,11 @@
 <template>
 	<div>
+	  <x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
+		  我的</x-header>
 	  <div>
 		  <img style="height: 1.5rem;margin-left: 1rem;" align="left" src="../assets/logo.png"/>
 		  <!-- 显示用户昵称 -->
-		  <div style="font-size: 0.7rem;">岛遇初代目</div>
+		  <div style="font-size: 0.6rem;">岛遇初代目</div>
 		  <div class="normal-font-size">已来到岛遇XX天,累计发布X条内容</div>
 		  <br/>
 	  </div>

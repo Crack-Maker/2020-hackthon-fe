@@ -2,11 +2,8 @@
   <div>
 <!-- 测边框先注释掉不要 -->
 	<!-- <DrawerDemo></DrawerDemo> -->
-	<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;":title="Home":transition="headerTransition">
-    <span @click="drawerVisibility = !drawerVisibility">岛遇</span>
-      <x-icon slot="overwrite-left" type="navicon" size="25" style="fill:#fff;
-	  position:relative;top:-8px;left:-3px;"></x-icon>
-    </x-header>
+	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
+			  首页</x-header>
 <!--   <h1>island</h1> -->
 	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
       <masker style="border-radius: 2px;">

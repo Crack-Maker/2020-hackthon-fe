@@ -1,7 +1,7 @@
 <template>
   <div>
       <tabbar slot="bottom" class="footerGuide">
-        <tabbar-item :link="{path:'/'}" :selected="isLogin" badge="9">
+        <tabbar-item :link="{path:'/'}" :selected="isLogin">
           <img slot="icon" src="../assets/logo.png" />
           <span slot="label">首页</span>
         </tabbar-item>

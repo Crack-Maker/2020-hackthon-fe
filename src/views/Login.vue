@@ -1,5 +1,7 @@
 <template>
 	<div class="login" style="width: 100%;">
+		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
+		 @on-click-more="showMenus = true">账号登陆</x-header>
 		<group>
 	      <x-input title="" name="phone" placeholder="请输入手机号码" 
 		  v-model="phone" keyboard="number" is-type="china-mobile" required></x-input>
