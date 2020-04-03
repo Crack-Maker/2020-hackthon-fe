@@ -4,7 +4,7 @@
    <!-- Using the slider component -->
 <!--   原本用这个方式，为了解决页面跳转产生的bug我把一些函数去掉了 -->
 <!--   <slider ref="slider" :options="options" @slide='slide' @tap='onTap' @init='onInit'> -->
-   <slider ref="slider" :options="options">
+   <slider ref="slider" :options="options" @tap='onTap'>
        <!-- slideritem wrapped package with the components you need -->
        <template slot-scope="coverflow">
            <slideritem v-for="(item,index) in someList" :pageLength="someList.length" :index="index" :key="index" :style="item.style">
@@ -28,21 +28,24 @@ data () {
          style: {
            'background': '#4abf8a',
            'width': '55.33333333%'
-         }
+         },
+		 LinkTo:"/Island1"
        },
        {
          html: '分享之岛',
          style: {
            'background': '#4bbfc3',
            'width': '55.33333333%'
-         }
+         },
+		 LinkTo:"/Island2"
        },
        {
          html: '回忆之岛',
          style: {
            'background': '#7baabe',
            'width': '55.33333333%'
-         }
+         },
+		 LinkTo:"/Island3"
        }
      ],
      //Slider configuration [obj]
@@ -64,7 +67,19 @@ data () {
  components: {
    slider,
    slideritem
- }
+ },
+ methods: {
+      // Listener event
+	  // onInit (data) {
+	  //   console.log(this.someList[data.currentPage])
+	  //   },
+      onTap (data) {
+        // console.log(this.list[data.currentPage])
+		this.$router.push({
+			path:'/'+ this.someList[data.currentPage].LinkTo
+		})
+      }
+    }
 }
 </script>
 
