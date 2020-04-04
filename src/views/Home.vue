@@ -1,7 +1,19 @@
 <template>
   <div>
-<!-- 测边框先注释掉不要 -->
-	<!-- <DrawerDemo></DrawerDemo> -->
+	 <div class="normal-font-size">
+		<search
+		     @result-click="resultClick"
+		     @on-change="getResult"
+		     :results="results"
+		     v-model="value"
+		     position="absolute"
+		     auto-scroll-to-top
+		     top="1.5rem"
+		     @on-focus="onFocus"
+		     @on-cancel="onCancel"
+		     @on-submit="onSubmit"
+		     ref="search"></search>
+	 </div>
 	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
 			  首页</x-header>
 <!--   <h1>island</h1> -->
@@ -30,7 +42,7 @@
   </div>
 </template>
 <script>
-import { XHeader, Masker } from 'vux'
+import { XHeader, Masker, Search } from 'vux'
 import DrawerDemo from '../components/DrawerDemo.vue'
 
 export default {
@@ -38,10 +50,39 @@ export default {
   components: {
 	  XHeader,
 	  DrawerDemo,
-	  Masker
+	  Masker,
+		Search
+  },
+	 methods: {
+    setFocus () {
+      this.$refs.search.setFocus()
+    },
+    resultClick (item) {
+      window.alert('you click the result item: ' + JSON.stringify(item))
+    },
+    getResult (val) {
+      console.log('on-change', val)
+      this.results = val ? getResult(this.value) : []
+    },
+    onSubmit () {
+      this.$refs.search.setBlur()
+      this.$vux.toast.show({
+        type: 'text',
+        position: 'top',
+        text: 'on submit'
+      })
+    },
+    onFocus () {
+      console.log('on focus')
+    },
+    onCancel () {
+      console.log('on cancel')
+    }
   },
   data () {
     return {
+	  results: [],
+	  value: 'test',
       list: [{
         title: '故事之岛',
         img: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
@@ -69,6 +110,18 @@ export default {
       }]
     }
   }
+}
+
+// 官网抄下来的
+function getResult (val) {
+  let rs = []
+  for (let i = 0; i < 20; i++) {
+    rs.push({
+      title: `${val} result: ${i + 1} `,
+      other: i
+    })
+  }
+  return rs
 }
 </script>
 
@@ -106,6 +159,9 @@ export default {
   border-top: 1px solid #f0f0f0;
   display: inline-block;
   margin-top: 5px;
+}
+.normal-font-size{
+	font-size: 0.5rem;
 }
 </style>
 
