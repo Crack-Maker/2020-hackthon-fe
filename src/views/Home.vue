@@ -16,18 +16,20 @@
 	 </div>
 	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
 			  首页</x-header>
-<!--   <h1>island</h1> -->
-	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
+	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
+	<br />
+<!-- 		4.5日注释掉，暂时用panel替换掉它，可以作为有需要的时候的例子	 -->  
+<!-- 	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
       <masker style="border-radius: 2px;">
         <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
         <div slot="content" class="m-title">
-			{{item.title}}
-<!--          <router-link :to="{path: '/' + item.island}">{{item.title}}</router-link> -->
+         <router-link :to="{path: '/' + item.island}">{{item.title}}</router-link>
           <br/>
           <span class="m-time">2020-04-03</span>
         </div>
       </masker>
-    </div>
+    </div> -->
+	
 <!-- 	4.1日注释掉，暂时不需要第四个模块,可以作为有需要时候的例子 -->
 <!--    <div style="margin: 10px;overflow: hidden;">
       <masker style="border-radius: 2px;" color="F9C90C" :opacity="0.8">
@@ -42,7 +44,7 @@
   </div>
 </template>
 <script>
-import { XHeader, Masker, Search } from 'vux'
+import { XHeader, Masker, Panel, Search } from 'vux'
 import DrawerDemo from '../components/DrawerDemo.vue'
 
 export default {
@@ -51,7 +53,8 @@ export default {
 	  XHeader,
 	  DrawerDemo,
 	  Masker,
-		Search
+	  Panel,
+	  Search
   },
 	 methods: {
     setFocus () {
@@ -83,6 +86,59 @@ export default {
     return {
 	  results: [],
 	  value: 'test',
+	  articleList: [{
+	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+        title: '面朝大海，春暖花开',
+        desc: '这里是内容',
+        url: {
+          path: '/component/radio',
+          replace: false
+        },
+        meta: {
+          source: '岛遇初代目',
+          date: '2020-04-05',
+          other: '日常'
+        }
+	  },{
+	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+        title: '面朝大海，春暖花开',
+        desc: '这里是内容',
+        url: {
+          path: '/component/radio',
+          replace: false
+        },
+        meta: {
+          source: '岛遇初代目',
+          date: '2020-04-05',
+          other: '日常'
+        }
+	  },{
+	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+        title: '面朝大海，春暖花开',
+        desc: '这里是内容',
+        url: {
+          path: '/component/radio',
+          replace: false
+        },
+        meta: {
+          source: '岛遇初代目',
+          date: '2020-04-05',
+          other: '日常'
+        }
+	  },{
+	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+        title: '面朝大海，春暖花开',
+        desc: '这里是内容',
+        url: {
+          path: '/component/radio',
+          replace: false
+        },
+        meta: {
+          source: '岛遇初代目',
+          date: '2020-04-05',
+          other: '日常'
+        }
+	  }],
       list: [{
         title: '故事之岛',
         img: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
