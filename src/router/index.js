@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import LogIn from '@/views/LogIn.vue'
+import Login from '@/views/Login.vue'
 import Home from '@/views/Home.vue'
 import Regist from '@/views/Regist.vue'
 import User from '@/views/User.vue'
@@ -28,9 +28,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/LogIn',
-      name: 'LogIn',
-      component: LogIn
+      path: '/Login',
+      name: 'Login',
+      component: Login
     },
     {
       path: '/TabBarDemo',
