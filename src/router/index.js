@@ -19,6 +19,12 @@ import Collect from '@/views/user/Collect.vue'
 
 Vue.use(Router)
 
+// 解决重复点击url报错
+const originalPush = Router.prototype.push;
+Router.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+};
+
 export default new Router({
   mode: 'history',
   routes: [
