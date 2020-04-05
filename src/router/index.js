@@ -27,8 +27,7 @@ Router.prototype.push = function push(location) {
 
 export default new Router({
   mode: 'history',
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
@@ -54,16 +53,16 @@ export default new Router({
       component: User
     },
     {
-      path:'/Regist',
-      name:'Regist',
-      component:Regist
+      path: '/Regist',
+      name: 'Regist',
+      component: Regist
     },
     {
       path: '/Island1',
       name: 'Island1',
       component: Island1
     },
-	{
+    {
       path: '/Islands',
       name: 'Islands',
       component: Islands
@@ -78,40 +77,40 @@ export default new Router({
       name: 'Island3',
       component: Island3
     },
-	{
-	  path: '/Setup',
-	  name: 'Setup',
-	  component: Setup
-	},
-	{
-	  path: '/Ability',
-	  name: 'Ability',
-	  component: Ability
-	},
-	{
-	  path: '/History',
-	  name: 'History',
-	  component: History
-	},
-	{
-	  path: '/Friend',
-	  name: 'Friend',
-	  component: Friend
-	},
-	{
-	  path: '/MyFocus',
-	  name: 'MyFocus',
-	  component: MyFocus 
-	},
-	{
-	  path: '/Collect',
-	  name: 'Collect',
-	  component: Collect 
-	}
-	// {
-	//   path: '/',
-	//   name: '',
-	//   component: 
-	// },
+    {
+      path: '/Setup',
+      name: 'Setup',
+      component: Setup
+    },
+    {
+      path: '/Ability',
+      name: 'Ability',
+      component: Ability
+    },
+    {
+      path: '/History',
+      name: 'History',
+      component: History
+    },
+    {
+      path: '/Friend',
+      name: 'Friend',
+      component: Friend
+    },
+    {
+      path: '/MyFocus',
+      name: 'MyFocus',
+      component: MyFocus
+    },
+    {
+      path: '/Collect',
+      name: 'Collect',
+      component: Collect
+    }
+    // {
+    //   path: '/',
+    //   name: '',
+    //   component: 
+    // },
   ]
 })
