@@ -1,5 +1,7 @@
 <template>
   <div>
+	 <x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
+	 		  首页</x-header>
 	 <div class="normal-font-size">
 		<search
 		     @result-click="resultClick"
@@ -14,9 +16,7 @@
 		     @on-submit="onSubmit"
 		     ref="search"></search>
 	 </div>
-	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
-			  首页</x-header>
-	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
+	<panel :header="''" :list="articleList" :type="'5'"></panel>
 	<br />
 <!-- 		4.5日注释掉，暂时用panel替换掉它，可以作为有需要的时候的例子	 -->  
 <!-- 	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
@@ -89,7 +89,7 @@ export default {
 	  articleList: [{
 	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
         title: '面朝大海，春暖花开',
-        desc: '这里是内容',
+        // desc: '这里是内容',
         url: {
           path: '/component/radio',
           replace: false

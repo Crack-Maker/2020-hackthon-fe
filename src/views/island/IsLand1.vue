@@ -2,16 +2,31 @@
   <div>
 	  <x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
 	   @on-click-more="showMenus = true">故事之岛</x-header>
-	<group :title="'My story'">
-      <x-input :placeholder="'标题'"></x-input>
-      <x-textarea :max="200" name="description" :placeholder="'内容'"></x-textarea>
-    </group>
+		<group :title="'My story'">
+<!-- 				<group>
+					<popup-radio title="options" :options="options3" v-model="option3" class="normal-font-size">
+						<p slot="popup-header" class="vux-1px-b demo3-slot">请选择你的文章类别</p>
+					</popup-radio>
+				</group> -->
+				<group>
+			      <popup-radio title="文章类别" :options="options3" v-model="option5">
+					<p slot="popup-header" class="vux-1px-b demo3-slot">请选择你的文章类别</p>
+			        <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
+			          <div class="normal-font-size">
+						 <p>{{ props.label }}</p> 
+					  </div>					  					
+			        </template>
+			      </popup-radio>
+			    </group>
+			<x-input :placeholder="'标题'"></x-input>
+			<x-textarea :max="200" name="description" :placeholder="'内容'"></x-textarea>
+		</group>
 	<x-button mini plain @click.native="showPlugin">提交</x-button>
   </div>
 </template>
 
 <script>
-import { XTextarea, Group, XInput, XButton } from 'vux'
+import { XTextarea, Group, XInput, XButton, PopupRadio  } from 'vux'
 import { AlertModule, Alert, XSwitch, Cell, TransferDomDirective as TransferDom } from 'vux'
 export default {
   name: "Home",
@@ -19,13 +34,21 @@ export default {
     TransferDom
   },
   components: {
-	XTextarea,
-    Group,
-    XInput,
-	XButton,
-	Cell,
-	Alert,
-    XSwitch
+		XTextarea,
+		Group,
+		XInput,
+		XButton,
+		Cell,
+		Alert,
+		XSwitch,
+		PopupRadio
+  },
+  data () {
+    return {
+      option3: '日常',
+      options3: ['日常', '情感', '励志'],
+	  option5: '日常',
+    }
   },
   methods: {
     onEvent (event) {
@@ -47,5 +70,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.normal-font-size{
+	font-size: 0.5rem !important;
+}
+.demo3-slot {
+  text-align: center;
+  padding: 8px 0;
+  color: #888;
+  font-size: 0.5rem;
+}
 </style>
