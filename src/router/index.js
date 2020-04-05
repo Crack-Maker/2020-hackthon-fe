@@ -7,9 +7,9 @@ import User from '@/views/User.vue'
 import Islands from '@/views/Islands.vue'
 import TabBarDemo from '@/components/TabBarDemo.vue'
 import DrawerDemo from '@/components/DrawerDemo.vue'
-import IsLand1 from '@/views/island/IsLand1.vue'
-import IsLand2 from '@/views/island/IsLand2.vue'
-import IsLand3 from '@/views/island/IsLand3.vue'
+import Island1 from '@/views/island/Island1.vue'
+import Island2 from '@/views/island/Island2.vue'
+import Island3 from '@/views/island/Island3.vue'
 import Setup from '@/views/user/Setup.vue'
 import Ability from '@/views/user/Ability.vue'
 import History from '@/views/user/History.vue'
@@ -53,9 +53,9 @@ export default new Router({
       component:Regist
     },
     {
-      path: '/IsLand1',
-      name: 'IsLand1',
-      component: IsLand1
+      path: '/Island1',
+      name: 'Island1',
+      component: Island1
     },
 	{
       path: '/Islands',
@@ -63,14 +63,14 @@ export default new Router({
       component: Islands
     },
     {
-      path: '/IsLand2',
-      name: 'IsLand2',
-      component: IsLand2
+      path: '/Island2',
+      name: 'Island2',
+      component: Island2
     },
     {
-      path: '/IsLand3',
-      name: 'IsLand3',
-      component: IsLand3
+      path: '/Island3',
+      name: 'Island3',
+      component: Island3
     },
 	{
 	  path: '/Setup',
