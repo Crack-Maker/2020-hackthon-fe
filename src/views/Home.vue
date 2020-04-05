@@ -1,7 +1,5 @@
 <template>
   <div>
-	 <x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
-	 		  首页</x-header>
 	 <div class="normal-font-size">
 		<search
 		     @result-click="resultClick"
@@ -16,7 +14,9 @@
 		     @on-submit="onSubmit"
 		     ref="search"></search>
 	 </div>
-	<panel :header="''" :list="articleList" :type="'5'"></panel>
+	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
+			  首页</x-header>
+	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
 	<br />
 <!-- 		4.5日注释掉，暂时用panel替换掉它，可以作为有需要的时候的例子	 -->  
 <!-- 	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
@@ -87,20 +87,7 @@ export default {
 	  results: [],
 	  value: 'test',
 	  articleList: [{
-	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
-        title: '面朝大海，春暖花开',
-        // desc: '这里是内容',
-        url: {
-          path: '/component/radio',
-          replace: false
-        },
-        meta: {
-          source: '岛遇初代目',
-          date: '2020-04-05',
-          other: '日常'
-        }
-	  },{
-	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
@@ -113,7 +100,7 @@ export default {
           other: '日常'
         }
 	  },{
-	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
@@ -126,7 +113,20 @@ export default {
           other: '日常'
         }
 	  },{
-	    src: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+        title: '面朝大海，春暖花开',
+        desc: '这里是内容',
+        url: {
+          path: '/component/radio',
+          replace: false
+        },
+        meta: {
+          source: '岛遇初代目',
+          date: '2020-04-05',
+          other: '日常'
+        }
+	  },{
+	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
@@ -141,27 +141,27 @@ export default {
 	  }],
       list: [{
         title: '故事之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
 		island:"island1"
       }, {
         title: '分享之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1512/241458078300.jpg',
+        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/02.jpg',
 		island:"island2"
       }, {
         title: '回忆之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1603/111016232050.jpg',
+        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/03.jpg',
 		island:"island3"
       },{
         title: '故事之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1601/201008103200.jpg',
+        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
 		island:"island1"
       }, {
         title: '分享之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1512/241458078300.jpg',
+        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/02.jpg',
 		island:"island2"
       }, {
         title: '回忆之岛',
-        img: 'http://pic.5tu.cn/uploads/allimg/1603/111016232050.jpg',
+        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/03.jpg',
 		island:"island3"
       }]
     }
