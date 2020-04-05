@@ -3,21 +3,18 @@
 	  <x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
 	   @on-click-more="showMenus = true">故事之岛</x-header>
 		<group :title="'My story'">
-<!-- 				<group>
-					<popup-radio title="options" :options="options3" v-model="option3" class="normal-font-size">
-						<p slot="popup-header" class="vux-1px-b demo3-slot">请选择你的文章类别</p>
-					</popup-radio>
-				</group> -->
+			<div class="left-font-position">
 				<group>
-			      <popup-radio title="文章类别" :options="options3" v-model="option5">
+				  <popup-radio title="文章类别" :options="options3" v-model="option5">
 					<p slot="popup-header" class="vux-1px-b demo3-slot">请选择你的文章类别</p>
-			        <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
-			          <div class="normal-font-size">
+				    <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
+				      <div class="normal-font-size">
 						 <p>{{ props.label }}</p> 
 					  </div>					  					
-			        </template>
-			      </popup-radio>
-			    </group>
+				    </template>
+				  </popup-radio>
+				</group>
+			</div>
 			<x-input :placeholder="'标题'"></x-input>
 			<x-textarea :max="200" name="description" :placeholder="'内容'"></x-textarea>
 		</group>
@@ -71,6 +68,9 @@ export default {
 </script>
 
 <style scoped>
+.left-font-position{
+	text-align: left;
+}
 .normal-font-size{
 	font-size: 0.5rem !important;
 }
