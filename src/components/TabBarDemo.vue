@@ -1,15 +1,15 @@
 <template>
   <div>
       <tabbar slot="bottom" class="footerGuide">
-        <tabbar-item :link="{path:'/'}" :selected="isLogin">
+        <tabbar-item :link="{path:'/'}" selected>
           <img slot="icon" src="../assets/logo.png" />
           <span slot="label">首页</span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/Islands'}" selected>
+        <tabbar-item :link="{path:'/Islands'}">
           <img slot="icon" src="../assets/logo.png"/>
           <span slot="label">岛屿</span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/User'}" :selected="isLogin" badge="1">
+        <tabbar-item :link="{path:'/User'}" badge="1">
           <img slot="icon" src="../assets/logo.png" />
           <span slot="label">我的</span>
         </tabbar-item>
