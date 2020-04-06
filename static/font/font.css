@@ -1,6 +1,6 @@
 @font-face {  
- font-family: 'zzgf';  //重命名造字工坊字体名
- src: url('zzgf.ttf');  //引入造字工坊字体
+ font-family: 'zzgf';
+ src: url('zzgf.ttf');
  font-weight: normal;  
  font-style: normal;  
 }
