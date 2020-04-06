@@ -126,7 +126,7 @@ export default {
 }
 
 .login-box {
-  width: 10.5rem;
+  width: 10.1rem;
   margin-top: 3.5rem;
   margin-left: 0.4rem;
 }
