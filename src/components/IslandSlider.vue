@@ -64,7 +64,7 @@ export default {
           currentPage: 0,
 		// 隐藏底部小圆点
 		  pagination: false,
-          thresholdDistance: 100, 
+          thresholdDistance: 50, 
           thresholdTime: 300, 
 		//相隔距离
           deviation: 127, 

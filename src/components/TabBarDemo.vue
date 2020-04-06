@@ -23,7 +23,17 @@ export default {
   name: "TabBarDemo",
   data() {
     return {
-      isLogin: false
+      isLogin: false,
+	  // list:[{
+		 //  img: require("../../assets/image/homePage-1.png"),
+		 //  active: require("../../assets/image/homePage.png")
+	  // },{
+		 //  img: require("../../assets/image/homePage-1.png"),
+		 //  active: require("../../assets/image/homePage.png")
+	  // },{
+		 //  img: require("../../assets/image/homePage-1.png"),
+		 //  active: require("../../assets/image/homePage.png")
+	  // }]
     }
   },
   components: {

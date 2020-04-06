@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="background-color">
 	  <x-header :left-options="{showBack: false}" style="width:100%;
 	  position:absolute;left:0;top:0;z-index:100;">岛屿</x-header>
 	  <br />
@@ -42,6 +42,10 @@ export default {
 </script>
 
 <style scoped lang="less">
+.background-color{
+  // background-color: #7EEA19;
+  // height: 100%;
+}
 .normal-font-size{
   color: #888888;
   font-size: 0.5rem;
