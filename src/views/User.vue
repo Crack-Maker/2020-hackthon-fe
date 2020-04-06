@@ -6,7 +6,7 @@
 	      	<img src="../../static/img/消息.svg"/>
 	      </div>
 		  <font size="2" color="#888888">——已来到岛遇XX天——</font>
-		  <div slot="right" @click="">
+		  <div slot="right" @click="linkSetup()">
 			<img src="../../static/img/设置.svg"/>
 		  </div>
 		  </x-header>
@@ -58,23 +58,13 @@
       <group>
 		<cell-box is-link @click.native="linkFriend">我的好友</cell-box>
 		<cell-box is-link @click.native="linkAbility">我的属性</cell-box>
-		<cell-box is-link @click.native="linkSetup">我的设置</cell-box>
+		<cell-box is-link @click.native="linkAbility">秘密の岛</cell-box>
+		<cell-box is-link @click.native="linkSetup">内容发布</cell-box>
       </group>
-	  <divider><font size="4">我的秘密岛</font></divider>
+	<!--  <divider><font size="4">我的秘密岛</font></divider> -->
 	      <card>
-	        <img slot="header" src="../../static/img/island3.png" style="width:35%;">
-	        <!-- <div slot="content" class="card-padding">
-	          <p style="color:#999;font-size:12px;">Posted on January 21, 2015</p>
-	          <p style="font-size:14px;line-height:1.2;">Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit..</p>
-	        </div> -->
+	        <img slot="header" src="../../static/img/island3.png" style="width:25%;">
 	      </card>
-<!-- 	  <divider><font size="4">我的好友</font></divider>
-	      <card>
-	        <div slot="content" class="card-padding">
-	          <p style="color:#999;font-size:12px;">Posted on January 21, 2015</p>
-	          <p style="font-size:14px;line-height:1.2;">Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit..</p>
-	        </div>
-	      </card> -->
 	  <!-- 之后再去用这个组件，具体方法还没写 -->
 	   <br />
 	   <TabBarDemoUser></TabBarDemoUser>
@@ -128,6 +118,11 @@ export default {
 		this.$router.push({
 			path:'/Ability'
 		})
+	},
+	linkAbility(){
+		this.$router.push({
+			path:'/Island3'
+		})
 	}
   },
   data () {
@@ -172,6 +167,7 @@ export default {
 }
 .normal-font-size{
   font-size: 0.5rem;
+  color:#393A31;
 }
 .grid-center {
   display: block;
