@@ -5,7 +5,10 @@
 	      <div slot="overwrite-left">
 	      	<img src="../../static/img/消息.svg"/>
 	      </div>
-		  <font size="2" color="#888888">——已来到岛遇XX天——</font>
+		  <!-- 下面这个div用来触发特效 -->
+		  <div>
+			  <font size="2" color="#888888">——已来到岛遇XX天——</font>
+		  </div>
 		  <div slot="right" @click="linkSetup()">
 			<img src="../../static/img/设置.svg"/>
 		  </div>
@@ -58,7 +61,7 @@
       <group>
 		<cell-box is-link @click.native="linkFriend">我的好友</cell-box>
 		<cell-box is-link @click.native="linkAbility">我的属性</cell-box>
-		<cell-box is-link @click.native="linkAbility">秘密の岛</cell-box>
+		<cell-box is-link @click.native="linkIsland">秘密の岛</cell-box>
 		<cell-box is-link @click.native="linkSetup">内容发布</cell-box>
       </group>
 	<!--  <divider><font size="4">我的秘密岛</font></divider> -->
@@ -119,7 +122,7 @@ export default {
 			path:'/Ability'
 		})
 	},
-	linkAbility(){
+	linkIsland(){
 		this.$router.push({
 			path:'/Island3'
 		})
