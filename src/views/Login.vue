@@ -166,7 +166,7 @@ export default {
   line-height: 0;
   font-size: 0.75rem;
   letter-spacing: 0.1rem;
-  font-family: zzgf;
+  font-family: zzgf, Arial;
   font-weight: 400;
 }
 .regist {
