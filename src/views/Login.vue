@@ -1,5 +1,5 @@
 <template>
-  <div class="login" style="width: 100%;">
+  <div class="login" @touchmove.prevent>
     <x-header
       style="width:100%;position:absolute;left:0;top:0;z-index:100;"
       :right-options="{showMore: true}"
@@ -10,54 +10,42 @@
       <div class="title-2">ISLAND</div>
     </div>
     <div class="login-box">
-      <group>
+      <group class="no-border">
         <x-input
           title="头像 |"
           name="phone"
           placeholder="请输入手机号码"
-          class="phone"
+          class="phone border"
           v-model="phone"
           keyboard="number"
           is-type="china-mobile"
           required
         >
-          <img
-            slot="label"
-            style="padding-right:10px;display:block;"
-            src="../assets/imgs/me.svg"
-            width="24"
-            height="24"
-          />
+          <img slot="label" src="../assets/imgs/me.svg" class="logo" />
         </x-input>
       </group>
-      <group>
+      <group class="no-border">
         <x-input
           title="锁头 |"
           type="text"
           placeholder="请输入密码"
-          class="passwd"
+          class="passwd border"
           v-model="password"
           :min="6"
           :max="16"
           @on-change="change"
+          @on-click-clear-icon="password = null"
           required
         >
-          <img
-            slot="label"
-            style="padding-right:10px;display:block;"
-            src="../assets/imgs/lock.svg"
-            width="24"
-            height="24"
-          />
+          <img slot="label" src="../assets/imgs/lock.svg" class="logo" />
         </x-input>
       </group>
     </div>
     <div class="forget-pass">忘记密码?</div>
-    <box gap="10px 25px">
-      <x-button type="primary" @click.native="handleLogin">登陆</x-button>
-      <x-button @click.native="handleRegist">注册</x-button>
-      <!-- 			<p><span class="to-regist">还没有账号？快去注册</span></p> -->
+    <box class="login-btn-box">
+      <x-button @click.native="handleLogin" class="login-btn">登陆</x-button>
     </box>
+    <div onclick="handleRegist" class="regist">还没有账号？快去注册</div>
   </div>
 </template>
 
@@ -97,33 +85,16 @@ export default {
 </script>
 
 <style scoped lang="less">
-// @color666:#666666;
-// @color393a31:#393a31;
 .input-box {
   background-color: #ffffff;
 }
-// .login{
-// 	>p:first-of-type{
-// 		padding: 20px 15px 40px;
-// 		float: right;
-// 		color: @color666;
-// 		font-size:14px;
-// 	}
-// 	>p:last-of-type{
-// 		width: 100%;
-// 		text-align: center;
-// 		color: @color393a31;
-// 		font-size:14px;
-// 		position: absolute;
-// 		bottom: 25px;
-// 	}
-// }
 
 .login {
   background-image: url(../assets/imgs/bg-island.png);
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem;
+  height: 19rem;
 }
 
 .forget-pass {
@@ -155,9 +126,9 @@ export default {
 }
 
 .login-box {
-  width: 10rem;
+  width: 10.5rem;
   margin-top: 3.5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
 }
 
 .forget-pass {
@@ -167,6 +138,68 @@ export default {
   color: #707070;
 }
 
-.phone {
+.border {
+  border: 1px solid #fdfdfd;
+  border-radius: 45px;
+  -webkit-box-shadow: 1px 4px 5px #c3c3c3;
+  box-shadow: 1px 4px 5px #c3c3c3;
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  text-indent: 0.5em;
+  font-size: 0.45rem;
+}
+
+.logo {
+  padding-right: 0.6rem;
+  display: block;
+  width: 0.65rem;
+  border-right: 0.02rem solid #afb3b5;
+}
+.login-btn-box {
+  margin: 0 1rem;
+}
+.login-btn {
+  border-radius: 0;
+  background-color: #667d3e;
+  color: white;
+  height: 1.5rem;
+  line-height: 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.1rem;
+  font-family: zzgf;
+  font-weight: 400;
+}
+.regist {
+  font-size: 0.35rem;
+  color: #5cc2b6;
+  margin-top: 0.35rem;
+}
+</style>
+<style>
+.no-border div:before {
+  display: none;
+}
+.no-border div:after {
+  display: none;
+}
+.no-border div {
+  margin-top: 0.1rem;
+}
+input::-webkit-input-placeholder {
+  color: #afb3b5;
+  letter-spacing: 0.1rem;
+}
+
+input::placeholder {
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
+}
+
+.vux-input-icon.weui-icon-warn:before {
+  font-size: 0.5rem !important;
+}
+
+.weui-icon-warn {
+  font-size: 0.5rem !important;
 }
 </style>
