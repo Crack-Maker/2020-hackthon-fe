@@ -1,5 +1,5 @@
 <template>
-  <div class="login" @touchmove.prevent>
+  <div class="login">
     <x-header
       style="width:100%;position:absolute;left:0;top:0;z-index:100;"
       :right-options="{showMore: true}"
