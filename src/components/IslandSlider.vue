@@ -101,7 +101,8 @@ export default {
 <style scoped lang="less">
 .font-style{
 	margin-top: 9.5rem;
-	font-size: 0.65rem;
+	font-size: 0.85rem;
+	// font-family:zzgf;
 	color:#000000;
 }
 </style>

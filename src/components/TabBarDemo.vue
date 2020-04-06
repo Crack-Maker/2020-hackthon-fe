@@ -1,16 +1,19 @@
 <template>
   <div>
-      <tabbar slot="bottom" class="footerGuide">
-        <tabbar-item :link="{path:'/'}" selected>
-          <img slot="icon" src="../assets/logo.png" />
-          <span slot="label">首页</span>
-        </tabbar-item>
-        <tabbar-item :link="{path:'/Islands'}">
-          <img slot="icon" src="../assets/logo.png"/>
+     <tabbar slot="bottom" class="footerGuide">
+		<tabbar-item @on-item-click="changeImageHome" :link="{path:'/'}">
+		  <img slot="icon" v-if="!showImageHome" src="../../static/img/home1.svg" />
+		  <img slot="icon" v-if="showImageHome" src="../../static/img/home2.svg" />
+		  <span slot="label">首页</span>
+		</tabbar-item>
+        <tabbar-item @on-item-click="changeImageIsland" :link="{path:'/Islands'}">
+          <img slot="icon" v-if="!showImageIsland" src="../../static/img/island1.svg"/>
+		  <img slot="icon" v-if="showImageIsland" src="../../static/img/island2.svg"/>
           <span slot="label">岛屿</span>
         </tabbar-item>
-        <tabbar-item :link="{path:'/User'}" badge="1">
-          <img slot="icon" src="../assets/logo.png" />
+        <tabbar-item @on-item-click="changeImageMine" :link="{path:'/User'}" badge="1">
+          <img slot="icon" v-if="!showImageMine" src="../../static/img/mine1.svg" />
+		  <img slot="icon" v-if="showImageMine" src="../../static/img/mine2.svg" />
           <span slot="label">我的</span>
         </tabbar-item>
       </tabbar>
@@ -23,28 +26,40 @@ export default {
   name: "TabBarDemo",
   data() {
     return {
+	  showImageHome:true,
+	  showImageIsland:false,
+	  showImageMine:false,
       isLogin: false,
-	  // list:[{
-		 //  img: require("../../assets/image/homePage-1.png"),
-		 //  active: require("../../assets/image/homePage.png")
-	  // },{
-		 //  img: require("../../assets/image/homePage-1.png"),
-		 //  active: require("../../assets/image/homePage.png")
-	  // },{
-		 //  img: require("../../assets/image/homePage-1.png"),
-		 //  active: require("../../assets/image/homePage.png")
-	  // }]
     }
   },
   components: {
     Tabbar,
     TabbarItem,
     ViewBox
+  },
+  methods: {
+    changeImageHome () {
+		console.log(this.$route.path);
+        this.showImageHome = true;
+		this.showImageIsland = false;
+		this.showImageMine = false;
+    },
+	changeImageIsland () {
+	    this.showImageIsland = true;
+		this.showImageHome = false;
+		this.showImageMine = false;
+	},
+	changeImageMine () {
+	    this.showImageMine = true;
+		this.showImageHome = false;
+		this.showImageIsland = false;
+	}
   }
 };
 </script>
 <style scoped>
 .footerGuide {
-  position: fixed;
+	width: 100%;
+	position: fixed;
 }
 </style>

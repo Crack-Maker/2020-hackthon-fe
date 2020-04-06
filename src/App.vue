@@ -51,10 +51,10 @@ export default {
 
 <!-- 使用vux -->
 <style lang="less">
-  @import '~vux/src/styles/reset.less';
+@import '~vux/src/styles/reset.less'; 
 </style>
 
-<style scoped>
+<style scoped>	
 </style>
 
 
