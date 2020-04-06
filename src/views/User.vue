@@ -1,36 +1,47 @@
 <template>
 	<div>
-	  <x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
-		  我的</x-header>
-	  <div>
-		  <img style="height: 1.5rem;margin-left: 1rem;" align="left" src="../assets/logo.png"/>
+	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+	  position:absolute;left:0;top:0;z-index:100;">
+	      <div slot="overwrite-left">
+	      	<img src="../../static/img/消息.svg"/>
+	      </div>
+		  <font size="2" color="#888888">——已来到岛遇XX天——</font>
+		  <div slot="right" @click="">
+			<img src="../../static/img/设置.svg"/>
+		  </div>
+		  </x-header>
+	  <div class="main-info">
+		  <br />
+		  <img style="height: 3.5rem;margin-left: 1rem;
+		  background-size: auto 100%;" align="left" src="../../static/img/头像.svg"/>
 		  <!-- 显示用户昵称 -->
-		  <div style="font-size: 0.6rem;">岛遇初代目</div>
-		  <div class="normal-font-size">已来到岛遇XX天,累计发布X条内容</div>
+		  <div style="font-size: 0.6rem;">Refuel Island</div>
+		  <div class="normal-font-size">Refuel Island的个性签名</div>
+		  <div slot="content" class="card-demo-flex card-demo-content01">
+		    <div class="vux-1px-r">
+		  			<div class="normal-font-size" @click="linkHistory()">
+		  			  <span>1130</span>
+		  			  <br/>最近发布
+		  			</div>
+		    </div>
+		    <div class="vux-1px-r">
+		  			<div class="normal-font-size" @click="linkMyFocus()">
+		  			  <span>15</span>
+		  			  <br/>关注
+		  			</div>
+		    </div>
+		    <div class="vux-1px-r">
+		  			<div class="normal-font-size" @click="linkCollect()">
+		  			  <span>1</span>
+		  			  <br/>收藏
+		  			</div>
+		    </div>
+		  </div>
 	  </div>
 	<!-- 引入卡片组件 -->
 <!-- <divider>{{ $t('Simple card with header and content') }}</divider>
 	   <card :header="{title: $t('My wallet')}"> -->
-      <div slot="content" class="card-demo-flex card-demo-content01">
-        <div class="vux-1px-r">
-			<div class="normal-font-size" @click="linkFriend()">
-			  <span>1130</span>
-			  <br/>最近发布
-			</div>
-        </div>
-        <div class="vux-1px-r">
-			<div class="normal-font-size" @click="linkMyFocus()">
-			  <span>15</span>
-			  <br/>关注
-			</div>
-        </div>
-        <div class="vux-1px-r">
-			<div class="normal-font-size" @click="linkCollect()">
-			  <span>1</span>
-			  <br/>收藏
-			</div>
-        </div>
-      </div>
+	   
 <!-- 	  暂时注释掉grid组件,以后根据设计需求再作调整 -->
 <!-- 	      <grid class="grid-font-style">
 			<div @click="linkFriend()">
@@ -45,12 +56,26 @@
 			</div>
 	      </grid> -->
       <group>
+		<cell-box is-link @click.native="linkFriend">我的好友</cell-box>
 		<cell-box is-link @click.native="linkAbility">我的属性</cell-box>
-        <cell-box is-link @click.native="linkHistory">最近浏览</cell-box>
 		<cell-box is-link @click.native="linkSetup">我的设置</cell-box>
       </group>
+	  <divider><font size="4">我的秘密岛</font></divider>
+	      <card>
+	        <img slot="header" src="../../static/img/island3.png" style="width:35%;">
+	        <!-- <div slot="content" class="card-padding">
+	          <p style="color:#999;font-size:12px;">Posted on January 21, 2015</p>
+	          <p style="font-size:14px;line-height:1.2;">Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit..</p>
+	        </div> -->
+	      </card>
+<!-- 	  <divider><font size="4">我的好友</font></divider>
+	      <card>
+	        <div slot="content" class="card-padding">
+	          <p style="color:#999;font-size:12px;">Posted on January 21, 2015</p>
+	          <p style="font-size:14px;line-height:1.2;">Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit..</p>
+	        </div>
+	      </card> -->
 	  <!-- 之后再去用这个组件，具体方法还没写 -->
-	   <panel :header="'最近发布的内容'" :list="list" :type="'4'"></panel>
 	   <br />
 	   <TabBarDemoUser></TabBarDemoUser>
 	</div>
@@ -141,6 +166,10 @@ export default {
 </style>
 
 <style scoped>
+.main-info{
+	background: url(../../static/img/frank.svg)no-repeat;
+	background-size:100% auto;
+}
 .normal-font-size{
   font-size: 0.5rem;
 }

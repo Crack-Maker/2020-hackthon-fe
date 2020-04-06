@@ -1,8 +1,8 @@
 <template>
 	<div>
 	<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
-	 @on-click-more="showMenus = true">历史</x-header>
-	<group :title="'历史记录'">
+	 @on-click-more="showMenus = true">最近发布</x-header>
+	<group :title="'最近发布'">
       <cell
       :title="'4月4日'"
       is-link
