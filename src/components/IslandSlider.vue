@@ -49,7 +49,7 @@ export default {
           LinkTo: "/Island2"
         },
         {
-          html: "回忆之岛",
+          html: "秘密之岛",
           style: {
             background: "url(../../static/img/island3.png)no-repeat",
 			'background-size': '100% auto',
