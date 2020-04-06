@@ -26,8 +26,8 @@ export default {
   name: "TabBarDemo",
   data() {
     return {
-	  showImageHome:true,
-	  showImageIsland:false,
+	  showImageHome:false,
+	  showImageIsland:true,
 	  showImageMine:false,
       isLogin: false,
     }
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     changeImageHome () {
-        this.showImageHome = true;
+		this.showImageHome = true;
 		this.showImageIsland = false;
 		this.showImageMine = false;
     },

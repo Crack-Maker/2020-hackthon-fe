@@ -1,9 +1,8 @@
 <template>
   <div id="app" style="height:100%;">
-<!-- 	 <DrawerDemo></DrawerDemo> -->
 	 <div>
 		 <router-view v-if="isRouterAlive"></router-view>
-		 <TabBarDemo></TabBarDemo>
+<!-- 		 <TabBarDemo></TabBarDemo> -->
 	 </div>
   </div>
 </template>

@@ -52,6 +52,7 @@
 	  <!-- 之后再去用这个组件，具体方法还没写 -->
 	   <panel :header="'最近发布的内容'" :list="list" :type="'4'"></panel>
 	   <br />
+	   <TabBarDemoUser></TabBarDemoUser>
 	</div>
 </template>
 

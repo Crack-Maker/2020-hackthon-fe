@@ -8,18 +8,17 @@
 	  <div class="normal-font-size">
 		<p>滑动选择小岛</p>
 	  </div>
+	  <TabBarDemoIsland></TabBarDemoIsland>
   </div>
 </template>
 <script>
 import { XHeader, Masker } from 'vux'
-import DrawerDemo from '../components/DrawerDemo.vue'
 import IslandSlider from '../components/IslandSlider.vue'
 
 export default {
   name: "Islands",
   components: {
 	  XHeader,
-	  DrawerDemo,
 	  Masker,
 	  IslandSlider
   },

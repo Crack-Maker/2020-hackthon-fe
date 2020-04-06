@@ -18,6 +18,7 @@
 			  首页</x-header>
 	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
 	<br />
+	<TabBarDemo></TabBarDemo>
 <!-- 		4.5日注释掉，暂时用panel替换掉它，可以作为有需要的时候的例子	 -->  
 <!-- 	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
       <masker style="border-radius: 2px;">
