@@ -15,7 +15,7 @@
         <div class="vux-1px-r">
 			<div class="normal-font-size" @click="linkFriend()">
 			  <span>1130</span>
-			  <br/>好友
+			  <br/>最近发布
 			</div>
         </div>
         <div class="vux-1px-r">

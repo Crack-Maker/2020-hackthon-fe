@@ -16,6 +16,7 @@ import History from '@/views/user/History.vue'
 import Friend from '@/views/user/Friend.vue'
 import MyFocus from '@/views/user/MyFocus.vue'
 import Collect from '@/views/user/Collect.vue'
+import Create from '@/views/island/story/Create.vue'
 
 Vue.use(Router)
 
@@ -106,7 +107,12 @@ export default new Router({
       path: '/Collect',
       name: 'Collect',
       component: Collect
-    }
+    },
+	{
+	  path: '/Create',
+	  name: 'Create',
+	  component: Create
+	}
     // {
     //   path: '/',
     //   name: '',

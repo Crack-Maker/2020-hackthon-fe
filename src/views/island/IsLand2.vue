@@ -3,6 +3,7 @@
 	  <x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
 	   @on-click-more="showMenus = true">分享之岛</x-header>
 	  <h1>这里是第二座岛</h1>
+		<TabBarDemoIsland></TabBarDemoIsland>
   </div>
 </template>
 
