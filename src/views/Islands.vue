@@ -43,7 +43,8 @@ export default {
 
 <style scoped lang="less">
 .normal-font-size{
-  font-size: 0.65rem;
+  color: #888888;
+  font-size: 0.5rem;
 }
 </style>
 

@@ -87,7 +87,7 @@ export default {
 	  results: [],
 	  value: 'test',
 	  articleList: [{
-	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
@@ -100,7 +100,7 @@ export default {
           other: '日常'
         }
 	  },{
-	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
@@ -113,7 +113,7 @@ export default {
           other: '日常'
         }
 	  },{
-	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
@@ -126,7 +126,7 @@ export default {
           other: '日常'
         }
 	  },{
-	    src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {

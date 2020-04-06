@@ -7,7 +7,6 @@
 		  <!-- 显示用户昵称 -->
 		  <div style="font-size: 0.6rem;">岛遇初代目</div>
 		  <div class="normal-font-size">已来到岛遇XX天,累计发布X条内容</div>
-		  <br/>
 	  </div>
 	<!-- 引入卡片组件 -->
 <!-- <divider>{{ $t('Simple card with header and content') }}</divider>
@@ -52,6 +51,7 @@
       </group>
 	  <!-- 之后再去用这个组件，具体方法还没写 -->
 	   <panel :header="'最近发布的内容'" :list="list" :type="'4'"></panel>
+	   <br />
 	</div>
 </template>
 
