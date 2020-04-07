@@ -21,6 +21,7 @@ import ChangeName from '@/views/user/setup/ChangeName.vue'
 import ChangePassword from '@/views/user/setup/ChangePassword.vue'
 import Feedback from '@/views/user/setup/Feedback.vue'
 import CreateTopic from '@/views/island/shareAndSecret/CreateTopic.vue'
+import Article from '@/views/home/Article.vue'
 
 Vue.use(Router)
 
@@ -136,6 +137,11 @@ export default new Router({
 	  path: '/CreateTopic',
 	  name: 'CreateTopic',
 	  component: CreateTopic
+	},
+	{
+	  path: '/Article',
+	  name: 'Article',
+	  component: Article 
 	}
     // {
     //   path: '/',

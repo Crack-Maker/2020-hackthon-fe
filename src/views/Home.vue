@@ -15,8 +15,12 @@
 		     @on-submit="onSubmit"
 		     ref="search"></search>
 	 </div> -->
-	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
-			  首页</x-header>
+	<x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+	position:absolute;left:0;top:0;z-index:100;">
+				<div slot="overwrite-left">
+					<img src="../../static/img/消息.svg"/>
+				</div>
+	</x-header>
 	<HomeSlider></HomeSlider>
 	<panel :header="''" :list="articleList" :type="'5'"></panel>
 	<br />
@@ -80,11 +84,11 @@ export default {
 	  results: [],
 	  value: 'test',
 	  articleList: [{
-	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: '../../static/img/plane1.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
-          path: '/component/radio',
+          path: '/Article',
           replace: false
         },
         meta: {
@@ -93,11 +97,11 @@ export default {
           other: '日常'
         }
 	  },{
-	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: '../../static/img/fish1.png',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
-          path: '/component/radio',
+          path: '/Article',
           replace: false
         },
         meta: {
@@ -106,11 +110,11 @@ export default {
           other: '日常'
         }
 	  },{
-	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: '../../static/img/franxx2.png',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
-          path: '/component/radio',
+          path: '/Article',
           replace: false
         },
         meta: {
@@ -119,11 +123,11 @@ export default {
           other: '日常'
         }
 	  },{
-	      src: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
+	      src: '../../static/img/people1.jpg',
         title: '面朝大海，春暖花开',
         desc: '这里是内容',
         url: {
-          path: '/component/radio',
+          path: '/Article',
           replace: false
         },
         meta: {
