@@ -18,24 +18,26 @@
 		  <img style="height: 3.5rem;margin-left: 1rem;
 		  background-size: auto 100%;" align="left" src="../../static/img/头像.svg"/>
 		  <!-- 显示用户昵称 -->
-		  <div style="font-size: 0.6rem;">Refuel Island</div>
+		  <div class="name-font-style">Refuel Island</div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
 		  <div slot="content" class="card-demo-flex card-demo-content01">
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkHistory()">
-		  			  <span>1130</span>
+		  			  135
 		  			  <br/>最近发布
 		  			</div>
 		    </div>
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkMyFocus()">
-		  			  <span>15</span>
+		  			  <!-- <span>15</span> -->
+					  99
 		  			  <br/>关注
 		  			</div>
 		    </div>
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkCollect()">
-		  			  <span>1</span>
+		  			  <!-- <span>10</span> -->
+					  10
 		  			  <br/>收藏
 		  			</div>
 		    </div>
@@ -168,8 +170,13 @@ export default {
 	background: url(../../static/img/frank.svg)no-repeat;
 	background-size:100% auto;
 }
+.name-font-style{
+	font-size: 0.7rem;
+	font-family: zzgf, Arial;
+}
 .normal-font-size{
   font-size: 0.5rem;
+  font-family: zzgf, Arial;
   color:#393A31;
 }
 .grid-center {
