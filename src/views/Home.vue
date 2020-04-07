@@ -18,7 +18,7 @@
 	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
 			  首页</x-header>
 	<HomeSlider></HomeSlider>
-	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
+	<panel :header="''" :list="articleList" :type="'5'"></panel>
 	<br />
 	<TabBarDemo></TabBarDemo>
 <!-- 		4.5日注释掉，暂时用panel替换掉它，可以作为有需要的时候的例子	 -->  

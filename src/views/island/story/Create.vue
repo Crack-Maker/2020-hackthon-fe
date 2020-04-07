@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="create-background">
 	  <x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
 	   @on-click-more="showMenus = true">写故事</x-header>
 		<group :title="'My story'">
@@ -68,7 +68,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+.create-background {
+  // background-image: url(../../../assets/imgs/bg-island.png) !important;
+  // background-repeat: no-repeat;
+  // background-position: 4.5rem 0rem;
+  // background-size: 8rem;
+}
 .left-font-position{
 	text-align: left;
 }
