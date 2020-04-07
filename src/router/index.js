@@ -17,6 +17,8 @@ import Friend from '@/views/user/Friend.vue'
 import MyFocus from '@/views/user/MyFocus.vue'
 import Collect from '@/views/user/Collect.vue'
 import Create from '@/views/island/story/Create.vue'
+import ChangeName from '@/views/user/setup/ChangeName.vue'
+import ChangePassword from '@/views/user/setup/ChangePassword.vue'
 
 Vue.use(Router)
 
@@ -112,6 +114,16 @@ export default new Router({
 	  path: '/Create',
 	  name: 'Create',
 	  component: Create
+	},
+	{
+	  path: '/ChangeName',
+	  name: 'ChangeName',
+	  component: ChangeName
+	},
+	{
+	  path: '/ChangePassword',
+	  name: 'ChangePassword',
+	  component: ChangePassword
 	}
     // {
     //   path: '/',
