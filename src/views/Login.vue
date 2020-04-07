@@ -125,7 +125,7 @@ export default {
 }
 
 .login-box {
-  width: 10.1rem;
+  width: 10.2rem;
   margin-top: 3.5rem;
   margin-left: 0.4rem;
 }
@@ -140,9 +140,9 @@ export default {
 .border {
   border: 1px solid #fdfdfd;
   border-radius: 45px;
-  -webkit-box-shadow: 1px 4px 5px #c3c3c3;
-  box-shadow: 1px 4px 5px #c3c3c3;
-  margin: 0.2rem;
+  -webkit-box-shadow: 1px 3px 5px #d1cece;
+  box-shadow: 1px 3px 5px #d1cece;
+  margin: 0.3rem;
   padding: 0.4rem 0.8rem;
   text-indent: 0.5em;
   font-size: 0.45rem;
@@ -173,25 +173,9 @@ export default {
   color: #5cc2b6;
   margin-top: 0.35rem;
 }
-</style>
-<style scoped lang="less">
-.no-border div:before {
-  display: none;
-}
-.no-border div:after {
-  display: none;
-}
+
 .no-border div {
   margin-top: 0.1rem;
-}
-input::-webkit-input-placeholder {
-  color: #afb3b5;
-  letter-spacing: 0.1rem;
-}
-
-input::placeholder {
-  color: #afb3b5;
-  letter-spacing: 0.02rem;
 }
 
 .vux-input-icon.weui-icon-warn:before {
@@ -200,5 +184,16 @@ input::placeholder {
 
 .weui-icon-warn {
   font-size: 0.5rem !important;
+}
+</style>
+<style>
+input::-webkit-input-placeholder {
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
+}
+
+input::placeholder {
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
 }
 </style>
