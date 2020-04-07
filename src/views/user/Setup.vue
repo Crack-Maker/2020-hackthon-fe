@@ -24,7 +24,7 @@
 				<cell title="账号设置" @click.native="handleLogin"></cell>
 				<br />
 				<cell title="问题与反馈" @click.native="handleLogin"></cell>
-				<br /><br />
+				<br /><br /><br />
 				<box class="exit-box">
 					<x-button @click.native="handleLogin" class="exit-btn">退出</x-button>
 				</box>

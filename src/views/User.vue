@@ -15,8 +15,8 @@
 		  </x-header>
 	  <div class="main-info">
 		  <br />
-		  <img style="height: 3.5rem;margin-left: 1rem;margin-top: -1rem;
-		  background-size: auto 100%;" align="left" src="../../static/img/头像.svg"/>
+		  <img style="height: 3.5rem;margin-left: 1rem;margin-top: -1rem;border-radius: 2rem;
+		  background-size: auto 100%;" align="left" src="../../static/img/aiji.jpg"/>
 		  <!-- 显示用户昵称 -->
 		  <div class="name-font-style">Refuel Island</div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
