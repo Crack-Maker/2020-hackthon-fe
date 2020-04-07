@@ -17,6 +17,7 @@
 	 </div> -->
 	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
 			  首页</x-header>
+	<HomeSlider></HomeSlider>
 	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
 	<br />
 	<TabBarDemo></TabBarDemo>
@@ -36,6 +37,7 @@
 <script>
 import { XHeader, Masker, Panel, Search } from 'vux'
 import DrawerDemo from '../components/DrawerDemo.vue'
+import HomeSlider from '../components/HomeSlider.vue'
 
 export default {
   name: "Islands",
@@ -44,7 +46,8 @@ export default {
 	  DrawerDemo,
 	  Masker,
 	  Panel,
-	  Search
+	  Search,
+	  HomeSlider
   },
 	 methods: {
     setFocus () {
