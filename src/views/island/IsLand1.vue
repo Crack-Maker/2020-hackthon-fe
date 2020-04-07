@@ -3,7 +3,7 @@
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
 	  			<div slot="overwrite-left" @click="linkToIslands()">
-	  				<img src="../../../static/img/设置.svg"/>
+	  				<x-icon type="ios-arrow-back" size="30"></x-icon>
 	  			</div>
 	  </x-header>
 	   <div class="island1-title">

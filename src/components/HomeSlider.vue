@@ -23,7 +23,7 @@ data () {
        {
          html: 'slider1',
          style: {
-           background: "url(../../static/img/franxx1.png)no-repeat",
+           background: "url(../../static/img/fish1.png)no-repeat",
            'background-size': 'auto 100%',
          }
        },
@@ -37,7 +37,7 @@ data () {
        {
          html: 'slider3',
          style: {
-           background: "url(../../static/img/fish1.png)no-repeat",
+           background: "url(../../static/img/people1.jpg)no-repeat",
            'background-size': 'auto 100%',
          }
        }
