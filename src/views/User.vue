@@ -15,7 +15,7 @@
 		  </x-header>
 	  <div class="main-info">
 		  <br />
-		  <img style="height: 3.5rem;margin-left: 1rem;
+		  <img style="height: 3.5rem;margin-left: 1rem;margin-top: -1rem;
 		  background-size: auto 100%;" align="left" src="../../static/img/头像.svg"/>
 		  <!-- 显示用户昵称 -->
 		  <div class="name-font-style">Refuel Island</div>
@@ -42,6 +42,7 @@
 		  			</div>
 		    </div>
 		  </div>
+		  <br />
 	  </div>
 	<!-- 引入卡片组件 -->
 <!-- <divider>{{ $t('Simple card with header and content') }}</divider>
@@ -173,11 +174,13 @@ export default {
 .name-font-style{
 	font-size: 0.7rem;
 	font-family: zzgf, Arial;
+	margin-top: -1rem;
 }
 .normal-font-size{
   font-size: 0.5rem;
   font-family: zzgf, Arial;
   color:#393A31;
+/*  margin-top: -1rem; */
 }
 .grid-center {
   display: block;
