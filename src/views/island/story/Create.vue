@@ -6,26 +6,36 @@
 	  				<x-icon type="ios-arrow-back" size="30"></x-icon>
 	  			</div>
 	  </x-header>
-			<group >
+			<group>
 				<x-input title="故事名称 &nbsp;|"
 					name="title"
-					placeholder="                  今天来岛遇很开心"
-					class="title border"
+					placeholder="今天来岛遇很开心"
+					class="border"
 					keyboard="number"
 				required></x-input>
 			</group>
 <!-- 				<x-input :placeholder="'标题'"></x-input> -->
 			<div class="left-font-position">
-				<group>
+<!-- 				<group>
 				  <popup-radio title="分类" :options="options3" v-model="option5">
 					<p slot="popup-header" class="vux-1px-b demo3-slot">请选择你的故事类别</p>
-				    <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
+				    <template slot-scope="props" slot="each-item">
 				      <div class="normal-font-size">
 						 <p>{{ props.label }}</p> 
 					  </div>					  					
 				    </template>
 				  </popup-radio>
-				</group>
+				</group> -->
+			    <group label-width="5rem">			  
+			      <popup-picker :popup-title="'请选择你的故事类别'" :title="'分类'" :data="list1" 
+				  v-model="value1" :placeholder="$t('')">
+			        <template slot="title" slot-scope="props">
+			          <span :class="props.labelClass" :style="props.labelStyle" style="height:24px;">			            
+			            <span style="vertical-align:middle;">故事类别</span>
+			          </span>
+			        </template>
+			      </popup-picker>
+			    </group>
 			</div>
 			<group>
 				<x-textarea :max="200" name="description" :placeholder="'  内容'"></x-textarea>
@@ -40,7 +50,7 @@
 </template>
 
 <script>
-import { XTextarea, Group, XInput, XButton, PopupRadio, Box  } from 'vux'
+import { XTextarea, Group, XInput, XButton, PopupRadio, Box, PopupPicker } from 'vux'
 import { AlertModule, Alert, XSwitch, Cell, TransferDomDirective as TransferDom } from 'vux'
 export default {
   name: "Home",
@@ -56,12 +66,15 @@ export default {
 		Alert,
 		XSwitch,
 		PopupRadio,
-		Box
+		Box,
+		PopupPicker
   },
   data () {
     return {
 	  // options3: ['日常', '情感', '励志'],
 	  // option5: '日常',
+	  value1: ['主题拟定型'],
+	  list1: [['人物拟定型', '首句拟定型', '主题拟定型','自定义拟定']],
 	  options3: ['人物拟定型', '首句拟定型', '主题拟定型','自定义拟定'],
 	  option5: '主题拟定型',
     }
@@ -98,9 +111,10 @@ export default {
 }
 .left-font-position{
 	text-align: left;
-	text-indent: 0.2em;
-	font-size: 0.5rem;
-	font-family: zzgf, Arial;
+	// text-indent: 0.2em; //点击选择样式的css样式
+	text-indent: 0.7em;
+	font-size: 0.5rem !important;
+	font-family: zzgf, Arial !important;
 	font-weight: 800;
 	color: #008000;
 	font-weight: 500;
@@ -133,7 +147,7 @@ export default {
   padding: 0.2rem 0rem;
   text-indent: 1.4em;
   font-size: 0.5rem;
-  font-family: zzgf, Arial;
+  font-family: zzgf, Arial !important;
   font-weight: 800;
   color: #008000;
   font-weight: 500;
@@ -152,5 +166,13 @@ export default {
   letter-spacing: 0.1rem;
   font-family: zzgf, Arial;
   font-weight: 400;
+}
+input::-webkit-input-placeholder{
+  font-size: 0.5rem;
+  font-family: zzgf, Arial !important;
+  font-weight: 800;
+  color: #008000;
+  font-weight: 500;
+  text-align: right;
 }
 </style>
