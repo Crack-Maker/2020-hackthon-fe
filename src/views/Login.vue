@@ -45,7 +45,7 @@
     <box class="login-btn-box">
       <x-button @click.native="handleLogin" class="login-btn">登陆</x-button>
     </box>
-    <div onclick="handleRegist" class="regist">还没有账号？快去注册</div>
+    <div @click="handleRegist()" class="regist">还没有账号？快去注册</div>
   </div>
 </template>
 
