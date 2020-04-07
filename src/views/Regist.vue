@@ -1,7 +1,7 @@
 <template>
   <div class="regist">
-		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
-		 @on-click-more="showMenus = true">账号注册</x-header>
+		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: false}"
+		 @on-click-more="showMenus = false">账号注册</x-header>
     <group>
       <x-input
         title

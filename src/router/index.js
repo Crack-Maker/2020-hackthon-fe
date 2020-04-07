@@ -19,6 +19,7 @@ import Collect from '@/views/user/Collect.vue'
 import Create from '@/views/island/story/Create.vue'
 import ChangeName from '@/views/user/setup/ChangeName.vue'
 import ChangePassword from '@/views/user/setup/ChangePassword.vue'
+import Feedback from '@/views/user/setup/Feedback.vue'
 
 Vue.use(Router)
 
@@ -124,6 +125,11 @@ export default new Router({
 	  path: '/ChangePassword',
 	  name: 'ChangePassword',
 	  component: ChangePassword
+	},
+	{
+	  path: '/Feedback',
+	  name: 'Feedback',
+	  component: Feedback
 	}
     // {
     //   path: '/',

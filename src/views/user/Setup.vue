@@ -13,7 +13,7 @@
 		  <div @click="linkToChangeName()" style="position: relative;right: -2.5rem;top: -1rem;"><img src="../../../static/img/home1.svg" /></div>
 		  </div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
-		  <div style="margin-left: -10rem;position: relative;left: -5.2rem;">
+		  <div style="position: relative;left: -2.8rem;top: -1rem;">
 			  <font size="2" color="#888888">换头像</font>
 		  </div>
 		</div>
@@ -23,7 +23,7 @@
 				<br />
 				<cell title="账号设置" @click.native="linkToChangePassword"></cell>
 				<br />
-				<cell title="问题与反馈" @click.native="linkToLogin"></cell>
+				<cell title="问题与反馈" @click.native="linkToFeedback"></cell>
 				<br /><br /><br />
 				<box class="exit-box">
 					<x-button @click.native="linkToUser" class="exit-btn">退出</x-button>
@@ -71,6 +71,11 @@ export default {
 		this.$router.push({
 			path:'/User'
 		})
+	},
+	linkToFeedback(){
+		this.$router.push({
+			path:'/Feedback'
+		})
 	}
   }
 }
@@ -80,6 +85,8 @@ export default {
 .main-body{
 	background: url(../../assets/imgs/bg-island.png)no-repeat !important;
 	background-size:100% auto;
+	/* 禁止页面拖动 */
+	touch-action: none;
 }
 .main-info{
 /* 	background: url(../../static/img/frank.svg)no-repeat;
@@ -94,7 +101,7 @@ export default {
 .exit-btn {
   border-radius: 0;
   background-color: #667d3e !important;
-  color: #008000;
+  color: #FFFFFF;
   height: 1.5rem;
   line-height: 0;
   font-size: 0.75rem;

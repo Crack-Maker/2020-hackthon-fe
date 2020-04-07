@@ -2,7 +2,7 @@
   <div class="login">
     <x-header
       style="width:100%;position:absolute;left:0;top:0;z-index:100;"
-      :right-options="{showMore: true}"
+      :right-options="{showMore: false}"
       @on-click-more="showMenus = true"
     >账号登陆</x-header>
     <div class="title-container">
@@ -94,7 +94,6 @@ export default {
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem;
-  height: 19rem;
 }
 
 .forget-pass {
@@ -175,7 +174,7 @@ export default {
   margin-top: 0.35rem;
 }
 </style>
-<style>
+<style scoped lang="less">
 .no-border div:before {
   display: none;
 }

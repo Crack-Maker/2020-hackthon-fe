@@ -1,6 +1,6 @@
 <template>
   <div class="changePassword">
-		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
+		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: false}"
 		 @on-click-more="showMenus = true">账号设置</x-header>
 	<div class="title-2">账号设置</div>
 	<div class="login-box">
@@ -50,7 +50,7 @@
       <x-input
         title
         type="password"
-        placeholder="再次确认新密码"
+        placeholder="再次输入新密码"
 		class="passwdC border"
         v-model="passwordC"
         :min="6"
@@ -62,7 +62,7 @@
     </group>
 	</div>
     <box class="login-btn-box">
-      <x-button @click.native="handleConfirm" class="login-btn">登陆</x-button>
+      <x-button @click.native="handleConfirm" class="login-btn">确认</x-button>
     </box>
   </div>
 </template>
@@ -111,6 +111,9 @@ export default {
         this.$vux.toast.text("两次输入的密码不一致");
       } else {
         this.$vux.toast.text("修改成功");
+		this.$router.push({
+		  path: "/Setup"
+		});
       }
     }
   },
@@ -128,18 +131,18 @@ export default {
 
 <style scoped lang="less">
 .changePassword {
-  background-image: url(../../../assets/imgs/bg-island.png);
-  background-repeat: no-repeat;
-  background-position: 4.5rem 0rem;
-  background-size: 8rem;
-  height: 19rem;
+  // background-image: url(../../../assets/imgs/bg-island.png);
+  // background-repeat: no-repeat;
+  // background-position: 4.5rem 0rem;
+  // background-size: 8rem;
 }
 .normal-font-size{
   font-size: 0.48rem;
 }
 .title-2 {
   letter-spacing: 0.1rem;
-  margin-left: 0.6rem;
+  margin-left: 0.8rem;
+  margin-top: 3rem !important;
   font-size: 0.75rem;
   font-family: "Noto Sans CJK SC", "Source Han Sans CN";
   font-weight: 1000;
@@ -170,7 +173,7 @@ export default {
 }
 .login-btn-box {
   margin: 0 1rem;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .login-btn {
   border-radius: 10px;
@@ -186,4 +189,13 @@ export default {
 </style>
 
 <style>
+.no-border div:before {
+  display: none;
+}
+.no-border div:after {
+  display: none;
+}
+.no-border div {
+  margin-top: 0.1rem;
+}
 </style>
