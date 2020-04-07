@@ -26,9 +26,9 @@ export default {
   name: "TabBarDemo",
   data() {
     return {
-	  showImageHome:true,
+	  showImageHome:false,
 	  showImageIsland:false,
-	  showImageMine:false,
+	  showImageMine:true,
       isLogin: false,
     }
   },
@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     changeImageHome () {
+		console.log(this.$route.path);
         this.showImageHome = true;
 		this.showImageIsland = false;
 		this.showImageMine = false;

@@ -1,5 +1,7 @@
 <template>
   <div class="regist">
+		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
+		 @on-click-more="showMenus = true">账号注册</x-header>
     <group>
       <x-input
         title
@@ -39,15 +41,18 @@
         required
       ></x-input>
     </group>
-    <p>
+	<div class="normal-font-size">
+		<span>注册后，您的微信账号和手机号都可以登录</span>
+	</div>
+<!--    <p>
       <span>注册后，您的微信账号和手机号都可以登录</span>
-    </p>
+    </p> -->
     <box gap="10px 25px">
       <x-button type="primary" @click.native="handleRegist">注册</x-button>
     </box>
-    <p>
-      <router-link to="/Login">已有账号？去登录</router-link>
-    </p>
+	<div class="normal-font-size">
+		<router-link to="/Login">已有账号？去登录</router-link>
+	</div>
   </div>
 </template>
 
@@ -111,6 +116,9 @@ export default {
 </script>
 
 <style scoped lang="less">
+.normal-font-size{
+  font-size: 0.48rem;
+}
 </style>
 
 <style>
