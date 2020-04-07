@@ -45,7 +45,7 @@ export default {
     },
 	linkToCreate(){
 		this.$router.push({
-			path:'/Create'
+			path:'/CreateTopic'
 		})
 	},
 	linkToIslands(){

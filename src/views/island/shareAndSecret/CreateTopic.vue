@@ -7,32 +7,28 @@
 	  			</div>
 	  </x-header>
 			<group >
-				<x-input title="故事名称 &nbsp;|"
+				<x-input title="标题 &nbsp;|"
 					name="title"
-					placeholder="                  今天来岛遇很开心"
+					placeholder="今天来岛遇很开心"
 					class="title border"
 					keyboard="number"
 				required></x-input>
-			</group>
-<!-- 				<x-input :placeholder="'标题'"></x-input> -->
-			<div class="left-font-position">
-				<group>
-				  <popup-radio title="分类" :options="options3" v-model="option5">
-					<p slot="popup-header" class="vux-1px-b demo3-slot">请选择你的故事类别</p>
-				    <template slot-scope="props" slot="each-item"><!-- use scope="props" when vue < 2.5.0 -->
-				      <div class="normal-font-size">
-						 <p>{{ props.label }}</p> 
-					  </div>					  					
-				    </template>
-				  </popup-radio>
-				</group>
-			</div>
-			<group>
+<!-- 			</group>
+			<group > -->
+				<x-input title="话题 &nbsp;|"
+					name="title"
+					placeholder="今天来岛遇很开心"
+					class="title border"
+					keyboard="number"
+				required></x-input>
+<!-- 			</group>
+			<group> -->
 				<x-textarea :max="200" name="description" :placeholder="'  内容'"></x-textarea>
 			</group>
 			<br />
+			<x-icon type="ios-ionic-outline" size="50"></x-icon>
 			<box class="submit-btn-box">
-			  <x-button @click.native="showPlugin" class="submit-btn">提交</x-button>
+			  <x-button @click.native="showPlugin" class="submit-btn">确认发布</x-button>
 			</box>
 <!-- 	<x-button mini plain @click.native="showPlugin">提交</x-button> -->
 <!-- 	<TabBarDemoIsland></TabBarDemoIsland> -->
@@ -72,8 +68,8 @@ export default {
     },
 	showPlugin () {
       AlertModule.show({
-        title: '提交成功!',
-        content: ('Submit successfully!'),
+        title: '发布成功!',
+        content: ('Publish successfully!'),
         onShow () {
           console.log('Module: I\'m showing')
         },
@@ -130,8 +126,8 @@ export default {
   display: none;
 }
 .border {
-  padding: 0.2rem 0rem;
-  text-indent: 1.4em;
+  padding: 0.4rem 0rem;
+  text-indent: -2.5em;
   font-size: 0.5rem;
   font-family: zzgf, Arial;
   font-weight: 800;
@@ -140,7 +136,7 @@ export default {
 }
 .submit-btn-box {
   margin: 0 1rem;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
 }
 .submit-btn {
   border-radius: 10px;

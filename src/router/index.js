@@ -20,6 +20,7 @@ import Create from '@/views/island/story/Create.vue'
 import ChangeName from '@/views/user/setup/ChangeName.vue'
 import ChangePassword from '@/views/user/setup/ChangePassword.vue'
 import Feedback from '@/views/user/setup/Feedback.vue'
+import CreateTopic from '@/views/island/shareAndSecret/CreateTopic.vue'
 
 Vue.use(Router)
 
@@ -130,6 +131,11 @@ export default new Router({
 	  path: '/Feedback',
 	  name: 'Feedback',
 	  component: Feedback
+	},
+	{
+	  path: '/CreateTopic',
+	  name: 'CreateTopic',
+	  component: CreateTopic
 	}
     // {
     //   path: '/',
