@@ -1,5 +1,6 @@
 <template>
   <div>
+<!-- 	  设计目前不打算这个页面要搜索栏
 	 <div class="normal-font-size">
 		<search
 		     @result-click="resultClick"
@@ -13,7 +14,7 @@
 		     @on-cancel="onCancel"
 		     @on-submit="onSubmit"
 		     ref="search"></search>
-	 </div>
+	 </div> -->
 	<x-header :left-options="{showBack: false}" style="width:100%;position:absolute;left:0;top:0;z-index:100;">
 			  首页</x-header>
 	<panel :header="'最近发布的内容'" :list="articleList" :type="'5'"></panel>
@@ -27,18 +28,6 @@
          <router-link :to="{path: '/' + item.island}">{{item.title}}</router-link>
           <br/>
           <span class="m-time">2020-04-03</span>
-        </div>
-      </masker>
-    </div> -->
-	
-<!-- 	4.1日注释掉，暂时不需要第四个模块,可以作为有需要时候的例子 -->
-<!--    <div style="margin: 10px;overflow: hidden;">
-      <masker style="border-radius: 2px;" color="F9C90C" :opacity="0.8">
-        <div class="m-img" style="background-image:url(https://cdn.xiaotaojiang.com/uploads/56/4b3601364b86fdfd234ef11d8712ad/_.jpg)"></div>
-        <div slot="content" class="m-title">
-          <router-link to="/Login">VUX</router-link>
-          <br/>
-          <span class="m-time">2020-04-01</span>
         </div>
       </masker>
     </div> -->
