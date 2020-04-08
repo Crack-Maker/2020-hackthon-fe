@@ -30,9 +30,9 @@
 								<flexbox-item :span="3/8">
 									<div style="float: left; width: 3.75rem;text-align: right;
 										font-size:0.2rem;color:#999;">2020-4-8
-										<div class="join-btn">
+<!-- 										<div class="join-btn">
 											<x-button mini type="primary" class="join-btn-font">关注</x-button>
-										</div>
+										</div> -->
 									</div>
 								</flexbox-item>
 							</flexbox>
@@ -62,9 +62,9 @@
 								<flexbox-item :span="3/8">
 									<div style="float: left; width: 3.75rem;text-align: right;
 										font-size:0.2rem;color:#999;">2020-4-8
-										<div class="join-btn">
+<!-- 										<div class="join-btn">
 											<x-button mini type="primary" class="join-btn-font">关注</x-button>
-										</div>
+										</div> -->
 									</div>
 								</flexbox-item>
 							</flexbox>
