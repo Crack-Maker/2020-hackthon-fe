@@ -3,7 +3,7 @@
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
 	      <div slot="overwrite-left">
-	      	<img src="../../static/img/消息.svg"/>
+	      	<img src="../../static/img/消息.png"/>
 	      </div>
 		  <!-- 下面这个div用来触发特效 -->
 		  <div>
