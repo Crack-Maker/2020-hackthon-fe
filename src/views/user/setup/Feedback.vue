@@ -28,7 +28,7 @@ export default {
 
 <style scoped lang="less">
 .login {
-  background-image: url(../../../assets/imgs/bg-island.png);
+  background-image: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/bg-island.png);
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem;

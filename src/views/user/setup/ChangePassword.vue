@@ -19,7 +19,7 @@
           is-type="china-mobile"
           required
         >
-          <img slot="label" src="../../../assets/imgs/me.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg" class="logo" />
         </x-input>
       </group>
 	  <group class="no-border">
@@ -50,7 +50,7 @@
           @on-click-clear-icon="password = null"
           required
         >
-          <img slot="label" src="../../../assets/imgs/lock.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
         </x-input>
       </group>
 	  <group class="no-border">
@@ -64,7 +64,7 @@
         :max="16"
         required
       >
-	  <img slot="label" src="../../../assets/imgs/lock.svg" class="logo" />
+	  <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
 	  </x-input>
     </group>
 	</div>
@@ -141,7 +141,7 @@ export default {
 
 <style scoped lang="less">
 .changePassword {
-  // background-image: url(../../../assets/imgs/bg-island.png);
+  // background-image: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/bg-island.png);
   // background-repeat: no-repeat;
   // background-position: 4.5rem 0rem;
   // background-size: 8rem;

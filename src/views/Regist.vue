@@ -26,7 +26,7 @@
           class="border"
           required
         >
-          <img slot="label" src="../assets/imgs/me.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg" class="logo" />
         </x-input>
       </group>
       <group class="no-border">
@@ -40,12 +40,12 @@
           class="border"
           required
         >
-          <img slot="label" src="../assets/imgs/phone.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/phone.svg" class="logo" />
         </x-input>
       </group>
       <group class="no-border">
         <x-input title type="text" placeholder="请输入验证码" v-model="code" class="border" required>
-          <img slot="label" src="../assets/imgs/code.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/code.svg" class="logo" />
           <x-button
             slot="right"
             type="primary"
@@ -66,7 +66,7 @@
           :max="16"
           required
         >
-          <img slot="label" src="../assets/imgs/lock.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
         </x-input>
       </group>
     </div>
@@ -162,7 +162,7 @@ export default {
 .title-container {
   padding-top: 1rem;
   margin-left: 0.7rem;
-  background-image: url(../assets/imgs/pen.svg);
+  background-image: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/pen.svg);
   background-repeat: no-repeat;
   background-position: 6.4rem 1rem;
   background-size: 3.1rem;

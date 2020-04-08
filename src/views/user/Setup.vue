@@ -91,7 +91,7 @@ export default {
 
 <style scoped lang="less">
 .main-body{
-	background: url(../../assets/imgs/bg-island.png)no-repeat !important;
+	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/bg-island.png)no-repeat !important;
 	background-size:100% auto;
 	/* 禁止页面拖动 */
 	touch-action: none;

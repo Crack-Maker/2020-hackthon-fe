@@ -174,7 +174,7 @@ function getResult (val) {
 
 <style scoped>
 .island1-background {
-/*  background-image: url(../../assets/imgs/bg-island.png) !important;
+/*  background-image: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/bg-island.png) !important;
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem; */
