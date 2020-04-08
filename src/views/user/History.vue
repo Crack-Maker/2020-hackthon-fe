@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="history-style">
 	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 		  position:absolute;left:0;top:0;z-index:100;">
 		  	<div slot="overwrite-left" @click="handleBack()">
@@ -102,6 +102,11 @@ export default {
 </script>
 
 <style scoped>
+.history-style{
+  font-size: 0.5rem;
+  font-family: zzgf, Arial;
+  color:#393A31;
+}
 .sub-item {
   color: #888;
 }
