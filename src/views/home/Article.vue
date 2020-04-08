@@ -57,7 +57,7 @@
 	 			<flexbox-item :span="3/8">
 	 				<div style="float: left; width: 3.75rem;text-align: right;
 	 					font-size:0.4rem;color:#999;" >135
-	 						<img src="../../../static/img/点赞1.png"/>
+	 						<img src="../../../static/img/like1.png"/>
 	 				</div>
 	 			</flexbox-item>
 	 		</flexbox>
@@ -84,7 +84,7 @@
 	 			<flexbox-item :span="3/8">
 	 				<div style="float: left; width: 3.75rem;text-align: right;
 	 					font-size:0.4rem;color:#999;" >126
-	 						<img src="../../../static/img/点赞1.png"/>
+	 						<img src="../../../static/img/like1.png"/>
 	 				</div>
 	 			</flexbox-item>
 	 		</flexbox>

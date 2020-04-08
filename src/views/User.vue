@@ -3,14 +3,14 @@
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
 	      <div slot="overwrite-left" @click="linkMessage()">
-	      	<img src="../../static/img/消息.png"/>
+	      	<img src="../../static/img/message.png"/>
 	      </div>
 		  <!-- 下面这个div用来触发特效 -->
 		  <div>
 			  <font size="2" color="#888888">——已来到岛遇XX天——</font>
 		  </div>
 		  <div slot="right" @click="linkSetup()">
-			<img src="../../static/img/设置.svg"/>
+			<img src="../../static/img/settings.svg"/>
 		  </div>
 		  </x-header>
 	  <div class="main-info">

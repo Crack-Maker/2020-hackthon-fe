@@ -9,7 +9,7 @@
 				<font size="2" color="#888888">——已来到岛遇XX天——</font>
 			</div>
 			<div slot="right" @click="linkSetup()">
-				<img src="../../static/img/设置.svg"/>
+				<img src="../../static/img/settings.svg"/>
 			</div>
 	</x-header>
 	

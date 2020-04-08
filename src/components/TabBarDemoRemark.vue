@@ -4,15 +4,15 @@
      <tabbar slot="bottom" class="footerGuide">
 		<tabbar-item @on-item-click="changeImageHome" >
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageHome" src="../../static/img/点赞1.png" />
-				<img slot="icon" v-if="showImageHome" src="../../static/img/点赞2.png" />
+				<img slot="icon" v-if="!showImageHome" src="../../static/img/like1.png" />
+				<img slot="icon" v-if="showImageHome" src="../../static/img/like2.png" />
 			</div>
 		  <<!-- span slot="label">首页</span> -->
 		</tabbar-item>
         <tabbar-item @on-item-click="changeImageIsland" >
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageIsland" src="../../static/img/收藏1.png"/>
-				<img slot="icon" v-if="showImageIsland" src="../../static/img/收藏2.png"/>
+				<img slot="icon" v-if="!showImageIsland" src="../../static/img/favorites1.png"/>
+				<img slot="icon" v-if="showImageIsland" src="../../static/img/favorites2.png"/>
 			</div>
         </tabbar-item>
         <tabbar-item @on-item-click="changeImageMine"  badge="1">
