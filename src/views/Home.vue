@@ -7,12 +7,11 @@
 		</div>
 	</x-header>
 	<HomeSlider></HomeSlider>
-	<ViewBox>
 	<div class="island2-content">
 		<flexbox orient="vertical">
 			<flexbox-item>
 				<div class="flex-demo"><card>
-					<div slot="content" class="card-padding">
+					<div slot="content" class="card-padding" @click="linkArticle()">
 						<flexbox :gutter="0">
 							<flexbox-item :span="1/4">
 								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
@@ -44,7 +43,7 @@
 			</flexbox-item>
 			<flexbox-item>
 				<div class="flex-demo"><card>
-					<div slot="content" class="card-padding">
+					<div slot="content" class="card-padding" @click="linkArticle()">
 						<flexbox :gutter="0">
 							<flexbox-item :span="1/4">
 								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
@@ -76,7 +75,6 @@
 			</flexbox-item>
 	   	</flexbox>			
 	</div>
-	</ViewBox>
 	<br />
 	<TabBarDemo></TabBarDemo>
   </div>
@@ -103,6 +101,11 @@ export default {
 		 	this.$router.push({
 		 		path:'/Message'
 		 	})
+		},
+		linkArticle(){
+		 	this.$router.push({
+		 		path:'/Article'
+		 	})
 		}
 	},
 	data () {
@@ -116,6 +119,7 @@ export default {
 <style scoped lang="less">
 .home-style{
 	font-family: zzgf, Arial !important;
+	width: 100%;
 }
 .m-img {
   // padding-bottom: 33%;
