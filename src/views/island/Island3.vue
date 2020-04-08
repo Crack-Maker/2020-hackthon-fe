@@ -1,17 +1,17 @@
 <template>
-  <div class="island2-background">
+  <div class="island3-background">
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
 	  			<div slot="overwrite-left" @click="linkToIslands()">
 	  				<x-icon type="ios-arrow-back" size="30"></x-icon>
 	  			</div>
 	  </x-header>
-		<div class="island2-title">
+		<div class="island3-title">
 		   秘密岛
 		   <div ><img style="width: 5rem;margin-right: -4.5rem;margin-top: -3.2rem;z-index: -100;
 		  background-size:100% auto;" align="right" src="../../../static/img/island3.png"/></div>
 		</div>
-		<div class="island2-content">
+		<div class="island3-content">
 			<flexbox orient="vertical">
 				<flexbox-item>
 					<div class="flex-demo"><card>
@@ -123,9 +123,7 @@ export default {
 		})
 	},
 	linkToIslands(){
-		this.$router.push({
-			path:'/Islands'
-		})
+		this.$router.go(-1)
 	}
   }
 }
@@ -133,13 +131,13 @@ export default {
 </script>
 
 <style scoped>
-.island2-background {
+.island3-background {
 /*  background-image: url(../../assets/imgs/bg-island.png) !important;
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem; */
 }
-.island2-title{
+.island3-title{
 	position: relative;
 	left: -0.5rem;
 	top: 1rem;
@@ -150,7 +148,7 @@ export default {
 	font-weight: 800;
 	width: 6.5rem;
 }
-.island2-content{
+.island3-content{
 	position: relative;
 /* 	left: -2.5rem; */
 	top: 0rem;

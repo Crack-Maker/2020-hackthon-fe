@@ -1,15 +1,18 @@
 <template>
-<div>
+<div class="message-style">
 	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 		  position:absolute;left:0;top:0;z-index:100;">
 		  	<div slot="overwrite-left" @click="handleBack()">
 		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
 		  	</div>
+			<div>
+				<font size="2" color="#888888">——已来到岛遇XX天——</font>
+			</div>
+			<div slot="right" @click="linkSetup()">
+				<img src="../../static/img/设置.svg"/>
+			</div>
 	</x-header>
-	 <div class="feedback-font-size">
-		<p>这里是未完成前后端交互的文章界面</p>
-	 </div>
-	 <TabBarDemoUser></TabBarDemoUser>
+	
 </div>
 </template>
 
@@ -21,24 +24,18 @@ export default {
   	//页面跳转方法
 	handleBack() {
 		this.$router.go(-1)
+	},
+	linkSetup(){
+		this.$router.push({
+			path:'/Setup'
+		})
 	}
   }
 }
 </script>
 
-<style scoped lang="less">
-.login {
-  background-image: url(../../assets/imgs/bg-island.png);
-  background-repeat: no-repeat;
-  background-position: 4.5rem 0rem;
-  background-size: 8rem;
-}
-.feedback-font-size{
-  margin-top: 7.5rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.1rem;
-  font-family: zzgf, Arial;
-  font-weight: 400;
+<style>
+.message-style{
+	font-family: zzgf, Arial;
 }
 </style>
-

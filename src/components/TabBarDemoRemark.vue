@@ -10,14 +10,14 @@
 		</tabbar-item>
         <tabbar-item @on-item-click="changeImageIsland" >
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageIsland" src="../../static/img/收藏1.png"/>
-				<img slot="icon" v-if="showImageIsland" src="../../static/img/island2.svg"/>
+				<img slot="icon" v-if="!showImageIsland" src="../../static/img/收藏2.png"/>
+				<img slot="icon" v-if="showImageIsland" src="../../static/img/收藏2.png"/>
 			</div>
         </tabbar-item>
         <tabbar-item @on-item-click="changeImageMine"  badge="1">
 			<div slot="label">135
 				<img slot="icon" v-if="!showImageMine" src="../../static/img/评论1.png" />
-				<img slot="icon" v-if="showImageMine" src="../../static/img/mine2.svg" />
+				<img slot="icon" v-if="showImageMine" src="../../static/img/评论1.png" />
 			</div>
         </tabbar-item>
       </tabbar>

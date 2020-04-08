@@ -2,7 +2,7 @@
 	<div class="user-style">
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
-	      <div slot="overwrite-left">
+	      <div slot="overwrite-left" @click="linkMessage()">
 	      	<img src="../../static/img/消息.png"/>
 	      </div>
 		  <!-- 下面这个div用来触发特效 -->
@@ -23,7 +23,7 @@
 		  <div slot="content" class="card-demo-flex card-demo-content01">
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkHistory()">
-		  			  135
+		  			  120
 		  			  <br/>最近发布
 		  			</div>
 		    </div>
@@ -65,7 +65,7 @@
 		<cell-box is-link @click.native="linkFriend">我的好友</cell-box>
 		<cell-box is-link @click.native="linkAbility">我的属性</cell-box>
 		<cell-box is-link @click.native="linkIsland">秘密の岛</cell-box>
-		<cell-box is-link @click.native="linkSetup">内容发布</cell-box>
+		<cell-box is-link @click.native="linkTopic">内容发布</cell-box>
       </group>
 	<!--  <divider><font size="4">我的秘密岛</font></divider> -->
 	      <card>
@@ -120,6 +120,11 @@ export default {
 			path:'/Setup'
 		})
 	},
+	linkMessage(){
+		this.$router.push({
+			path:'/Message'
+		})
+	},
 	linkAbility(){
 		this.$router.push({
 			path:'/Ability'
@@ -128,6 +133,11 @@ export default {
 	linkIsland(){
 		this.$router.push({
 			path:'/Island3'
+		})
+	},
+	linkTopic(){
+		this.$router.push({
+			path:'/CreateTopic'
 		})
 	}
   },

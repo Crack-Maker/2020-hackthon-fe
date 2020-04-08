@@ -23,7 +23,9 @@
         </x-input>
       </group>
 	  <group class="no-border">
-		<x-input title type="text" class="confirm border" placeholder="请输入验证码" v-model="code" required>
+		<x-input 
+		title="验证码 |"
+		type="text" class="confirm border" placeholder="" v-model="code" required>
         <x-button
           slot="right"
           type="primary"
@@ -32,6 +34,7 @@
           @click.native="handleGetCode"
           style="width: 100px;"
         >{{getCode.txt}}</x-button>
+		<img slot="label" src="../../../../static/img/confirm.png" class="logo" />
 		</x-input>
 	  </group>
       <group class="no-border">
@@ -142,6 +145,7 @@ export default {
   // background-repeat: no-repeat;
   // background-position: 4.5rem 0rem;
   // background-size: 8rem;
+  font-family: zzgf, Arial;
 }
 .normal-font-size{
   font-size: 0.48rem;
@@ -158,7 +162,7 @@ export default {
 }
 .border {
   border: 1px solid #fdfdfd;
-  border-radius: 10px;
+  border-radius: 45px;
   -webkit-box-shadow: 1px 4px 5px #c3c3c3;
   box-shadow: 1px 4px 5px #c3c3c3;
   margin: 0.2rem;
@@ -204,5 +208,9 @@ export default {
 }
 .no-border div {
   margin-top: 0.1rem;
+}
+input::-webkit-input-placeholder {
+	font-family: zzgf, Arial;
+	letter-spacing: 0.02rem;
 }
 </style>

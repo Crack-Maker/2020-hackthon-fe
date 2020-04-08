@@ -178,6 +178,7 @@ function getResult (val) {
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem; */
+  width: 100%;
 }
 .island1-title{
 	position: relative;
@@ -191,9 +192,9 @@ function getResult (val) {
 	width: 6.5rem;
 }
 .island1-content{
-	position: relative;
+	position: absolute;
 /* 	left: -2.5rem; */
-	top: 0rem;
+	top: 8.5rem;
 	color: #393A31;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
@@ -201,9 +202,10 @@ function getResult (val) {
 	font-weight: 800;
 }
 .create-icon{
-/* 	position: absolute;
-	right: -0.2rem;
-	z-index: 1rem; */
+	position: relative;
+/* 	right: -0.2rem; */
+	bottom: 2rem;
+	z-index: 1rem;
 /* 	position: absolute; */
 	width: 50px;
 	height: 50px;
