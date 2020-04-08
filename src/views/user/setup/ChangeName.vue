@@ -1,7 +1,11 @@
 <template>
   <div class="changePassword">
-		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: false}"
-		 @on-click-more="showMenus = false">个人信息</x-header>
+		<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+			  position:absolute;left:0;top:0;z-index:100;">
+			  	<div slot="overwrite-left" @click="handleBack()">
+			  		<x-icon type="ios-arrow-back" size="30"></x-icon>
+			  	</div>
+		</x-header>
 	<div class="title-2">编辑个人信息</div>
 	<div class="login-box">
       <group class="no-border">
@@ -62,7 +66,10 @@ export default {
 		this.$router.push({
 		  path: "/Setup"
 		});
-    }
+    },
+	handleBack() {
+		this.$router.go(-1)
+	}
   },
   components: {
     XInput,

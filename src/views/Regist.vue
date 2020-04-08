@@ -1,10 +1,11 @@
 <template>
   <div class="regist">
-    <x-header
-      style="width:100%;position:absolute;left:0;top:0;z-index:100;"
-      :right-options="{showMore: false}"
-      @on-click-more="showMenus = false"
-    >账号注册</x-header>
+    <x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+    position:absolute;left:0;top:0;z-index:100;">
+    			<div slot="overwrite-left" @click="handleBack()">
+    				<x-icon type="ios-arrow-back" size="30"></x-icon>
+    			</div>
+    </x-header>
     <div class="title-container">
       <div class="title-1">Welcome to the</div>
       <div class="title-2">ISLAND</div>
@@ -126,7 +127,10 @@ export default {
       } else {
         this.$vux.toast.text("注册成功");
       }
-    }
+    },
+	handleBack() {
+		this.$router.go(-1)
+	}
   },
   created() {
     window.document.title = "注册";

@@ -1,7 +1,11 @@
 <template>
   <div class="changePassword">
-		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: false}"
-		 @on-click-more="showMenus = true">账号设置</x-header>
+		<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+			  position:absolute;left:0;top:0;z-index:100;">
+			  	<div slot="overwrite-left" @click="handleBack()">
+			  		<x-icon type="ios-arrow-back" size="30"></x-icon>
+			  	</div>
+		</x-header>
 	<div class="title-2">账号设置</div>
 	<div class="login-box">
       <group class="no-border">
@@ -115,7 +119,10 @@ export default {
 		  path: "/Setup"
 		});
       }
-    }
+    },
+	handleBack() {
+		this.$router.go(-1)
+	}
   },
   created() {
     window.document.title = "注册";

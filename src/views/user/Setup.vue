@@ -1,7 +1,11 @@
 <template>
 	<div class="main-body">
-		<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: false}"
-		>设置</x-header>
+		<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+			  position:absolute;left:0;top:0;z-index:100;">
+			  			<div slot="overwrite-left" @click="handleBack()">
+			  				<x-icon type="ios-arrow-back" size="30"></x-icon>
+			  			</div>
+		</x-header>
 		<div class="main-info">
 		  <br />
 		  <div>
@@ -76,6 +80,9 @@ export default {
 		this.$router.push({
 			path:'/Feedback'
 		})
+	},
+	handleBack() {
+		 this.$router.go(-1)
 	}
   }
 }

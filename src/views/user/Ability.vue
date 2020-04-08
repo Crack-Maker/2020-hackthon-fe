@@ -1,7 +1,11 @@
 <template>
   <div class="normal-font-size">
-	<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
-	 @on-click-more="showMenus = true">属性</x-header>
+	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+		  position:absolute;left:0;top:0;z-index:100;">
+		  	<div slot="overwrite-left" @click="handleBack()">
+		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
+		  	</div>
+	</x-header>
 	 <br />
 	<div>
 		<p>见识:{{someList[0].percent*2.5}}</p>
@@ -50,6 +54,11 @@ export default {
 		  	percent:50
 		}]
     }
+  },
+  methods:{
+	  handleBack() {
+	  	this.$router.go(-1)
+	}
   }
 }
 </script>

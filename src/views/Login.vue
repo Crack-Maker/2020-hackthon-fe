@@ -1,10 +1,11 @@
 <template>
   <div class="login">
-    <x-header
-      style="width:100%;position:absolute;left:0;top:0;z-index:100;"
-      :right-options="{showMore: false}"
-      @on-click-more="showMenus = true"
-    >账号登陆</x-header>
+    <x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+    	  position:absolute;left:0;top:0;z-index:100;">
+    	  			<div slot="overwrite-left" @click="handleBack()">
+    	  				<x-icon type="ios-arrow-back" size="30"></x-icon>
+    	  			</div>
+    </x-header>
     <div class="title-container">
       <div class="title-1">Welcome to the</div>
       <div class="title-2">ISLAND</div>
@@ -79,7 +80,10 @@ export default {
       this.$router.push({
         path: "/Regist"
       });
-    }
+    },
+		handleBack() {
+			this.$router.go(-1)
+		}
   }
 };
 </script>

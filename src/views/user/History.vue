@@ -1,7 +1,11 @@
 <template>
 	<div>
-	<x-header style="width:100%;position:absolute;left:0;top:0;z-index:100;" :right-options="{showMore: true}"
-	 @on-click-more="showMenus = true">最近发布</x-header>
+	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+		  position:absolute;left:0;top:0;z-index:100;">
+		  	<div slot="overwrite-left" @click="handleBack()">
+		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
+		  	</div>
+	</x-header>
 	<group :title="'最近发布'">
       <cell
       :title="'4月4日'"
@@ -78,7 +82,10 @@ export default {
   methods: {
     onClick () {
       console.log('on click')
-    }
+    },
+	handleBack() {
+		this.$router.go(-1)
+	}	
   },
   data () {
     return {
