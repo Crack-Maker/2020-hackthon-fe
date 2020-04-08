@@ -1,10 +1,14 @@
 <template>
   <div class="login">
-    <x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
-    	  position:absolute;left:0;top:0;z-index:100;">
-    	  			<div slot="overwrite-left" @click="handleBack()">
-    	  				<x-icon type="ios-arrow-back" size="30"></x-icon>
-    	  			</div>
+    <x-header
+      :left-options="{showBack: true}"
+      :right-options="{showMore: false}"
+      style="width:100%;background-color:#FFFFFF ;
+    	  position:absolute;left:0;top:0;z-index:100;"
+    >
+      <div slot="overwrite-left" @click="handleBack()">
+        <x-icon type="ios-arrow-back" size="30"></x-icon>
+      </div>
     </x-header>
     <div class="title-container">
       <div class="title-1">Welcome to the</div>
@@ -81,9 +85,9 @@ export default {
         path: "/Regist"
       });
     },
-		handleBack() {
-			this.$router.go(-1)
-		}
+    handleBack() {
+      this.$router.go(-1);
+    }
   }
 };
 </script>
@@ -192,7 +196,7 @@ export default {
 </style>
 <style>
 input::-webkit-input-placeholder {
-	font-family: zzgf, Arial;
+  font-family: zzgf, Arial;
   color: #afb3b5;
   letter-spacing: 0.02rem;
 }

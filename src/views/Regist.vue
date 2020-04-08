@@ -1,70 +1,74 @@
 <template>
   <div class="regist">
-    <x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
-    position:absolute;left:0;top:0;z-index:100;">
-    			<div slot="overwrite-left" @click="handleBack()">
-    				<x-icon type="ios-arrow-back" size="30"></x-icon>
-    			</div>
+    <x-header
+      :left-options="{showBack: true}"
+      :right-options="{showMore: false}"
+      style="width:100%;background-color:#FFFFFF ;
+    position:absolute;left:0;top:0;z-index:100;"
+    >
+      <div slot="overwrite-left" @click="handleBack()">
+        <x-icon type="ios-arrow-back" size="30"></x-icon>
+      </div>
     </x-header>
     <div class="title-container">
       <div class="title-1">Welcome to the</div>
       <div class="title-2">ISLAND</div>
     </div>
     <div class="regist-box">
-    <group class="no-border">
-      <x-input
-        title="昵称 |"
-        name="nickname"
-        placeholder="给自己取个昵称吧"
-        v-model="nickname"
-        keyboard="number"
-        is-type="china-mobile"
-        class="border"
-        required
-      >
-        <img slot="label" src="../assets/imgs/me.svg" class="logo" />
-      </x-input>
-    </group>
-    <group class="no-border">
-      <x-input
-        title="手机 |"
-        name="phone"
-        placeholder="请输入手机号码"
-        v-model="phone"
-        keyboard="number"
-        is-type="china-mobile"
-        class="border"
-        required
-      >
-        <img slot="label" src="../assets/imgs/phone.svg" class="logo" />
-      </x-input>
-    </group>
-    <group class="no-border">
-      <x-input title type="text" placeholder="请输入验证码" v-model="code" class="border" required>
-        <img slot="label" src="../assets/imgs/code.svg" class="logo" />
-        <x-button
-          slot="right"
-          type="primary"
-          mini
-          :disabled="getCode.disabled"
-          @click.native="handleGetCode"
-        >{{getCode.txt}}</x-button>
-      </x-input>
-    </group>
-    <group class="no-border">
-      <x-input
-        title
-        type="password"
-        class="border"
-        placeholder="请设置登录密码"
-        v-model="password"
-        :min="6"
-        :max="16"
-        required
-      >
-        <img slot="label" src="../assets/imgs/lock.svg" class="logo" />
-      </x-input>
-    </group>
+      <group class="no-border">
+        <x-input
+          title="昵称 |"
+          name="nickname"
+          placeholder="给自己取个昵称吧"
+          v-model="nickname"
+          keyboard="number"
+          is-type="china-mobile"
+          class="border"
+          required
+        >
+          <img slot="label" src="../assets/imgs/me.svg" class="logo" />
+        </x-input>
+      </group>
+      <group class="no-border">
+        <x-input
+          title="手机 |"
+          name="phone"
+          placeholder="请输入手机号码"
+          v-model="phone"
+          keyboard="number"
+          is-type="china-mobile"
+          class="border"
+          required
+        >
+          <img slot="label" src="../assets/imgs/phone.svg" class="logo" />
+        </x-input>
+      </group>
+      <group class="no-border">
+        <x-input title type="text" placeholder="请输入验证码" v-model="code" class="border" required>
+          <img slot="label" src="../assets/imgs/code.svg" class="logo" />
+          <x-button
+            slot="right"
+            type="primary"
+            mini
+            :disabled="getCode.disabled"
+            @click.native="handleGetCode"
+          >{{getCode.txt}}</x-button>
+        </x-input>
+      </group>
+      <group class="no-border">
+        <x-input
+          title
+          type="password"
+          class="border"
+          placeholder="请设置登录密码"
+          v-model="password"
+          :min="6"
+          :max="16"
+          required
+        >
+          <img slot="label" src="../assets/imgs/lock.svg" class="logo" />
+        </x-input>
+      </group>
     </div>
     <div class="normal-font-size">
       <span>注册后，您的微信账号和手机号都可以登录</span>
@@ -128,9 +132,9 @@ export default {
         this.$vux.toast.text("注册成功");
       }
     },
-	handleBack() {
-		this.$router.go(-1)
-	}
+    handleBack() {
+      this.$router.go(-1);
+    }
   },
   created() {
     window.document.title = "注册";
