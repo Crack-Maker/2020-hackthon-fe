@@ -23,7 +23,7 @@ data () {
        {
          html: 'slider1',
          style: {
-           background: "url(../../static/img/Mask.png)no-repeat",
+           background: "url(../../static/img/mask.png)no-repeat",
            'background-size': '100% 100%',
          }
        },
