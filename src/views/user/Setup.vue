@@ -14,7 +14,8 @@
 		  </div>
 		  <!-- 显示用户昵称 -->
 		  <div class="name-font-style"><p>Refuel Island</p>
-		  <div @click="linkToChangeName()" style="position: relative;right: -2.5rem;top: -1rem;"><img src="../../../static/img/home1.svg" /></div>
+		  <div @click="linkToChangeName()" style="position: relative;right: -2.5rem;top: -1rem;">
+			  <img src="../../../static/img/修改.png" /></div>
 		  </div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
 		  <div style="position: relative;left: -2.8rem;top: -1rem;">

@@ -3,20 +3,20 @@
      <tabbar slot="bottom" class="footerGuide">
 		<tabbar-item @on-item-click="changeImageHome" >
 			<div slot="label">{{admire}}
-				<img slot="icon" v-if="!showImageHome" src="../../static/img/home1.svg" />
-				<img slot="icon" v-if="showImageHome" src="../../static/img/home2.svg" />
+				<img slot="icon" v-if="!showImageHome" src="../../static/img/点赞1.png" />
+				<img slot="icon" v-if="showImageHome" src="../../static/img/点赞2.png" />
 			</div>
 		  <<!-- span slot="label">首页</span> -->
 		</tabbar-item>
         <tabbar-item @on-item-click="changeImageIsland" >
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageIsland" src="../../static/img/island1.svg"/>
+				<img slot="icon" v-if="!showImageIsland" src="../../static/img/收藏1.png"/>
 				<img slot="icon" v-if="showImageIsland" src="../../static/img/island2.svg"/>
 			</div>
         </tabbar-item>
         <tabbar-item @on-item-click="changeImageMine"  badge="1">
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageMine" src="../../static/img/mine1.svg" />
+				<img slot="icon" v-if="!showImageMine" src="../../static/img/评论1.png" />
 				<img slot="icon" v-if="showImageMine" src="../../static/img/mine2.svg" />
 			</div>
         </tabbar-item>
