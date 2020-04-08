@@ -2,7 +2,7 @@
   <div class="home-style">
 	<x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	position:absolute;left:0;top:0;z-index:100;">
-		<div slot="overwrite-left">
+		<div slot="overwrite-left" @click="linkMessage()">
 			<img src="../../static/img/消息.png"/>
 		</div>
 	</x-header>
@@ -87,24 +87,28 @@ import DrawerDemo from '../components/DrawerDemo.vue'
 import HomeSlider from '../components/HomeSlider.vue'
 
 export default {
-  name: "Islands",
-  components: {
-	  DrawerDemo,
-	  HomeSlider,
-	  PopupRadio,
-	  Flexbox, 
-	  FlexboxItem,
-	  Search,
-	  Card,
-	  ViewBox
-  },
-	 methods: {
-
-  },
-  data () {
-    return {
-    }
-  }
+	name: "Islands",
+	components: {
+		DrawerDemo,
+		HomeSlider,
+		PopupRadio,
+		Flexbox, 
+		FlexboxItem,
+		Search,
+		Card,
+		ViewBox
+	},
+	methods: {
+		 linkMessage(){
+		 	this.$router.push({
+		 		path:'/Message'
+		 	})
+		}
+	},
+	data () {
+		return {
+		}
+	}
 }
 
 </script>

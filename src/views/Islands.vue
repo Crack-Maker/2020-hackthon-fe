@@ -2,9 +2,9 @@
   <div class="background-color">
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
-	  			<div slot="overwrite-left">
-	  				<img src="../../static/img/消息.png"/>
-	  			</div>
+	  		<div slot="overwrite-left" @click="linkMessage()">
+	  			<img src="../../static/img/消息.png"/>
+	  		</div>
 	  </x-header>
 	  <br />
 	  <island-slider></island-slider>
@@ -25,6 +25,13 @@ export default {
 	  XHeader,
 	  Masker,
 	  IslandSlider
+  },
+  methods:{
+	  linkMessage(){
+	  	this.$router.push({
+	  		path:'/Message'
+	  	})
+	  }
   },
   // 接受App.vue传递过来的reload方法
   inject:	['reload'],
