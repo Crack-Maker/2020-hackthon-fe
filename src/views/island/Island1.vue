@@ -208,7 +208,7 @@ function getResult(val) {
   width: 100%;
 }
 .para {
-  font-size: 0.3rem;
+  font-size: 0.2rem;
   line-height: 1.2;
   margin-top: 0.2rem; 
 	width: 4.2rem
@@ -227,7 +227,7 @@ function getResult(val) {
 .island1-content {
   /* 	left: -2.5rem; */
   margin-top: 4.9rem;
-  width: 11.2rem;
+  width: 10.6rem;
   color: #393a31;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
