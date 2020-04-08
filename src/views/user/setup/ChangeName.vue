@@ -82,7 +82,7 @@ export default {
 
 <style scoped lang="less">
 .changePassword {
-  background-image: url(../../../../static/img/leaf.png);
+  background-image: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/leaf.png);
   background-repeat: no-repeat;
   // background-position: 4.5rem 0rem;
   background-size: auto 100%; 

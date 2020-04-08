@@ -23,21 +23,21 @@ data () {
        {
          html: 'slider1',
          style: {
-           background: "url(../../static/img/mask.png)no-repeat",
+           background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/mask.png)no-repeat",
            'background-size': '100% 100%',
          }
        },
        {
          html: 'slider2',
          style: {
-           background: "url(../../static/img/fish1.png)no-repeat",
+           background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/fish1.png)no-repeat",
            'background-size': 'auto 100%',
          }
        },
        {
          html: 'slider3',
          style: {
-           background: "url(../../static/img/people1.jpg)no-repeat",
+           background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg)no-repeat",
            'background-size': 'auto 100%',
          }
        }

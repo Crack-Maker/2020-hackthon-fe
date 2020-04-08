@@ -9,9 +9,9 @@
 	<div class="title-2">我的属性</div>
 	<div class="img-style">
 		<img  style="margin-left: -1rem;margin-top: -3rem;z-index: -100;
-		  background-size: 100% auto" src="../../../static/img/card1.png"/>
+		  background-size: 100% auto" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/card1.png"/>
     	<img  style="margin-left: -1rem;margin-top: -0.5rem;z-index: -300;
-		  background-size: 100% auto" src="../../../static/img/card2.png"/>
+		  background-size: 100% auto" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/card2.png"/>
     </div>
   </div>
 </template>

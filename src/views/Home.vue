@@ -3,7 +3,7 @@
 	<x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	position:absolute;left:0;top:0;z-index:100;">
 		<div slot="overwrite-left" @click="linkMessage()">
-			<img src="../../static/img/message.png"/>
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message.png"/>
 		</div>
 	</x-header>
 	<HomeSlider></HomeSlider>
@@ -15,7 +15,7 @@
 						<flexbox :gutter="0">
 							<flexbox-item :span="1/4">
 								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-								background-size: auto 100%;" align="left" src="../../static/img/avatar.png" />
+								background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar.png" />
 							</flexbox-item>  
 							<flexbox-item :span="3/8">
 								<div style="width: 4.25rem;float: left;
@@ -36,7 +36,7 @@
 							历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
 						</p>
 						<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-						 align="middle" src="../../static/img/photo1.png" />
+						 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
 						<TabBarDemoRemark></TabBarDemoRemark>
 					</div></card>
 				</div>
@@ -47,7 +47,7 @@
 						<flexbox :gutter="0">
 							<flexbox-item :span="1/4">
 								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-								background-size: auto 100%;" align="left" src="../../static/img/aiji.jpg" />
+								background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg" />
 							</flexbox-item>  
 							<flexbox-item :span="3/8">
 								<div style="width: 4.25rem;float: left;
@@ -68,7 +68,7 @@
 							历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
 						</p>
 						<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-						 align="middle" src="../../static/img/photo1.png" />
+						 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
 						<TabBarDemoRemark></TabBarDemoRemark>
 					</div></card>
 				</div>
@@ -191,7 +191,7 @@ export default {
 	font-weight: 800;
 }
 .card-padding{
-/* 	background: url(../../../static/img/frank.svg)no-repeat; */
+/* 	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat; */
 	background-size: auto 100%;
 	height: 7rem;
 	padding: 0.5rem 0.5rem 0.6rem 1rem;

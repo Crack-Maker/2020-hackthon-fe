@@ -34,7 +34,7 @@
           @click.native="handleGetCode"
           style="width: 100px;"
         >{{getCode.txt}}</x-button>
-		<img slot="label" src="../../../../static/img/confirm.png" class="logo" />
+		<img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/confirm.png" class="logo" />
 		</x-input>
 	  </group>
       <group class="no-border">

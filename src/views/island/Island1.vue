@@ -9,7 +9,7 @@
 		<div class="island1-title">
 		   故事岛
 		   <div ><img style="width: 5rem;margin-right: -4.5rem;margin-top: -3.2rem;z-index: -100;
-		  background-size:100% auto;" align="right" src="../../../static/img/island1.png"/></div>
+		  background-size:100% auto;" align="right" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island1.png"/></div>
 		</div>
 			  <!-- 搜索栏 -->
 			 <div class="search-style">
@@ -225,7 +225,7 @@ function getResult (val) {
 	font-weight: 800;
 }
 .card-padding{
-	background: url(../../../static/img/frank.svg)no-repeat;
+	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat;
 	background-size: auto 100%;
 	height: 4rem;
 	padding: 1rem 0rem 0.6rem 1rem;

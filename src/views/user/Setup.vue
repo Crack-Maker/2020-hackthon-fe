@@ -10,12 +10,12 @@
 		  <br />
 		  <div>
 			<img style="height: 3.3rem;margin-left: 1rem;
-			background-size: auto 100%;border-radius: 2rem;" align="left" src="../../../static/img/aiji.jpg"/>
+			background-size: auto 100%;border-radius: 2rem;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg"/>
 		  </div>
 		  <!-- 显示用户昵称 -->
 		  <div class="name-font-style"><p>Refuel Island</p>
 		  <div @click="linkToChangeName()" style="position: relative;right: -2.5rem;top: -1rem;">
-			  <img src="../../../static/img/modify.png" /></div>
+			  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/modify.png" /></div>
 		  </div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
 		  <div style="position: relative;left: -2.8rem;top: -1rem;">
@@ -97,7 +97,7 @@ export default {
 	touch-action: none;
 }
 .main-info{
-/* 	background: url(../../static/img/frank.svg)no-repeat;
+/* 	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat;
 	background-size:100% auto; */
 	margin-top: -1rem;
 }

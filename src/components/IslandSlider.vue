@@ -33,7 +33,7 @@ export default {
         {
           html: "故事岛",
           style: {
-            background: "url(../../static/img/island1.png)no-repeat",
+            background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island1.png)no-repeat",
 			'background-size': '100% auto',
             width: "65.33333333%"
           },
@@ -42,7 +42,7 @@ export default {
         {
           html: "分享岛",
           style: {
-            background: "url(../../static/img/island2.png)no-repeat",
+            background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island2.png)no-repeat",
 			'background-size': '100% auto',
             width: "65.33333333%"
           },
@@ -51,7 +51,7 @@ export default {
         {
           html: "秘密岛",
           style: {
-            background: "url(../../static/img/island3.png)no-repeat",
+            background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island3.png)no-repeat",
 			'background-size': '100% auto',
             width: "65.33333333%"
           },

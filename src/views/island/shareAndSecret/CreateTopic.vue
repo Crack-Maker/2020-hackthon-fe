@@ -27,7 +27,7 @@
 			</group>
 			<br />
 			<!-- <x-icon type="ios-ionic-outline" size="50"></x-icon> -->
-			<img src="../../../../static/img/addPhoto.png"/>
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/addPhoto.png"/>
 			<box class="submit-btn-box">
 			  <x-button @click.native="showPlugin" class="submit-btn">确认发布</x-button>
 			</box>

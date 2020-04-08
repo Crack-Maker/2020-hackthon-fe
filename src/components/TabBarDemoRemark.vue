@@ -4,21 +4,21 @@
      <tabbar slot="bottom" class="footerGuide">
 		<tabbar-item @on-item-click="changeImageHome" >
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageHome" src="../../static/img/like1.png" />
-				<img slot="icon" v-if="showImageHome" src="../../static/img/like2.png" />
+				<img slot="icon" v-if="!showImageHome" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/like1.png" />
+				<img slot="icon" v-if="showImageHome" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/like2.png" />
 			</div>
 		  <<!-- span slot="label">首页</span> -->
 		</tabbar-item>
         <tabbar-item @on-item-click="changeImageIsland" >
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageIsland" src="../../static/img/favorites1.png"/>
-				<img slot="icon" v-if="showImageIsland" src="../../static/img/favorites2.png"/>
+				<img slot="icon" v-if="!showImageIsland" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/favorites1.png"/>
+				<img slot="icon" v-if="showImageIsland" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/favorites2.png"/>
 			</div>
         </tabbar-item>
         <tabbar-item @on-item-click="changeImageMine"  badge="1">
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageMine" src="../../static/img/comments1.png" />
-				<img slot="icon" v-if="showImageMine" src="../../static/img/comments1.png" />
+				<img slot="icon" v-if="!showImageMine" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/comments1.png" />
+				<img slot="icon" v-if="showImageMine" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/comments1.png" />
 			</div>
         </tabbar-item>
       </tabbar>

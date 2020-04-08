@@ -11,7 +11,7 @@
 	 		<flexbox :gutter="0">
 	 			<flexbox-item :span="1/4">
 	 				<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-	 				background-size: auto 100%;" align="left" src="../../../static/img/avatar.png" />
+	 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar.png" />
 	 			</flexbox-item>  
 	 			<flexbox-item :span="3/8">
 	 				<div style="width: 4.25rem;float: left;
@@ -36,7 +36,7 @@
 				美丽的白雪公主受继母的嫉妒而被多次置于死地，最后在七个小矮人和王子的帮助下获得新生。爱慕虚荣、贪恋美貌的王后总是爱问镜子：“魔镜魔镜，谁是这个世界上最美的女人？”当镜子说是白雪公主时，王后就伪装成巫婆，骗白雪公主吃下毒苹果。吃下毒苹果的白雪公主被随后出现的王子救了，最终王子和公主幸福地生活在一起，王后得到了应有的惩罚。
 	 		</p>
 	 		<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-	 		 align="middle" src="../../../static/img/photo1.png" />
+	 		 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
 	 		<TabBarDemoRemark></TabBarDemoRemark>
 	 	</div></card>
 	 </div>
@@ -46,7 +46,7 @@
 	 		<flexbox :gutter="0">
 	 			<flexbox-item :span="1/4">
 	 				<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-	 				background-size: auto 100%;" align="left" src="../../../static/img/avatar.png" />
+	 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar.png" />
 	 			</flexbox-item>  
 	 			<flexbox-item :span="3/8">
 	 				<div style="width: 4.25rem;float: left;
@@ -57,7 +57,7 @@
 	 			<flexbox-item :span="3/8">
 	 				<div style="float: left; width: 3.75rem;text-align: right;
 	 					font-size:0.4rem;color:#999;" >135
-	 						<img src="../../../static/img/like1.png"/>
+	 						<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/like1.png"/>
 	 				</div>
 	 			</flexbox-item>
 	 		</flexbox>
@@ -73,7 +73,7 @@
 	 		<flexbox :gutter="0">
 	 			<flexbox-item :span="1/4">
 	 				<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-	 				background-size: auto 100%;" align="left" src="../../../static/img/aiji.jpg" />
+	 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg" />
 	 			</flexbox-item>  
 	 			<flexbox-item :span="3/8">
 	 				<div style="width: 4.25rem;float: left;
@@ -84,7 +84,7 @@
 	 			<flexbox-item :span="3/8">
 	 				<div style="float: left; width: 3.75rem;text-align: right;
 	 					font-size:0.4rem;color:#999;" >126
-	 						<img src="../../../static/img/like1.png"/>
+	 						<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/like1.png"/>
 	 				</div>
 	 			</flexbox-item>
 	 		</flexbox>
@@ -137,7 +137,7 @@ export default {
 	font-weight: 800;
 }
 .card-padding{
-/* 	background: url(../../../static/img/frank.svg)no-repeat; */
+/* 	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat; */
 	background-size: auto 100%;
 	padding: 0.5rem 0.5rem 0.6rem 1rem;
 }

@@ -3,20 +3,20 @@
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
 	      <div slot="overwrite-left" @click="linkMessage()">
-	      	<img src="../../static/img/message.png"/>
+	      	<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message.png"/>
 	      </div>
 		  <!-- 下面这个div用来触发特效 -->
 		  <div>
 			  <font size="2" color="#888888">——已来到岛遇XX天——</font>
 		  </div>
 		  <div slot="right" @click="linkSetup()">
-			<img src="../../static/img/settings.svg"/>
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/settings.svg"/>
 		  </div>
 		  </x-header>
 	  <div class="main-info">
 		  <br />
 		  <img style="height: 3.5rem;margin-left: 1rem;margin-top: -1rem;border-radius: 2rem;
-		  background-size: auto 100%;" align="left" src="../../static/img/aiji.jpg"/>
+		  background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg"/>
 		  <!-- 显示用户昵称 -->
 		  <div class="name-font-style">Refuel Island</div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
@@ -69,7 +69,7 @@
       </group>
 	<!--  <divider><font size="4">我的秘密岛</font></divider> -->
 	      <card>
-	        <img slot="header" src="../../static/img/island3.png" style="width:25%;">
+	        <img slot="header" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island3.png" style="width:25%;">
 	      </card>
 	  <!-- 之后再去用这个组件，具体方法还没写 -->
 	   <br />
@@ -181,7 +181,7 @@ export default {
 	font-family: zzgf, Arial !important;
 }
 .main-info{
-	background: url(../../static/img/frank.svg)no-repeat;
+	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat;
 	background-size:100% auto;
 }
 .name-font-style{
