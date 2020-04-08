@@ -52,6 +52,7 @@ export default {
 .normal-font-size{
   color: #888888;
   font-size: 0.5rem;
+	font-family: zzgf, Arial !important;
 }
 </style>
 

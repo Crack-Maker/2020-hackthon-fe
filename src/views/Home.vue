@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-style">
 <!-- 	  设计目前不打算这个页面要搜索栏
 	 <div class="normal-font-size">
 		<search
@@ -179,6 +179,9 @@ function getResult (val) {
 </script>
 
 <style scoped lang="less">
+.home-style{
+	font-family: zzgf, Arial !important;
+}
 .m-img {
   // padding-bottom: 33%;
   padding-bottom: 45%;

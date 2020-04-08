@@ -174,10 +174,10 @@ function getResult (val) {
 
 <style scoped>
 .island1-background {
-  background-image: url(../../assets/imgs/bg-island.png) !important;
+/*  background-image: url(../../assets/imgs/bg-island.png) !important;
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
-  background-size: 8rem;
+  background-size: 8rem; */
 }
 .island1-title{
 	position: relative;
@@ -241,5 +241,8 @@ function getResult (val) {
 	width: 100%;
 	float:right;
 	z-index: 100;
+	letter-spacing: 0.1rem;
+	font-family: zzgf, Arial;
+	font-weight: 800;
 }
 </style>

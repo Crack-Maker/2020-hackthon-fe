@@ -6,18 +6,52 @@
 	  				<x-icon type="ios-arrow-back" size="30"></x-icon>
 	  			</div>
 	  </x-header>
-	   <div class="island1-title">
+		<div class="island1-title">
 		   分享岛
-	   </div>
-	   <div @click="linkToCreate()" class="create-icon">
-			<x-icon type="ios-plus" size="50"></x-icon>
-	   </div>
-	  <TabBarDemoIsland></TabBarDemoIsland>
+		   <div ><img style="width: 5rem;margin-right: -4.5rem;margin-top: -3.2rem;z-index: -100;
+		  background-size:100% auto;" align="right" src="../../../static/img/island2.png"/></div>
+		</div>
+		<div class="island1-content">
+			<flexbox orient="vertical">
+				<flexbox-item><div class="flex-demo">
+					<card>
+					    <div slot="content" class="card-padding">
+							<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+		  background-size: auto 100%;" align="left" src="../../../static/img/aiji.jpg" />
+							<p style="color:#999;font-size:0.5rem;">白雪公主</p>
+							<br />
+							<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">
+								历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+							</p>
+							<div class="join-btn">
+								<x-button mini type="primary" class="join-btn-font">加入</x-button>
+							</div>
+					    </div>
+					</card>
+				</div></flexbox-item>
+				<flexbox-item><div class="flex-demo">
+					<card>
+					    <div slot="content" class="card-padding">
+							<p style="color:#999;font-size:0.5rem;">白雪公主</p>
+							<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">
+								历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+							</p>
+							<div class="join-btn">
+								<x-button mini type="primary" class="join-btn-font">加入</x-button>
+							</div>
+					    </div>
+					</card>
+				</div></flexbox-item>
+		   	</flexbox>			
+			<div @click="linkToCreate()" class="create-icon">
+			 	<x-icon type="ios-plus" size="50"></x-icon>
+			</div>
+		</div>
   </div>
 </template>
 
 <script>
-import { XTextarea, Group, XInput, XButton, PopupRadio  } from 'vux'
+import { XTextarea, Group, XInput, XButton, PopupRadio, Flexbox, FlexboxItem, Search, Card } from 'vux'
 import { AlertModule, Alert, XSwitch, Cell, TransferDomDirective as TransferDom } from 'vux'
 export default {
   name: "Home",
@@ -32,11 +66,16 @@ export default {
 		Cell,
 		Alert,
 		XSwitch,
-		PopupRadio
+		PopupRadio,
+		Flexbox, 
+		FlexboxItem,
+		Search,
+		Card
   },
   data () {
     return {
-		
+		results: [],
+		value: '',
     }
   },
   methods: {
@@ -45,7 +84,7 @@ export default {
     },
 	linkToCreate(){
 		this.$router.push({
-			path:'/CreateTopic'
+			path:'/Create'
 		})
 	},
 	linkToIslands(){
@@ -55,19 +94,31 @@ export default {
 	}
   }
 }
+
 </script>
 
 <style scoped>
 .island1-background {
-  background-image: url(../../assets/imgs/bg-island.png) !important;
+/*  background-image: url(../../assets/imgs/bg-island.png) !important;
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
-  background-size: 8rem;
+  background-size: 8rem; */
 }
 .island1-title{
 	position: relative;
-	left: -2.5rem;
+	left: -0.5rem;
 	top: 1rem;
+	color: #A52A2A;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	font-family: zzgf, Arial;
+	font-weight: 800;
+	width: 6.5rem;
+}
+.island1-content{
+	position: relative;
+/* 	left: -2.5rem; */
+	top: 0rem;
 	color: #393A31;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
@@ -75,9 +126,32 @@ export default {
 	font-weight: 800;
 }
 .create-icon{
+/* 	position: absolute;
+	right: -0.2rem;
+	z-index: 1rem; */
+/* 	position: absolute; */
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	z-index: 100;
+	float: right;
+/* 	right: -5rem !important; */
+}
+.join-btn{
 	position: relative;
-	top: 1rem;
-	left: -2.6rem;
+/* 	left: 1rem;
+	bottom: 0.6rem; */
+}
+.join-btn-font{
+	letter-spacing: 0.1rem;
+	font-family: zzgf, Arial;
+	font-weight: 800;
+}
+.card-padding{
+/* 	background: url(../../../static/img/frank.svg)no-repeat; */
+	background-size: auto 100%;
+	height: 6rem;
+	padding: 0.5rem 0.5rem 0.6rem 1rem;
 }
 .vux-x-icon {
   fill: #F70968;

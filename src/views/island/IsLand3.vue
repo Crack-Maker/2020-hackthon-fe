@@ -7,8 +7,11 @@
 	  			</div>
 	  </x-header>
 	   <div class="island1-title">
-		   秘密岛
+	      秘密岛
+	      <div ><img style="width: 5rem;margin-right: -4.5rem;margin-top: -3.2rem;z-index: -100;
+	     background-size:100% auto;" align="right" src="../../../static/img/island2.png"/></div>
 	   </div>
+	   
 	   <div @click="linkToCreate()" class="create-icon">
 			<x-icon type="ios-plus" size="50"></x-icon>
 	   </div>
@@ -59,25 +62,28 @@ export default {
 
 <style scoped>
 .island1-background {
-  background-image: url(../../assets/imgs/bg-island.png) !important;
+/*  background-image: url(../../assets/imgs/bg-island.png) !important;
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
-  background-size: 8rem;
+  background-size: 8rem; */
 }
 .island1-title{
 	position: relative;
-	left: -2.5rem;
+	left: -0.5rem;
 	top: 1rem;
-	color: #393A31;
+	color: #A52A2A;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
 	font-family: zzgf, Arial;
 	font-weight: 800;
+	width: 6.5rem;
 }
 .create-icon{
-	position: relative;
-	top: 1rem;
-	left: -2.6rem;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	z-index: 100;
+	float: right;
 }
 .vux-x-icon {
   fill: #F70968;

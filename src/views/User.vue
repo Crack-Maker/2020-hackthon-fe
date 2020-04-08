@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="user-style">
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
 	      <div slot="overwrite-left">
@@ -167,6 +167,9 @@ export default {
 </style>
 
 <style scoped>
+.user-style{
+	font-family: zzgf, Arial !important;
+}
 .main-info{
 	background: url(../../static/img/frank.svg)no-repeat;
 	background-size:100% auto;
