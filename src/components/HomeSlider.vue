@@ -23,14 +23,14 @@ data () {
        {
          html: 'slider1',
          style: {
-           background: "url(../../static/img/fish1.png)no-repeat",
-           'background-size': 'auto 100%',
+           background: "url(../../static/img/Mask.png)no-repeat",
+           'background-size': '100% 100%',
          }
        },
        {
          html: 'slider2',
          style: {
-           background: "url(../../static/img/franxx2.png)no-repeat",
+           background: "url(../../static/img/fish1.png)no-repeat",
            'background-size': 'auto 100%',
          }
        },
