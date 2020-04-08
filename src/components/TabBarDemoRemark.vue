@@ -17,8 +17,8 @@
         </tabbar-item>
         <tabbar-item @on-item-click="changeImageMine"  badge="1">
 			<div slot="label">135
-				<img slot="icon" v-if="!showImageMine" src="../../static/img/评论1.png" />
-				<img slot="icon" v-if="showImageMine" src="../../static/img/评论1.png" />
+				<img slot="icon" v-if="!showImageMine" src="../../static/img/comments1.png" />
+				<img slot="icon" v-if="showImageMine" src="../../static/img/comments1.png" />
 			</div>
         </tabbar-item>
       </tabbar>
