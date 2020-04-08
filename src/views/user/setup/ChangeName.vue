@@ -82,10 +82,10 @@ export default {
 
 <style scoped lang="less">
 .changePassword {
-  background-image: url(../../../assets/imgs/bg-island.png);
+  background-image: url(../../../../static/img/leaf.png);
   background-repeat: no-repeat;
-  background-position: 4.5rem 0rem;
-  background-size: 8rem;
+  // background-position: 4.5rem 0rem;
+  background-size: auto 100%; 
 }
 .normal-font-size{
   font-size: 0.48rem;
@@ -100,15 +100,26 @@ export default {
   text-align: left;
   color: #667d3e;
 }
+.no-border div:before {
+  display: none;
+}
+.no-border div:after {
+  display: none;
+}
+.no-border div {
+  margin-top: 0.1rem;
+}
 .border {
   border: 1px solid #fdfdfd;
-  border-radius: 10px;
+  border-radius: 45px;
   -webkit-box-shadow: 1px 4px 5px #c3c3c3;
   box-shadow: 1px 4px 5px #c3c3c3;
   margin: 0.2rem;
   padding: 0.4rem 0.1rem;
   text-indent: 0.5em;
   font-size: 0.5rem;
+  font-family: zzgf, Arial;
+  font-weight: 400;
   color: #008000;
 }
 
@@ -141,13 +152,4 @@ export default {
 </style>
 
 <style>
-.no-border div:before {
-  display: none;
-}
-.no-border div:after {
-  display: none;
-}
-.no-border div {
-  margin-top: 0.1rem;
-}
 </style>

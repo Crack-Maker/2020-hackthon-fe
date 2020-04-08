@@ -22,6 +22,7 @@ import ChangePassword from '@/views/user/setup/ChangePassword.vue'
 import Feedback from '@/views/user/setup/Feedback.vue'
 import CreateTopic from '@/views/island/shareAndSecret/CreateTopic.vue'
 import Article from '@/views/home/Article.vue'
+import Message from '@/views/Message.vue'
 
 Vue.use(Router)
 
@@ -142,6 +143,11 @@ export default new Router({
 	  path: '/Article',
 	  name: 'Article',
 	  component: Article 
+	},
+	{
+	  path: '/Message',
+	  name: 'Message',
+	  component: Message
 	}
     // {
     //   path: '/',

@@ -1,186 +1,125 @@
 <template>
   <div class="home-style">
-<!-- 	  设计目前不打算这个页面要搜索栏
-	 <div class="normal-font-size">
-		<search
-		     @result-click="resultClick"
-		     @on-change="getResult"
-		     :results="results"
-		     v-model="value"
-		     position="absolute"
-		     auto-scroll-to-top
-		     top="1.5rem"
-		     @on-focus="onFocus"
-		     @on-cancel="onCancel"
-		     @on-submit="onSubmit"
-		     ref="search"></search>
-	 </div> -->
 	<x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	position:absolute;left:0;top:0;z-index:100;">
-				<div slot="overwrite-left">
-					<img src="../../static/img/消息.png"/>
-				</div>
+		<div slot="overwrite-left" @click="linkMessage()">
+			<img src="../../static/img/消息.png"/>
+		</div>
 	</x-header>
 	<HomeSlider></HomeSlider>
-	<panel :header="''" :list="articleList" :type="'5'"></panel>
+	<div class="island2-content">
+		<flexbox orient="vertical">
+			<flexbox-item>
+				<div class="flex-demo"><card>
+					<div slot="content" class="card-padding" @click="linkArticle()">
+						<flexbox :gutter="0">
+							<flexbox-item :span="1/4">
+								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+								background-size: auto 100%;" align="left" src="../../static/img/avatar.png" />
+							</flexbox-item>  
+							<flexbox-item :span="3/8">
+								<div style="width: 4.25rem;float: left;
+								color:#000;font-size:0.5rem;">台词就很炫</div>
+								<p style="font-size:0.35rem;line-height:1.2;text-align: left;
+								margin-top: 0.2rem; color:#999;">来自分享岛&nbsp;&nbsp;#爱情电影</p>
+							</flexbox-item>
+							<flexbox-item :span="3/8">
+								<div style="float: left; width: 3.75rem;text-align: right;
+									font-size:0.2rem;color:#999;">2020-4-8
+									<div class="join-btn">
+										<x-button mini type="primary" class="join-btn-font">关注</x-button>
+									</div>
+								</div>
+							</flexbox-item>
+						</flexbox>
+						<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
+							历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+						</p>
+						<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+						 align="middle" src="../../static/img/photo1.png" />
+						<TabBarDemoRemark></TabBarDemoRemark>
+					</div></card>
+				</div>
+			</flexbox-item>
+			<flexbox-item>
+				<div class="flex-demo"><card>
+					<div slot="content" class="card-padding" @click="linkArticle()">
+						<flexbox :gutter="0">
+							<flexbox-item :span="1/4">
+								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+								background-size: auto 100%;" align="left" src="../../static/img/aiji.jpg" />
+							</flexbox-item>  
+							<flexbox-item :span="3/8">
+								<div style="width: 4.25rem;float: left;
+								color:#000;font-size:0.5rem;">安达垣爱姬</div>
+								<p style="font-size:0.35rem;line-height:1.2;text-align: left;
+								margin-top: 0.2rem; color:#999;">来自分享岛&nbsp;&nbsp;#爱情电影</p>
+							</flexbox-item>
+							<flexbox-item :span="3/8">
+								<div style="float: left; width: 3.75rem;text-align: right;
+									font-size:0.2rem;color:#999;">2020-4-8
+									<div class="join-btn">
+										<x-button mini type="primary" class="join-btn-font">关注</x-button>
+									</div>
+								</div>
+							</flexbox-item>
+						</flexbox>
+						<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
+							历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+						</p>
+						<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+						 align="middle" src="../../static/img/photo1.png" />
+						<TabBarDemoRemark></TabBarDemoRemark>
+					</div></card>
+				</div>
+			</flexbox-item>
+	   	</flexbox>			
+	</div>
 	<br />
 	<TabBarDemo></TabBarDemo>
-<!-- 		4.5日注释掉，暂时用panel替换掉它，可以作为有需要的时候的例子	 -->  
-<!-- 	<div style="margin: 10px;overflow: hidden;" v-for="item in list">
-      <masker style="border-radius: 2px;">
-        <div class="m-img" :style="{backgroundImage: 'url(' + item.img + ')'}"></div>
-        <div slot="content" class="m-title">
-         <router-link :to="{path: '/' + item.island}">{{item.title}}</router-link>
-          <br/>
-          <span class="m-time">2020-04-03</span>
-        </div>
-      </masker>
-    </div> -->
   </div>
 </template>
 <script>
-import { XHeader, Masker, Panel, Search } from 'vux'
+import { PopupRadio, Flexbox, FlexboxItem, Search, Card, ViewBox } from 'vux'
 import DrawerDemo from '../components/DrawerDemo.vue'
 import HomeSlider from '../components/HomeSlider.vue'
 
 export default {
-  name: "Islands",
-  components: {
-	  XHeader,
-	  DrawerDemo,
-	  Masker,
-	  Panel,
-	  Search,
-	  HomeSlider
-  },
-	 methods: {
-    setFocus () {
-      this.$refs.search.setFocus()
-    },
-    resultClick (item) {
-      window.alert('you click the result item: ' + JSON.stringify(item))
-    },
-    getResult (val) {
-      console.log('on-change', val)
-      this.results = val ? getResult(this.value) : []
-    },
-    onSubmit () {
-      this.$refs.search.setBlur()
-      this.$vux.toast.show({
-        type: 'text',
-        position: 'top',
-        text: 'on submit'
-      })
-    },
-    onFocus () {
-      console.log('on focus')
-    },
-    onCancel () {
-      console.log('on cancel')
-    }
-  },
-  data () {
-    return {
-	  results: [],
-	  value: 'test',
-	  articleList: [{
-	      src: '../../static/img/plane1.jpg',
-        title: '五分钟和二十年',
-        desc: '冬天的风吹到哪里都是刺骨的冷。正午时分，当我出差乘坐的列车缓缓到达这个名叫“紫霞”的小站时，尽管车厢里沉闷依旧，却仍然没有人打开车窗换换空气。',
-        url: {
-          path: '/Article',
-          replace: false
-        },
-        meta: {
-          source: '岛遇初代目',
-          date: '2020-04-05',
-          other: '日常'
-        }
-	  },{
-	      src: '../../static/img/fish1.png',
-        title: '钓竿',
-        desc: '有个老人在河边钓鱼，一个小孩走过去看他钓鱼。老人技巧纯熟，所以没多久就钓上了满篓的鱼，老人见小孩很可爱，要把整篓的鱼送给他，小孩摇摇头，老人惊异的问道：“你为何不要？”',
-        url: {
-          path: '/Article',
-          replace: false
-        },
-        meta: {
-          source: '岛遇初代目',
-          date: '2020-04-05',
-          other: '日常'
-        }
-	  },{
-	      src: '../../static/img/franxx2.png',
-        title: '令尊',
-        desc: '有个轿夫不会说客套话，有一次，他和另外几个轿夫把一位秀才抬上山后，轿夫问道：“相公，‘令尊’是什么意思？”秀才捉弄他说：“这‘令尊’二字字么，是称呼人家儿子的。”说完偷偷地掩嘴而笑。',
-        url: {
-          path: '/Article',
-          replace: false
-        },
-        meta: {
-          source: '岛遇初代目',
-          date: '2020-04-05',
-          other: '日常'
-        }
-	  },{
-	      src: '../../static/img/people1.jpg',
-        title: '阿房宫是谁烧的',
-        desc: '督学的文学底子很厚，看到杜牧的诗句，油然想起《阿房宫赋》，于是顺口问起了学生： “你们知道阿房宫是谁烧的？”学生们一脸惶恐，不住地摇头：“不是我烧的，不是我烧的！”',
-        url: {
-          path: '/Article',
-          replace: false
-        },
-        meta: {
-          source: '岛遇初代目',
-          date: '2020-04-05',
-          other: '日常'
-        }
-	  }],
-      list: [{
-        title: '故事之岛',
-        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
-		island:"island1"
-      }, {
-        title: '分享之岛',
-        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/02.jpg',
-		island:"island2"
-      }, {
-        title: '回忆之岛',
-        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/03.jpg',
-		island:"island3"
-      },{
-        title: '故事之岛',
-        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/01.jpg',
-		island:"island1"
-      }, {
-        title: '分享之岛',
-        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/02.jpg',
-		island:"island2"
-      }, {
-        title: '回忆之岛',
-        img: 'https://gz-1301715442.cos.ap-guangzhou.myqcloud.com/03.jpg',
-		island:"island3"
-      }]
-    }
-  }
+	name: "Islands",
+	components: {
+		DrawerDemo,
+		HomeSlider,
+		PopupRadio,
+		Flexbox, 
+		FlexboxItem,
+		Search,
+		Card,
+		ViewBox
+	},
+	methods: {
+		 linkMessage(){
+		 	this.$router.push({
+		 		path:'/Message'
+		 	})
+		},
+		linkArticle(){
+		 	this.$router.push({
+		 		path:'/Article'
+		 	})
+		}
+	},
+	data () {
+		return {
+		}
+	}
 }
 
-// 官网抄下来的
-function getResult (val) {
-  let rs = []
-  for (let i = 0; i < 20; i++) {
-    rs.push({
-      title: `${val} result: ${i + 1} `,
-      other: i
-    })
-  }
-  return rs
-}
 </script>
 
 <style scoped lang="less">
 .home-style{
 	font-family: zzgf, Arial !important;
+	width: 100%;
 }
 .m-img {
   // padding-bottom: 33%;
@@ -218,6 +157,44 @@ function getResult (val) {
 }
 .normal-font-size{
 	font-size: 0.5rem;
+}
+.island2-content{
+	position: relative;
+/* 	left: -2.5rem; */
+	top: 0rem;
+	color: #393A31;
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+	font-family: zzgf, Arial;
+	font-weight: 800;
+}
+.create-icon{
+/* 	position: absolute;
+	right: -0.2rem;
+	z-index: 1rem; */
+/* 	position: absolute; */
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	z-index: 100;
+	float: right;
+/* 	right: -5rem !important; */
+}
+.join-btn{
+	position: relative;
+/* 	left: 1rem;
+	bottom: 0.6rem; */
+}
+.join-btn-font{
+	letter-spacing: 0.1rem;
+	font-family: zzgf, Arial;
+	font-weight: 800;
+}
+.card-padding{
+/* 	background: url(../../../static/img/frank.svg)no-repeat; */
+	background-size: auto 100%;
+	height: 7rem;
+	padding: 0.5rem 0.5rem 0.6rem 1rem;
 }
 </style>
 

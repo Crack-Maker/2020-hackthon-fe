@@ -26,7 +26,8 @@
 				<x-textarea :max="200" name="description" :placeholder="'  内容'"></x-textarea>
 			</group>
 			<br />
-			<x-icon type="ios-ionic-outline" size="50"></x-icon>
+			<!-- <x-icon type="ios-ionic-outline" size="50"></x-icon> -->
+			<img src="../../../../static/img/addPhoto.png"/>
 			<box class="submit-btn-box">
 			  <x-button @click.native="showPlugin" class="submit-btn">确认发布</x-button>
 			</box>
@@ -136,7 +137,7 @@ export default {
 }
 .submit-btn-box {
   margin: 0 1rem;
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
 }
 .submit-btn {
   border-radius: 10px;
@@ -148,5 +149,14 @@ export default {
   letter-spacing: 0.1rem;
   font-family: zzgf, Arial;
   font-weight: 400;
+}
+</style>
+
+<style>
+input::-webkit-input-placeholder{
+  font-size: 0.5rem;
+  font-family: zzgf, Arial !important;
+  font-weight: 500;
+/*  text-align: middle; */
 }
 </style>

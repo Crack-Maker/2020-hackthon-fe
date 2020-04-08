@@ -1,8 +1,9 @@
 <template>
   <div>
+	 <ViewBox>
      <tabbar slot="bottom" class="footerGuide">
 		<tabbar-item @on-item-click="changeImageHome" >
-			<div slot="label">{{admire}}
+			<div slot="label">135
 				<img slot="icon" v-if="!showImageHome" src="../../static/img/点赞1.png" />
 				<img slot="icon" v-if="showImageHome" src="../../static/img/点赞2.png" />
 			</div>
@@ -11,18 +12,20 @@
         <tabbar-item @on-item-click="changeImageIsland" >
 			<div slot="label">135
 				<img slot="icon" v-if="!showImageIsland" src="../../static/img/收藏1.png"/>
-				<img slot="icon" v-if="showImageIsland" src="../../static/img/island2.svg"/>
+				<img slot="icon" v-if="showImageIsland" src="../../static/img/收藏2.png"/>
 			</div>
         </tabbar-item>
         <tabbar-item @on-item-click="changeImageMine"  badge="1">
 			<div slot="label">135
 				<img slot="icon" v-if="!showImageMine" src="../../static/img/评论1.png" />
-				<img slot="icon" v-if="showImageMine" src="../../static/img/mine2.svg" />
+				<img slot="icon" v-if="showImageMine" src="../../static/img/评论1.png" />
 			</div>
         </tabbar-item>
       </tabbar>
+	  </ViewBox>
   </div>
 </template>
+
 <script>
 import { Tabbar, TabbarItem, ViewBox } from "vux";
 
@@ -50,7 +53,6 @@ export default {
 			this.showImageHome = !this.showImageHome;
 		}else{
 			this.showImageHome = !this.showImageHome;
-			admire = admire - 1;
 		}
     },
 	changeImageIsland () {
@@ -64,7 +66,7 @@ export default {
 </script>
 <style scoped>
 .footerGuide {
-	width: 86%;
+	width: 100%;
 /* 	position: fixed; */
 }
 </style>

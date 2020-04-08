@@ -89,7 +89,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang="less">
 .main-body{
 	background: url(../../assets/imgs/bg-island.png)no-repeat !important;
 	background-size:100% auto;
