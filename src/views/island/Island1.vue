@@ -227,9 +227,9 @@ function getResult(val) {
   width: 6.5rem;
 }
 .island1-content {
-  position: absolute;
   /* 	left: -2.5rem; */
-  top: 8.5rem;
+  margin-top: 4.9rem;
+	width: 11.2rem;
   color: #393a31;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
