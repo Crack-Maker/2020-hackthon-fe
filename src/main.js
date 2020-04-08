@@ -9,6 +9,7 @@ import '../static/font/font.css'
 import TabBarDemo from './components/TabBarDemo.vue'
 import TabBarDemoIsland from './components/TabBarDemoIsland.vue'
 import TabBarDemoUser from './components/TabBarDemoUser.vue'
+import TabBarDemoRemark from './components/TabBarDemoRemark.vue'
 import VueI18n from 'vue-i18n'
 
 Vue.config.productionTip = false
@@ -18,6 +19,7 @@ Vue.component("XButton", XButton);
 Vue.component("TabBarDemo", TabBarDemo);
 Vue.component("TabBarDemoIsland", TabBarDemoIsland);
 Vue.component("TabBarDemoUser", TabBarDemoUser);
+Vue.component("TabBarDemoRemark", TabBarDemoRemark);
 
 Vue.use(VueI18n) // 通过插件的形式挂载
  

@@ -183,7 +183,7 @@ function getResult (val) {
 	position: relative;
 	left: -0.5rem;
 	top: 1rem;
-	color: #A52A2A;
+	color: #985148;
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
 	font-family: zzgf, Arial;
@@ -229,7 +229,7 @@ function getResult (val) {
 	padding: 1rem 0rem 0.6rem 1rem;
 }
 .vux-x-icon {
-  fill: #F70968;
+  fill: #985148;
 }
 .cell-x-icon {
   display: block;
