@@ -13,58 +13,70 @@
 		</div>
 		<div class="island2-content">
 			<flexbox orient="vertical">
-				<flexbox-item><div class="flex-demo">
-					<card>
-					    <div slot="content" class="card-padding">
-							<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-		  background-size: auto 100%;" align="left" src="../../../static/img/aiji.jpg" />
-							<div>
-								<div style="width: 4.25rem;float: left;
-								color:#000;font-size:0.5rem;">安达垣爱姬</div>
-								<div style="float: left; width: 3.75rem;
-								text-align: right;font-size:0.2rem;color:#999;">2020-4-8
-									<div class="join-btn">
-										<x-button mini type="primary" class="join-btn-font">关注</x-button>
+				<flexbox-item>
+					<div class="flex-demo"><card>
+						<div slot="content" class="card-padding">
+							<flexbox :gutter="0">
+								<flexbox-item :span="1/4">
+									<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+									background-size: auto 100%;" align="left" src="../../../static/img/aiji.jpg" />
+								</flexbox-item>  
+								<flexbox-item :span="3/8">
+									<div style="width: 4.25rem;float: left;
+									color:#000;font-size:0.5rem;">安达垣爱姬</div>
+									<p style="font-size:0.35rem;line-height:1.2;text-align: left;
+									margin-top: 0.2rem; color:#999;">#熬夜我想喝咖啡</p>
+								</flexbox-item>
+								<flexbox-item :span="3/8">
+									<div style="float: left; width: 3.75rem;text-align: right;
+										font-size:0.2rem;color:#999;">2020-4-8
+										<div class="join-btn">
+											<x-button mini type="primary" class="join-btn-font">关注</x-button>
+										</div>
 									</div>
-								</div>
-							</div>						
-							<p style="font-size:0.35rem;line-height:1.2;text-align: left;
-							margin-top: 0.2rem; color:#999;">来自分享岛&nbsp;&nbsp;#爱情电影</p>
+								</flexbox-item>
+							</flexbox>
 							<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
 								历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
 							</p>
 							<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
 							 align="middle" src="../../../static/img/people1.jpg" />
 							 <TabBarDemoRemark></TabBarDemoRemark>
-					    </div>
-					</card>
-				</div></flexbox-item>
-				<flexbox-item><div class="flex-demo">
-									<card>
-									    <div slot="content" class="card-padding">
-											<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-				background-size: auto 100%;" align="left" src="../../../static/img/aiji.jpg" />
-											<div>
-												<div style="width: 4.25rem;float: left;
-												color:#000;font-size:0.5rem;">安达垣爱姬</div>
-												<div style="float: left; width: 3.75rem;
-												text-align: right;font-size:0.2rem;color:#999;">2020-4-8
-													<div class="join-btn">
-														<x-button mini type="primary" class="join-btn-font">关注</x-button>
-													</div>
-												</div>
-											</div>						
-											<p style="font-size:0.35rem;line-height:1.2;text-align: left;
-											margin-top: 0.2rem; color:#999;">来自分享岛&nbsp;&nbsp;#爱情电影</p>
-											<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
-												历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
-											</p>
-											<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-											 align="middle" src="../../../static/img/people1.jpg" />
-											 <TabBarDemoRemark></TabBarDemoRemark>
-									    </div>
-									</card>
-								</div></flexbox-item>
+						</div></card>
+					</div>
+				</flexbox-item>
+				<flexbox-item>
+					<div class="flex-demo"><card>
+						<div slot="content" class="card-padding">
+							<flexbox :gutter="0">
+								<flexbox-item :span="1/4">
+									<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+									background-size: auto 100%;" align="left" src="../../../static/img/aiji.jpg" />
+								</flexbox-item>  
+								<flexbox-item :span="3/8">
+									<div style="width: 4.25rem;float: left;
+									color:#000;font-size:0.5rem;">安达垣爱姬</div>
+									<p style="font-size:0.35rem;line-height:1.2;text-align: left;
+									margin-top: 0.2rem; color:#999;">#熬夜我想喝咖啡</p>
+								</flexbox-item>
+								<flexbox-item :span="3/8">
+									<div style="float: left; width: 3.75rem;text-align: right;
+										font-size:0.2rem;color:#999;">2020-4-8
+										<div class="join-btn">
+											<x-button mini type="primary" class="join-btn-font">关注</x-button>
+										</div>
+									</div>
+								</flexbox-item>
+							</flexbox>
+							<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
+								历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+							</p>
+							<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+							 align="middle" src="../../../static/img/people1.jpg" />
+							 <TabBarDemoRemark></TabBarDemoRemark>
+						</div></card>
+					</div>
+				</flexbox-item>
 		   	</flexbox>			
 			<div @click="linkToCreate()" class="create-icon">
 			 	<x-icon type="ios-plus" size="50"></x-icon>
