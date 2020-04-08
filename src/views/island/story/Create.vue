@@ -26,15 +26,10 @@
 				    </template>
 				  </popup-radio>
 				</group> -->
-			    <group label-width="5rem">			  
-			      <popup-picker :popup-title="'请选择你的故事类别'" :title="'分类'" :data="list1" 
-				  v-model="value1" :placeholder="$t('')">
-			        <template slot="title" slot-scope="props">
-			          <span :class="props.labelClass" :style="props.labelStyle" style="height:24px;">			            
-			            <span style="vertical-align:middle;">故事类别</span>
-			          </span>
-			        </template>
-			      </popup-picker>
+			    <group>
+				<popup-picker :popup-title="'请选择你的故事类别'":title="'故事类别'" :data="list1" 
+				v-model="value1" :placeholder="$t('')":popup-style="{'font-size': '0.5rem',
+				'font-family': 'zzgf, Arial !important'}"></popup-picker>
 			    </group>
 			</div>
 			<group>
@@ -44,8 +39,6 @@
 			<box class="submit-btn-box">
 			  <x-button @click.native="showPlugin" class="submit-btn">提交</x-button>
 			</box>
-<!-- 	<x-button mini plain @click.native="showPlugin">提交</x-button> -->
-<!-- 	<TabBarDemoIsland></TabBarDemoIsland> -->
   </div>
 </template>
 
@@ -148,7 +141,6 @@ export default {
   text-indent: 1.4em;
   font-size: 0.5rem;
   font-family: zzgf, Arial !important;
-  font-weight: 800;
   color: #008000;
   font-weight: 500;
 }
@@ -167,12 +159,12 @@ export default {
   font-family: zzgf, Arial;
   font-weight: 400;
 }
+</style>
+<style>
 input::-webkit-input-placeholder{
   font-size: 0.5rem;
   font-family: zzgf, Arial !important;
-  font-weight: 800;
-  color: #008000;
   font-weight: 500;
-  text-align: right;
+/*  text-align: middle; */
 }
 </style>

@@ -188,6 +188,7 @@ export default {
 </style>
 <style>
 input::-webkit-input-placeholder {
+	font-family: zzgf, Arial;
   color: #afb3b5;
   letter-spacing: 0.02rem;
 }
