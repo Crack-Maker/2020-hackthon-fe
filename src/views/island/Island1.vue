@@ -44,9 +44,7 @@
             <card>
               <div slot="content" class="card-padding">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
-                <p
-                  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
-                >历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
+                <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
                   <x-button mini type="primary" class="join-btn-font">加入</x-button>
                 </div>
@@ -59,9 +57,7 @@
             <card>
               <div slot="content" class="card-padding">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
-                <p
-                  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
-                >历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
+                <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
                   <x-button mini type="primary" class="join-btn-font">加入</x-button>
                 </div>
@@ -76,9 +72,7 @@
             <card>
               <div slot="content" class="card-padding">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
-                <p
-                  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
-                >历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
+                <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
                   <x-button mini type="primary" class="join-btn-font">加入</x-button>
                 </div>
@@ -91,9 +85,7 @@
             <card>
               <div slot="content" class="card-padding">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
-                <p
-                  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
-                >历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
+                <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
                   <x-button mini type="primary" class="join-btn-font">加入</x-button>
                 </div>
@@ -215,6 +207,12 @@ function getResult(val) {
   background-size: 8rem; */
   width: 100%;
 }
+.para {
+  font-size: 0.3rem;
+  line-height: 1.2;
+  margin-top: 0.2rem; 
+	width: 4.2rem
+}
 .island1-title {
   position: relative;
   left: -0.5rem;
@@ -229,7 +227,7 @@ function getResult(val) {
 .island1-content {
   /* 	left: -2.5rem; */
   margin-top: 4.9rem;
-	width: 11.2rem;
+  width: 11.2rem;
   color: #393a31;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
