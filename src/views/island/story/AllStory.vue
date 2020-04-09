@@ -5,6 +5,9 @@
 		  	<div slot="overwrite-left" @click="handleBack()">
 		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
 		  	</div>
+			<div slot="right" @click="linkToIslands()" style="margin-top: 0.25rem;">
+			  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island2.svg"/>
+			</div>
 	</x-header>
 	<div style="margin-top: -0.5rem;"><h1>{{storyName}}</h1>
 	  <div style="text-align: center;">岛主&nbsp;&nbsp;{{storyBeginner}}</div>
@@ -39,6 +42,11 @@ export default {
   	//页面跳转方法
 	handleBack() {
 		this.$router.go(-1)
+	},
+	linkToIslands() {
+	  this.$router.push({
+	    path: "/Islands"
+	  });
 	}
   },
   data () {

@@ -15,9 +15,12 @@
       @click.native="showContent001 = !showContent001"></cell>
 
       <template v-if="showContent001">
-        <cell-box :border-intent="false" class="sub-item" >content 001</cell-box>
-        <cell-box class="sub-item" >content 001</cell-box>
-        <cell-box class="sub-item" >content 001</cell-box>
+        <cell-box :border-intent="false" class="sub-item" >小朋友你是否有很多秘密</cell-box>
+        <cell-box class="sub-item" >白雪公主和奥特曼的爱好者</cell-box>
+		<cell-box class="sub-item" >一个酷酷的人</cell-box>
+		<cell-box :border-intent="false" class="sub-item" >秘密岛有好东西</cell-box>
+		<cell-box class="sub-item" >奥特曼打小怪兽</cell-box>
+        <cell-box class="sub-item" >001还没有账号</cell-box>
       </template>
 
       <cell
@@ -28,9 +31,9 @@
       @click.native="showContent002 = !showContent002"></cell>
 
       <template v-if="showContent002">
-        <cell-box :border-intent="false" class="sub-item" >content 002</cell-box>
-        <cell-box class="sub-item" >content 002</cell-box>
-        <cell-box class="sub-item" >content 002</cell-box>
+        <cell-box :border-intent="false" class="sub-item" >台词就很炫</cell-box>
+        <cell-box class="sub-item" >光头强别砍树了</cell-box>
+        <cell-box class="sub-item" >一个酷酷的人</cell-box>
       </template>
 
       <cell
@@ -41,9 +44,13 @@
       @click.native="showContent003 = !showContent003"></cell>
 
       <template v-if="showContent003">
-        <cell-box :border-intent="false" class="sub-item" >content 001</cell-box>
-        <cell-box class="sub-item" >content 001</cell-box>
-        <cell-box class="sub-item" >content 001</cell-box>
+        <cell-box :border-intent="false" class="sub-item" >开学到底好不好</cell-box>
+        <cell-box class="sub-item" >不想考试</cell-box>
+		<cell-box class="sub-item" >光头强别砍树了</cell-box>
+		<cell-box class="sub-item" >一个酷酷的人</cell-box>
+		<cell-box :border-intent="false" class="sub-item" >小朋友你是否有很多秘密</cell-box>
+		<cell-box class="sub-item" >白雪公主和奥特曼的爱好者</cell-box>
+		<cell-box class="sub-item" >001还没有账号</cell-box>
       </template>
 
       <cell
@@ -54,9 +61,10 @@
       @click.native="showContent004 = !showContent004"></cell>
 
       <template v-if="showContent004">
-        <cell-box :border-intent="false" class="sub-item" >content 004</cell-box>
-        <cell-box class="sub-item" >content 004</cell-box>
-        <cell-box class="sub-item" >content 004</cell-box>
+        <cell-box class="sub-item" >一个酷酷的人</cell-box>
+        <cell-box :border-intent="false" class="sub-item" >小朋友你是否有很多问号</cell-box>
+        <cell-box class="sub-item" >白雪公主和奥特曼的爱好者</cell-box>
+        <cell-box class="sub-item" >001还没有账号</cell-box>
       </template>
 
     </group>
@@ -92,7 +100,7 @@ export default {
       list: [{
        }],
       money: null,
-      showContent001: false,
+      showContent001: true,
       showContent002: false,
       showContent003: false,
       showContent004: false

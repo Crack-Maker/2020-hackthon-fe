@@ -128,6 +128,40 @@
 		 			</flexbox-item>
 		 	</flexbox>
 		</cell-box>
+		<cell-box :border-intent="false" class="sub-item" >
+			<flexbox :gutter="0">
+		 			<flexbox-item :span="1/4">
+		 				<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+		 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island3.png" />
+		 			</flexbox-item>  
+		 			<flexbox-item :span="5/16">
+		 				<div style="width: 4.25rem;float: left;font-weight: 550;
+		 				color:#000;font-size:0.5rem;">秘密岛土著</div>
+		 				<p style="font-size:0.35rem;line-height:1.2;text-align: left;
+		 				margin-top: 0.2rem; color:#999;">小朋友你是否有很多秘密</p>
+		 			</flexbox-item>
+		 			<flexbox-item :span="7/16">
+		 				<FocusButton></FocusButton>
+		 			</flexbox-item>
+		 	</flexbox>
+		</cell-box>
+		<cell-box :border-intent="false" class="sub-item" >
+			<flexbox :gutter="0">
+		 			<flexbox-item :span="1/4">
+		 				<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
+		 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar.png" />
+		 			</flexbox-item>  
+		 			<flexbox-item :span="5/16">
+		 				<div style="width: 4.25rem;float: left;font-weight: 550;
+		 				color:#000;font-size:0.5rem;">台词就很炫</div>
+		 				<p style="font-size:0.35rem;line-height:1.2;text-align: left;
+		 				margin-top: 0.2rem; color:#999;">一个酷酷的人</p>
+		 			</flexbox-item>
+		 			<flexbox-item :span="7/16">
+		 				<FocusButton></FocusButton>
+		 			</flexbox-item>
+		 	</flexbox>
+		</cell-box>
 		<cell-box class="sub-item" >
 			<flexbox :gutter="0">
 					<flexbox-item :span="1/4">

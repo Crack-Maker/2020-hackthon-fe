@@ -30,14 +30,14 @@
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkMyFocus()">
 		  			  <!-- <span>15</span> -->
-					  99
+					  15
 		  			  <br/>关注
 		  			</div>
 		    </div>
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkCollect()">
 		  			  <!-- <span>10</span> -->
-					  10
+					  8
 		  			  <br/>收藏
 		  			</div>
 		    </div>
