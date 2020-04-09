@@ -42,7 +42,7 @@
 				  					<TabBarDemoRemark></TabBarDemoRemark>
 				  	 			</flexbox-item>
 				  	 		</flexbox>
-				  	 		<div class="remark-style">							
+				  	 		<div class="remark-style" @click="linkRemarkStory()">							
 				  	 			历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</div>
 				  	 	</div></card>
 			  </flexbox-item>
@@ -72,7 +72,7 @@
 				  					<TabBarDemoRemark></TabBarDemoRemark>
 				  	 			</flexbox-item>
 				  	 		</flexbox>
-				  	 		<div class="remark-style">							
+				  	 		<div class="remark-style" @click="linkRemarkStory()">							
 				  	 			白雪公主（Snow White）是广泛流行于欧洲的一个童话故事中的人物，其中最著名的故事版本见于德国1812年的《格林童话》。
 							</div>
 				  	 	</div></card>
@@ -103,7 +103,7 @@
 				  					<TabBarDemoRemark></TabBarDemoRemark>
 				  	 			</flexbox-item>
 				  	 		</flexbox>
-				  	 		<div class="remark-style">							
+				  	 		<div class="remark-style" @click="linkRemarkStory()">							
 				  	 			讲述了白雪公主受到继母皇后（格林兄弟最初手稿中为生母）的虐待，逃到森林里，遇到七个小矮人的故事。历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。 [1] 
 							</div>
 				  	 	</div></card>
@@ -143,6 +143,11 @@ export default {
 	linkAllStory(){
 		this.$router.push({
 			path:'/AllStory'
+		})
+	},
+	linkRemarkStory(){
+		this.$router.push({
+			path:'/RemarkStory'
 		})
 	}
   },
