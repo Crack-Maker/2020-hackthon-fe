@@ -146,6 +146,7 @@
 	  	  </flexbox-item>
 	 </flexbox>
 	 <br />
+	 <InputArea></InputArea>
 </div>
 </template>
 

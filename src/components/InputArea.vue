@@ -1,6 +1,6 @@
 <template>
 	 <div class="input-story">
-		 <x-input title type="text" placeholder="继续编写故事"  required>
+		 <x-input title type="text" placeholder="请输入内容"  required>
 		   <x-button
 		     slot="right"
 		     type="primary"
