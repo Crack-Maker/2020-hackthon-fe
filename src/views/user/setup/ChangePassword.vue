@@ -12,7 +12,7 @@
         <x-input
           title="头像 |"
           name="phone"
-          placeholder="请输入新的手机号码"
+          placeholder="请输入的手机号码"
           class="phone border"
           v-model="phone"
           keyboard="number"

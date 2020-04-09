@@ -4,7 +4,7 @@
       :left-options="{showBack: false}"
       :right-options="{showMore: false}"
       style="width:100%;background-color:#FFFFFF ;
-	  position:absolute;left:0;top:0;z-index:100;"
+	  position:fixed;left:0;top:0;z-index:100;"
     >
       <div slot="overwrite-left" @click="linkToIslands()">
         <x-icon type="ios-arrow-back" size="30"></x-icon>
@@ -120,10 +120,10 @@
           </div>
         </flexbox-item>
       </flexbox>
-      <div @click="linkToCreate()" class="create-icon">
-        <x-icon type="ios-plus" size="50"></x-icon>
-      </div>
     </div>
+	<div @click="linkToCreate()" class="create-icon">
+	  <x-icon type="ios-plus" size="50"></x-icon>
+	</div>
   </div>
 </template>
 
@@ -221,9 +221,11 @@ export default {
   /* 	position: absolute;
 	right: -0.2rem;
 	z-index: 1rem; */
-  /* 	position: absolute; */
+  position: fixed;
   width: 50px;
   height: 50px;
+  bottom: 1rem;
+  right: 1rem;
   border-radius: 50%;
   z-index: 100;
   float: right;
