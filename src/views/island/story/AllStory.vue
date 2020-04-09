@@ -1,6 +1,7 @@
 <template>
 <div class="article-style">
-	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#F5F5F5 ;
+	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#F1F1F1
+ ;
 		  position:absolute;left:0;top:0;z-index:100;">
 		  	<div slot="overwrite-left" @click="handleBack()">
 		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
@@ -64,7 +65,7 @@ export default {
 	font-family: zzgf, Arial;
 	font-size: 0.5rem;
 	background-size: 100% 100%;
-	background: #F5F5F5 !important;
+	background: #F1F1F1 !important;
 	width: 100%;
 }
 .story-padding{
