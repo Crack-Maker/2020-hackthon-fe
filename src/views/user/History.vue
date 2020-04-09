@@ -1,7 +1,7 @@
 <template>
 	<div class="history-style">
 	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
-		  position:absolute;left:0;top:0;z-index:100;">
+		  position:fixed;left:0;top:0;z-index:100;">
 		  	<div slot="overwrite-left" @click="handleBack()">
 		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
 		  	</div>
