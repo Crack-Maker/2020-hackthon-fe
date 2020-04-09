@@ -42,11 +42,12 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding">
+              <div slot="content" class="card-padding" @click="joinStory()">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
                 <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
-                  <x-button mini type="primary" class="join-btn-font">加入</x-button>
+				  <p style="font-size:0.35rem;line-height:1.2;text-align: left;
+				  margin-top: 0.2rem; color:#999;">#首句拟定型</p>
                 </div>
               </div>
             </card>
@@ -55,12 +56,16 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding">
+              <div slot="content" class="card-padding" @click="joinStory()">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
                 <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
-                <div class="join-btn">
+<!--                <div class="join-btn">
                   <x-button mini type="primary" class="join-btn-font">加入</x-button>
-                </div>
+                </div> -->
+				<div class="join-btn">
+				  <p style="font-size:0.35rem;line-height:1.2;text-align: left;
+				  margin-top: 0.2rem; color:#999;">#人物拟定型</p>
+				</div>
               </div>
             </card>
           </div>
@@ -70,11 +75,12 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding">
+              <div slot="content" class="card-padding" @click="joinStory()">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
                 <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
-                  <x-button mini type="primary" class="join-btn-font">加入</x-button>
+				  <p style="font-size:0.35rem;line-height:1.2;text-align: left;
+				  margin-top: 0.2rem; color:#999;">#主题拟定型</p>
                 </div>
               </div>
             </card>
@@ -83,11 +89,12 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding">
+              <div slot="content" class="card-padding" @click="joinStory()">
                 <p style="color:#999;font-size:0.5rem;">白雪公主</p>
                 <p class="para">历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
                 <div class="join-btn">
-                  <x-button mini type="primary" class="join-btn-font">加入</x-button>
+				  <p style="font-size:0.35rem;line-height:1.2;text-align: left;
+				  margin-top: 0.2rem; color:#999;">#自定义拟定</p>
                 </div>
               </div>
             </card>
@@ -182,7 +189,12 @@ export default {
     },
     onCancel() {
       console.log("on cancel");
-    }
+    },
+	joinStory(){
+		this.$router.push({
+		  path: "/JoinStory"
+		});
+	}
   }
 };
 
@@ -237,7 +249,7 @@ function getResult(val) {
 .create-icon {
   position: relative;
   /* 	right: -0.2rem; */
-  bottom: 2rem;
+  bottom: 0.5rem;
   z-index: 1rem;
   /* 	position: absolute; */
   width: 50px;
@@ -250,7 +262,7 @@ function getResult(val) {
 .join-btn {
   position: relative;
   left: 1rem;
-  bottom: 0.6rem;
+  top: 0.2rem;
 }
 .join-btn-font {
   letter-spacing: 0.1rem;

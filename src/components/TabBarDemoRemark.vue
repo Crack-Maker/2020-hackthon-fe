@@ -67,6 +67,7 @@ export default {
 <style scoped>
 .footerGuide {
 	width: 100%;
+	background: #FFFFFF;
 /* 	position: fixed; */
 }
 </style>

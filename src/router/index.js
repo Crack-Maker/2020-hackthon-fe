@@ -23,6 +23,9 @@ import Feedback from '@/views/user/setup/Feedback.vue'
 import CreateTopic from '@/views/island/shareAndSecret/CreateTopic.vue'
 import Article from '@/views/home/Article.vue'
 import Message from '@/views/Message.vue'
+import AllStory from '@/views/island/story/AllStory.vue'
+import JoinStory from '@/views/island/story/JoinStory.vue'
+import RemarkStory from '@/views/island/story/RemarkStory.vue'
 
 Vue.use(Router)
 
@@ -148,7 +151,22 @@ export default new Router({
 	  path: '/Message',
 	  name: 'Message',
 	  component: Message
-	}
+	},
+	{
+	  path: '/AllStory',
+	  name: 'AllStory',
+	  component: AllStory 
+	},
+	{
+	  path: '/JoinStory',
+	  name: 'JoinStory',
+	  component: JoinStory
+	},
+	{
+	  path: '/RemarkStory',
+	  name: 'RemarkStory',
+	  component: RemarkStory
+	},
     // {
     //   path: '/',
     //   name: '',

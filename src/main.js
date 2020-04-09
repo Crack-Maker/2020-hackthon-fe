@@ -10,6 +10,7 @@ import TabBarDemo from './components/TabBarDemo.vue'
 import TabBarDemoIsland from './components/TabBarDemoIsland.vue'
 import TabBarDemoUser from './components/TabBarDemoUser.vue'
 import TabBarDemoRemark from './components/TabBarDemoRemark.vue'
+import InputArea from './components/InputArea.vue'
 import VueI18n from 'vue-i18n'
 
 Vue.config.productionTip = false
@@ -20,6 +21,7 @@ Vue.component("TabBarDemo", TabBarDemo);
 Vue.component("TabBarDemoIsland", TabBarDemoIsland);
 Vue.component("TabBarDemoUser", TabBarDemoUser);
 Vue.component("TabBarDemoRemark", TabBarDemoRemark);
+Vue.component("InputArea", InputArea);
 
 Vue.use(VueI18n) // 通过插件的形式挂载
  

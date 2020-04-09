@@ -98,7 +98,6 @@
 	 </div></flexbox-item>
 	 </flexbox>
 	 <br />
-	 <InputArea></InputArea>
 </div>
 </template>
 
@@ -143,4 +142,3 @@ export default {
 	padding: 0.5rem 0.5rem 0.6rem 1rem;
 }
 </style>
-

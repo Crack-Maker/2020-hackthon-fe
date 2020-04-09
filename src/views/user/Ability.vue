@@ -1,5 +1,5 @@
 <template>
-  <div class="normal-font-size">
+  <div class="ability-style">
 	<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 		  position:absolute;left:0;top:0;z-index:100;">
 		  	<div slot="overwrite-left" @click="handleBack()">
@@ -46,11 +46,12 @@ export default {
 </script>
 
 <style scoped lang="less">
-.normal-font-size{
+.ability-style{
   font-size: 0.8rem;
   text-align: left;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  // background: #985148;
 }
 .img-style{
 	margin-top: 2rem;
