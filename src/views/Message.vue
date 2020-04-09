@@ -12,13 +12,29 @@
 				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/settings.svg"/>
 			</div>
 	</x-header>
-	
+	<group>
+			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
+				<img src="../../static/img/message1.png"/>&nbsp;&nbsp;&nbsp;我的好友		
+			</cell-box>
+			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
+				<img src="../../static/img/message2.png"/>&nbsp;&nbsp;&nbsp;我的属性
+			</cell-box>
+			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
+				<img src="../../static/img/message3.png"/>&nbsp;&nbsp;&nbsp;秘密の岛
+			</cell-box>
+	</group>
 </div>
 </template>
 
 <script>
+import { Group, Cell, CellBox, ToastPlugin, Toast } from 'vux'
 export default {
   components: {
+	  Group,
+	  Cell,
+	  CellBox,
+	  ToastPlugin,
+	  Toast
   },
   methods:{
   	//页面跳转方法
@@ -29,6 +45,11 @@ export default {
 		this.$router.push({
 			path:'/Setup'
 		})
+	},
+	showMessage(){
+		// this.$vux.toast.show({
+		//  text: '1'
+		// })
 	}
   }
 }
