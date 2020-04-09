@@ -12,6 +12,7 @@ import TabBarDemoUser from './components/TabBarDemoUser.vue'
 import TabBarDemoRemark from './components/TabBarDemoRemark.vue'
 import InputArea from './components/InputArea.vue'
 import VueI18n from 'vue-i18n'
+import FocusButton from './components/FocusButton.vue'
 
 Vue.config.productionTip = false
 //全局注册
@@ -22,6 +23,7 @@ Vue.component("TabBarDemoIsland", TabBarDemoIsland);
 Vue.component("TabBarDemoUser", TabBarDemoUser);
 Vue.component("TabBarDemoRemark", TabBarDemoRemark);
 Vue.component("InputArea", InputArea);
+Vue.component("FocusButton", FocusButton);
 
 Vue.use(VueI18n) // 通过插件的形式挂载
  

@@ -26,7 +26,7 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding">
+              <div slot="content" class="card-padding" @click="remarkShare()">
                 <flexbox :gutter="0">
                   <flexbox-item :span="1/4">
                     <img
@@ -64,7 +64,7 @@
                 <img
                   style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
                   align="middle"
-                  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg"
+                  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png"
                 />
                 <TabBarDemoRemark></TabBarDemoRemark>
               </div>
@@ -74,7 +74,7 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding">
+              <div slot="content" class="card-padding" @click="remarkShare()">
                 <flexbox :gutter="0">
                   <flexbox-item :span="1/4">
                     <img
@@ -112,7 +112,7 @@
                 <img
                   style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
                   align="middle"
-                  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg"
+                  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png"
                 />
                 <TabBarDemoRemark></TabBarDemoRemark>
               </div>
@@ -184,7 +184,12 @@ export default {
       this.$router.push({
         path: "/Islands"
       });
-    }
+    },
+	remarkShare(){
+		this.$router.push({
+			 path: "/RemarkShare"
+		});
+	}
   }
 };
 </script>
@@ -245,7 +250,7 @@ export default {
   /* 	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat; */
   background-size: auto 100%;
   height: 7rem;
-  padding: 0.5rem 0.5rem 0.6rem 1rem;
+  padding: 0.5rem 0.5rem 0.6rem 0.5rem;
 }
 .vux-x-icon {
   fill: #75b67d;

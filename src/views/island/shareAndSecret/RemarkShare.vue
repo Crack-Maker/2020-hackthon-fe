@@ -11,11 +11,11 @@
 	 		<flexbox :gutter="0">
 	 			<flexbox-item :span="1/4">
 	 				<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
-	 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar.png" />
+	 				background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg" />
 	 			</flexbox-item>  
 	 			<flexbox-item :span="3/8">
 	 				<div style="width: 4.25rem;float: left;
-	 				color:#000;font-size:0.5rem;">台词就很炫</div>
+	 				color:#000;font-size:0.5rem;font-weight: 800;">安达垣爱姬</div>
 	 				<p style="font-size:0.35rem;line-height:1.2;text-align: left;
 	 				margin-top: 0.2rem; color:#999;">来自分享岛&nbsp;&nbsp;#爱情电影</p>
 	 			</flexbox-item>
@@ -23,8 +23,8 @@
 	 				<div style="float: left; width: 3.75rem;text-align: right;
 	 					font-size:0.2rem;color:#999;">2020-4-8
 	 					<div class="join-btn">
-							<FocusButton></FocusButton>
 	 						<!-- <x-button mini type="primary" class="join-btn-font">关注</x-button> -->
+							<FocusButton></FocusButton>
 	 					</div>
 	 				</div>
 	 			</flexbox-item>
