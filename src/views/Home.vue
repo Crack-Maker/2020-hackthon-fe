@@ -1,7 +1,7 @@
 <template>
   <div class="home-style">
-	<x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
-	position:absolute;left:0;top:0;z-index:100;">
+	<x-header :left-options="{showBack: false}" :right-options="{showMore: false}" style="width:100%;background-color:#FFFFFF ;
+	position:fixed;left:0;top:0;z-index:100;">
 		<div slot="overwrite-left" @click="linkMessage()">
 			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message.png"/>
 		</div>
