@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="friend-style">
     <x-header
       :left-options="{showBack: true}"
       style="width:100%;background-color:#FFFFFF ;
@@ -25,7 +25,25 @@
       </div>
     </x-header>
     <div class="friend-container">
-      <ul class="friend-list">
+		<swipeout>
+			<swipeout-item v-for="(item) in friendList" :key="item.id" @on-close="handleEvents('on-close')" @on-open="handleEvents('on-open')" transition-mode="follow">
+				<div slot="right-menu">
+				<swipeout-button @click.native="onButtonClick('delete')" type="warn"><div class="friend-style">删除</div></swipeout-button>
+				</div>
+				<div slot="content" class="friend-list">
+					<flexbox :gutter="0">
+							<flexbox-item :span="1/4">
+								<img v-bind:src="item.avatarSrc">
+							</flexbox-item>  
+							<flexbox-item :span="3/4">
+								<div class="friend-title">{{item.nickname}}</div>
+								<div class="friend-msg">{{item.lastMsg}}</div>
+							</flexbox-item>
+					</flexbox>
+				</div>
+			</swipeout-item>
+		</swipeout>
+<!--      <ul class="friend-list">
         <li v-for="(item) in friendList" :key="item.id">
           <div class="friend-avatar">
             <img v-bind:src="item.avatarSrc">
@@ -33,15 +51,26 @@
           <div class="friend-title">{{item.nickname}}</div>
           <div class="friend-msg">{{item.lastMsg}}</div>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </div>
 </template>
 
 <script>
-import { Search } from "vux";
+import { Search, Flexbox, FlexboxItem } from "vux";
+import { GroupTitle, Swipeout, SwipeoutItem, SwipeoutButton, XButton } from 'vux'
+
 export default {
-  components: { Search },
+  components: { 
+	Search,
+	GroupTitle,
+    Swipeout,
+    SwipeoutItem,
+    SwipeoutButton,
+    XButton,
+	Flexbox,
+    FlexboxItem
+	},
   methods: {
     setFocus() {
       this.$refs.search.setFocus();
@@ -70,10 +99,17 @@ export default {
     //页面跳转方法
     handleBack() {
       this.$router.go(-1);
+    },
+	onButtonClick (type) {
+      alert('on button click ' + type)
+    },
+    handleEvents (type) {
+      console.log('event: ', type)
     }
   },
   data() {
     return {
+	  disabled: false,
       friendResults: [],
       value: "",
       friendList: [
@@ -108,6 +144,9 @@ export default {
 </script>
 
 <style>
+.friend-style{
+	font-family: zzgf, Arial;
+}
 .weui-search-bar__cancel-btn {
   font-size: 0.4rem;
 }
@@ -176,8 +215,9 @@ export default {
   margin-top: 3rem;
   text-align: left;
 }
-.friend-list li {
+.friend-list{
   border-bottom: solid 1px #ebebeb;
+  padding: 0.5rem 0rem 0rem 0.5rem;
   height: 2.4rem;
 }
 .friend-avatar {
@@ -193,13 +233,17 @@ export default {
   width: 5rem;
   font-size: 0.43rem;
   font-weight: 600;
-  margin-left: 2.5rem;
+/*  margin-left: 0.5rem; */
+  text-align: left;
+  font-family: zzgf, Arial;
 }
 .friend-msg {
   font-size: 0.31rem;
-  margin-left: 2.5rem;
-  margin-top: 0.15rem;
+  margin-top: 0.6rem;
+/*  margin-top: 0.35rem; */
   color: rgb(126, 126, 126);
+  text-align: left;
+  font-family: zzgf, Arial;
 }
 input::-webkit-input-placeholder {
   font-family: Arial;
