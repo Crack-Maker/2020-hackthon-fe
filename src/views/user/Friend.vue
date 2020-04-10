@@ -246,15 +246,15 @@ export default {
   font-family: zzgf, Arial;
 }
 </style>
-<style scoped>
+<style>
 input::-webkit-input-placeholder {
-  font-family: Arial;
+  font-family: Arial !important;
   color: #afb3b5;
   letter-spacing: 0.02rem;
 }
 
 input::placeholder {
-  font-family: Arial;
+  font-family: Arial !important;
   color: #afb3b5;
   letter-spacing: 0.02rem;
 }
