@@ -13,6 +13,7 @@ import TabBarDemoRemark from './components/TabBarDemoRemark.vue'
 import InputArea from './components/InputArea.vue'
 import VueI18n from 'vue-i18n'
 import FocusButton from './components/FocusButton.vue'
+import  { ToastPlugin } from 'vux'
 
 Vue.config.productionTip = false
 //全局注册
@@ -25,6 +26,7 @@ Vue.component("TabBarDemoRemark", TabBarDemoRemark);
 Vue.component("InputArea", InputArea);
 Vue.component("FocusButton", FocusButton);
 
+Vue.use(ToastPlugin)
 Vue.use(VueI18n) // 通过插件的形式挂载
  
 const i18n = new VueI18n({
