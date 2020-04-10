@@ -227,7 +227,7 @@ export default {
   bottom: 1rem;
   right: 1rem;
   border-radius: 50%;
-  z-index: 100;
+  z-index: 500;
   float: right;
 }
 .join-btn {

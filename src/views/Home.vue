@@ -176,7 +176,7 @@ export default {
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	z-index: 100;
+	z-index: 500;
 	float: right;
 /* 	right: -5rem !important; */
 }
