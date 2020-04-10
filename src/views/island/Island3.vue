@@ -26,7 +26,7 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding" @click="remarkSecret()">
+              <div slot="content" class="card-padding">
                 <flexbox :gutter="0">
                   <flexbox-item :span="1/4">
                     <img
@@ -58,14 +58,16 @@
                     </div>
                   </flexbox-item>
                 </flexbox>
-                <p
-                  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
-                >历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
-                <img
-                  style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-                  align="middle"
-                  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg"
-                />
+				<div class="article-content" @click="remarkSecret()">
+					<p
+					  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
+					>历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
+					<img
+					  style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+					  align="middle"
+					  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg"
+					/>
+				</div>
                 <TabBarDemoRemark></TabBarDemoRemark>
               </div>
             </card>
@@ -74,7 +76,7 @@
         <flexbox-item>
           <div class="flex-demo">
             <card>
-              <div slot="content" class="card-padding" @click="remarkSecret()">
+              <div slot="content" class="card-padding">
                 <flexbox :gutter="0">
                   <flexbox-item :span="1/4">
                     <img
@@ -106,14 +108,16 @@
                     </div>
                   </flexbox-item>
                 </flexbox>
-                <p
-                  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
-                >历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
-                <img
-                  style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-                  align="middle"
-                  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg"
-                />
+				<div class="article-content" @click="remarkSecret()">
+					<p
+					  style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;"
+					>历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。</p>
+					<img
+					  style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+					  align="middle"
+					  src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/people1.jpg"
+					/>
+				</div>
                 <TabBarDemoRemark></TabBarDemoRemark>
               </div>
             </card>
