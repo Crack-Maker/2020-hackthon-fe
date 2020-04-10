@@ -245,6 +245,8 @@ export default {
   text-align: left;
   font-family: zzgf, Arial;
 }
+</style>
+<style scoped>
 input::-webkit-input-placeholder {
   font-family: Arial;
   color: #afb3b5;
