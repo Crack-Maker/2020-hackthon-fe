@@ -7,7 +7,7 @@
 		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
 		  	</div>
 			<div slot="right" @click="linkAllStory()">
-				<img style="margin-top: -1rem;" src="../../../../static/img/seeAll.png"/>
+				<img style="margin-top: -1rem;" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/seeAll.png"/>
 			</div>
 	</x-header>
 	<div style="margin-top: -0.5rem;"><h1>白雪公主</h1></div>
@@ -38,7 +38,7 @@
 				  	 					</div>
 				  	 				</div> -->
 				  					<div class="focus">
-				  					  <img src="../../../../static/img/focus.png"/>
+				  					  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/focus.png"/>
 				  					</div>
 				  					<TabBarDemoRemark></TabBarDemoRemark>
 				  	 			</flexbox-item>
@@ -68,7 +68,7 @@
 				  	 					</div>
 				  	 				</div> -->
 				  					<div class="focus">
-				  					  <img src="../../../../static/img/focus.png"/>
+				  					  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/focus.png"/>
 				  					</div>
 				  					<TabBarDemoRemark></TabBarDemoRemark>
 				  	 			</flexbox-item>
@@ -99,7 +99,7 @@
 				  	 					</div>
 				  	 				</div> -->
 				  					<div class="focus">
-				  					  <img src="../../../../static/img/focus.png"/>
+				  					  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/focus.png"/>
 				  					</div>
 				  					<TabBarDemoRemark></TabBarDemoRemark>
 				  	 			</flexbox-item>
@@ -197,7 +197,7 @@ export default {
 	line-height:1.2;
 	margin-top: 0.2rem;
 	text-align: left;
-	background: url(../../../../static/img/storyFrank.png)no-repeat !important;
+	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/storyFrank.png)no-repeat !important;
 }
 .input-story{
 	font-family: zzgf, Arial !important;

@@ -27,7 +27,7 @@
 	 	 					</div>
 	 	 				</div> -->
 	 					<div class="focus">
-	 					  <img src="../../../../static/img/focus.png"/>
+	 					  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/focus.png"/>
 	 					</div>
 	 					<TabBarDemoRemark></TabBarDemoRemark>
 	 	 			</flexbox-item>
@@ -215,7 +215,7 @@ export default {
 	line-height:1.2;
 	margin-top: 0.2rem;
 	text-align: left;
-	background: url(../../../../static/img/storyFrank.png) !important;
+	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/storyFrank.png) !important;
 	background-size: auto 100%; 
 }
 .remark-style-top{

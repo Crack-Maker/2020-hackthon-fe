@@ -63,16 +63,16 @@
 	      </grid> -->
       <group>
 		<cell-box is-link @click.native="linkFriend" style="margin-left: 1rem;">
-			<img src="../../static/img/user1.png"/>&nbsp;&nbsp;我的好友		
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user1.png"/>&nbsp;&nbsp;我的好友		
 		</cell-box>
 		<cell-box is-link @click.native="linkAbility" style="margin-left: 1rem;">
-			<img src="../../static/img/user2.png"/>&nbsp;&nbsp;我的属性
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user2.png"/>&nbsp;&nbsp;我的属性
 		</cell-box>
 		<cell-box is-link @click.native="linkIsland" style="margin-left: 1rem;">
-			<img src="../../static/img/user3.png"/>&nbsp;&nbsp;秘密の岛
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user3.png"/>&nbsp;&nbsp;秘密の岛
 		</cell-box>
 		<cell-box is-link @click.native="linkTopic" style="margin-left: 1rem;">
-			<img src="../../static/img/user4.png"/>&nbsp;&nbsp;内容发布
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user4.png"/>&nbsp;&nbsp;内容发布
 		</cell-box>
       </group>
 	<!--  <divider><font size="4">我的秘密岛</font></divider> -->

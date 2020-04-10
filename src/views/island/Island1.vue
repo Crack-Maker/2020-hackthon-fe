@@ -267,7 +267,7 @@ function getResult(val) {
   font-weight: 800;
 }
 .card-padding {
-  background: url("../../../static/img/frank.png")no-repeat;
+  background: url("https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg")no-repeat;
   background-size: 100% 100%;
   width: 4.6rem;
   height: 4rem;

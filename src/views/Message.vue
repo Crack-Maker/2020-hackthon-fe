@@ -14,13 +14,13 @@
 	</x-header>
 	<group>
 			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
-				<img src="../../static/img/message1.png"/>&nbsp;&nbsp;&nbsp;我的好友		
+				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message1.png"/>&nbsp;&nbsp;&nbsp;我的好友		
 			</cell-box>
 			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
-				<img src="../../static/img/message2.png"/>&nbsp;&nbsp;&nbsp;我的属性
+				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message2.png"/>&nbsp;&nbsp;&nbsp;我的属性
 			</cell-box>
 			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
-				<img src="../../static/img/message3.png"/>&nbsp;&nbsp;&nbsp;秘密の岛
+				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message3.png"/>&nbsp;&nbsp;&nbsp;秘密の岛
 			</cell-box>
 	</group>
 </div>
