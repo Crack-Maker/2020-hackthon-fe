@@ -201,4 +201,15 @@ export default {
   margin-top: 0.15rem;
   color: rgb(126, 126, 126);
 }
+input::-webkit-input-placeholder {
+  font-family: Arial;
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
+}
+
+input::placeholder {
+  font-family: Arial;
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
+}
 </style>
