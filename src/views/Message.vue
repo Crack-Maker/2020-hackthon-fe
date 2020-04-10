@@ -6,7 +6,7 @@
 		  		<x-icon type="ios-arrow-back" size="30"></x-icon>
 		  	</div>
 			<div>
-				<font size="2" color="#888888">——已来到岛遇XX天——</font>
+				<font size="2" color="#888888">——已来到岛遇15天——</font>
 			</div>
 			<div slot="right" @click="linkSetup()">
 				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/settings.svg"/>
@@ -14,13 +14,13 @@
 	</x-header>
 	<group>
 			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
-				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message1.png"/>&nbsp;&nbsp;&nbsp;我的好友		
+				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message1.png"/>&nbsp;&nbsp;&nbsp;系统消息		
 			</cell-box>
 			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
-				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message2.png"/>&nbsp;&nbsp;&nbsp;我的属性
+				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message2.png"/>&nbsp;&nbsp;&nbsp;好友消息
 			</cell-box>
 			<cell-box is-link @click.native="showMessage" style="margin-left: 1rem;height: 2rem;">
-				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message3.png"/>&nbsp;&nbsp;&nbsp;秘密の岛
+				<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message3.png"/>&nbsp;&nbsp;&nbsp;相关留言
 			</cell-box>
 	</group>
 </div>

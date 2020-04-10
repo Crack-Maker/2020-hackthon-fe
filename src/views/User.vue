@@ -7,7 +7,7 @@
 	      </div>
 		  <!-- 下面这个div用来触发特效 -->
 		  <div>
-			  <font size="2" color="#888888">——已来到岛遇XX天——</font>
+			  <font size="2" color="#888888">——已来到岛遇15天——</font>
 		  </div>
 		  <div slot="right" @click="linkSetup()">
 			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/settings.svg"/>

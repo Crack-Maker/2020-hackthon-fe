@@ -11,7 +11,7 @@
 		<flexbox orient="vertical">
 			<flexbox-item>
 				<div class="flex-demo"><card>
-					<div slot="content" class="card-padding" @click="linkArticle()">
+					<div slot="content" class="card-padding">
 						<flexbox :gutter="0">
 							<flexbox-item :span="1/4">
 								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
@@ -27,23 +27,26 @@
 								<div style="float: left; width: 3.75rem;text-align: right;
 									font-size:0.2rem;color:#999;">2020-4-8
 									<div class="join-btn">
-										<x-button mini type="primary" class="join-btn-font">关注</x-button>
+										<FocusButton></FocusButton>
+										<!-- <x-button mini type="primary" class="join-btn-font">关注</x-button> -->
 									</div>
 								</div>
 							</flexbox-item>
 						</flexbox>
-						<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
-							历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
-						</p>
-						<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-						 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
+						<div class="article-content" @click="linkArticle()">
+							<p>
+								历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+							</p>
+							<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+							 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
+						</div>					
 						<TabBarDemoRemark></TabBarDemoRemark>
 					</div></card>
 				</div>
 			</flexbox-item>
 			<flexbox-item>
 				<div class="flex-demo"><card>
-					<div slot="content" class="card-padding" @click="linkArticle()">
+					<div slot="content" class="card-padding" >
 						<flexbox :gutter="0">
 							<flexbox-item :span="1/4">
 								<img style="height: 1.5rem;margin-left: 0rem;border-radius: 2rem;
@@ -59,16 +62,19 @@
 								<div style="float: left; width: 3.75rem;text-align: right;
 									font-size:0.2rem;color:#999;">2020-4-8
 									<div class="join-btn">
-										<x-button mini type="primary" class="join-btn-font">关注</x-button>
+										<!-- <x-button mini type="primary" class="join-btn-font">关注</x-button> -->
+										<FocusButton></FocusButton>
 									</div>
 								</div>
 							</flexbox-item>
 						</flexbox>
-						<p style="font-size:0.2rem;line-height:1.2;margin-top: 0.2rem;">							
-							历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
-						</p>
-						<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
-						 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
+						<div class="article-content" @click="linkArticle()">
+							<p>
+								历史学家巴特尔思据称白雪公主的历史原型是1725年生于德国西部美茵河畔洛尔城的玛利亚·索菲亚·冯·埃尔塔尔。
+							</p>
+							<img style="height: 3rem;margin-left: 0rem;background-size: auto 100%;"
+							 align="middle" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/photo1.png" />
+						</div>	
 						<TabBarDemoRemark></TabBarDemoRemark>
 					</div></card>
 				</div>
@@ -194,7 +200,12 @@ export default {
 /* 	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat; */
 	background-size: auto 100%;
 	height: 7rem;
-	padding: 0.5rem 0.5rem 0.6rem 1rem;
+	padding: 0.5rem 0.5rem 0.6rem 0.5rem;
+}
+.article-content{
+	font-size:0.2rem;
+	line-height:1.2;
+	margin-top: 0.2rem;
 }
 </style>
 
