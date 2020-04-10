@@ -183,7 +183,7 @@ export default {
 .friend-avatar {
   position: absolute;
   display: inline-block;
-  left: 0.3rem;
+  left: 0.5rem;
   margin-top: 0.5rem;
 }
 .friend-avatar img {
@@ -193,11 +193,11 @@ export default {
   width: 5rem;
   font-size: 0.43rem;
   font-weight: 600;
-  margin-left: 2.3rem;
+  margin-left: 2.5rem;
 }
 .friend-msg {
   font-size: 0.31rem;
-  margin-left: 2.3rem;
+  margin-left: 2.5rem;
   margin-top: 0.15rem;
   color: rgb(126, 126, 126);
 }
