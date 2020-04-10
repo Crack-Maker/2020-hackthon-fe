@@ -17,6 +17,17 @@ import Friend from '@/views/user/Friend.vue'
 import MyFocus from '@/views/user/MyFocus.vue'
 import Collect from '@/views/user/Collect.vue'
 import Create from '@/views/island/story/Create.vue'
+import ChangeName from '@/views/user/setup/ChangeName.vue'
+import ChangePassword from '@/views/user/setup/ChangePassword.vue'
+import Feedback from '@/views/user/setup/Feedback.vue'
+import CreateTopic from '@/views/island/shareAndSecret/CreateTopic.vue'
+import Article from '@/views/home/Article.vue'
+import Message from '@/views/Message.vue'
+import AllStory from '@/views/island/story/AllStory.vue'
+import JoinStory from '@/views/island/story/JoinStory.vue'
+import RemarkStory from '@/views/island/story/RemarkStory.vue'
+import RemarkShare from '@/views/island/shareAndSecret/RemarkShare.vue'
+import RemarkSecret from '@/views/island/shareAndSecret/RemarkSecret.vue'
 
 Vue.use(Router)
 
@@ -112,7 +123,62 @@ export default new Router({
 	  path: '/Create',
 	  name: 'Create',
 	  component: Create
-	}
+	},
+	{
+	  path: '/ChangeName',
+	  name: 'ChangeName',
+	  component: ChangeName
+	},
+	{
+	  path: '/ChangePassword',
+	  name: 'ChangePassword',
+	  component: ChangePassword
+	},
+	{
+	  path: '/Feedback',
+	  name: 'Feedback',
+	  component: Feedback
+	},
+	{
+	  path: '/CreateTopic',
+	  name: 'CreateTopic',
+	  component: CreateTopic
+	},
+	{
+	  path: '/Article',
+	  name: 'Article',
+	  component: Article 
+	},
+	{
+	  path: '/Message',
+	  name: 'Message',
+	  component: Message
+	},
+	{
+	  path: '/AllStory',
+	  name: 'AllStory',
+	  component: AllStory 
+	},
+	{
+	  path: '/JoinStory',
+	  name: 'JoinStory',
+	  component: JoinStory
+	},
+	{
+	  path: '/RemarkStory',
+	  name: 'RemarkStory',
+	  component: RemarkStory
+	},
+	{
+	  path: '/RemarkShare',
+	  name: 'RemarkShare',
+	  component: RemarkShare
+	},
+	{
+	  path: '/RemarkSecret',
+	  name: 'RemarkSecret',
+	  component: RemarkSecret
+	},
     // {
     //   path: '/',
     //   name: '',

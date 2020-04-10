@@ -1,10 +1,15 @@
 <template>
   <div class="login">
     <x-header
-      style="width:100%;position:absolute;left:0;top:0;z-index:100;"
-      :right-options="{showMore: true}"
-      @on-click-more="showMenus = true"
-    >账号登陆</x-header>
+      :left-options="{showBack: true}"
+      :right-options="{showMore: false}"
+      style="width:100%;background-color:#FFFFFF ;
+    	  position:absolute;left:0;top:0;z-index:100;"
+    >
+      <div slot="overwrite-left" @click="handleBack()">
+        <x-icon type="ios-arrow-back" size="30"></x-icon>
+      </div>
+    </x-header>
     <div class="title-container">
       <div class="title-1">Welcome to the</div>
       <div class="title-2">ISLAND</div>
@@ -21,7 +26,7 @@
           is-type="china-mobile"
           required
         >
-          <img slot="label" src="../assets/imgs/me.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg" class="logo" />
         </x-input>
       </group>
       <group class="no-border">
@@ -37,7 +42,7 @@
           @on-click-clear-icon="password = null"
           required
         >
-          <img slot="label" src="../assets/imgs/lock.svg" class="logo" />
+          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
         </x-input>
       </group>
     </div>
@@ -79,6 +84,9 @@ export default {
       this.$router.push({
         path: "/Regist"
       });
+    },
+    handleBack() {
+      this.$router.go(-1);
     }
   }
 };
@@ -90,11 +98,10 @@ export default {
 }
 
 .login {
-  background-image: url(../assets/imgs/bg-island.png);
+  background-image: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/bg-island.png);
   background-repeat: no-repeat;
   background-position: 4.5rem 0rem;
   background-size: 8rem;
-  height: 19rem;
 }
 
 .forget-pass {
@@ -126,7 +133,7 @@ export default {
 }
 
 .login-box {
-  width: 10.1rem;
+  width: 10.2rem;
   margin-top: 3.5rem;
   margin-left: 0.4rem;
 }
@@ -141,9 +148,9 @@ export default {
 .border {
   border: 1px solid #fdfdfd;
   border-radius: 45px;
-  -webkit-box-shadow: 1px 4px 5px #c3c3c3;
-  box-shadow: 1px 4px 5px #c3c3c3;
-  margin: 0.2rem;
+  -webkit-box-shadow: 1px 3px 5px #d1cece;
+  box-shadow: 1px 3px 5px #d1cece;
+  margin: 0.3rem;
   padding: 0.4rem 0.8rem;
   text-indent: 0.5em;
   font-size: 0.45rem;
@@ -174,25 +181,9 @@ export default {
   color: #5cc2b6;
   margin-top: 0.35rem;
 }
-</style>
-<style>
-.no-border div:before {
-  display: none;
-}
-.no-border div:after {
-  display: none;
-}
+
 .no-border div {
   margin-top: 0.1rem;
-}
-input::-webkit-input-placeholder {
-  color: #afb3b5;
-  letter-spacing: 0.1rem;
-}
-
-input::placeholder {
-  color: #afb3b5;
-  letter-spacing: 0.02rem;
 }
 
 .vux-input-icon.weui-icon-warn:before {
@@ -201,5 +192,17 @@ input::placeholder {
 
 .weui-icon-warn {
   font-size: 0.5rem !important;
+}
+</style>
+<style>
+input::-webkit-input-placeholder {
+  font-family: zzgf, Arial;
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
+}
+
+input::placeholder {
+  color: #afb3b5;
+  letter-spacing: 0.02rem;
 }
 </style>

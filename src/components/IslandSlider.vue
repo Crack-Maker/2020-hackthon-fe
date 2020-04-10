@@ -31,27 +31,27 @@ export default {
       //data list [array]
       someList: [
         {
-          html: "故事之岛",
+          html: "故事岛",
           style: {
-            background: "url(../../static/img/island1.png)no-repeat",
+            background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island1.png)no-repeat",
 			'background-size': '100% auto',
             width: "65.33333333%"
           },
           LinkTo: "/Island1"
         },
         {
-          html: "分享之岛",
+          html: "分享岛",
           style: {
-            background: "url(../../static/img/island2.png)no-repeat",
+            background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island2.png)no-repeat",
 			'background-size': '100% auto',
             width: "65.33333333%"
           },
           LinkTo: "/Island2"
         },
         {
-          html: "秘密之岛",
+          html: "秘密岛",
           style: {
-            background: "url(../../static/img/island3.png)no-repeat",
+            background: "url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island3.png)no-repeat",
 			'background-size': '100% auto',
             width: "65.33333333%"
           },
@@ -101,8 +101,9 @@ export default {
 <style scoped lang="less">
 .font-style{
 	margin-top: 9.5rem;
-	font-size: 0.85rem;
-	// font-family:zzgf;
+	font-size: 0.9rem;
+	font-family: zzgf, Arial !important;
+	font-weight: 800;
 	color:#000000;
 }
 </style>

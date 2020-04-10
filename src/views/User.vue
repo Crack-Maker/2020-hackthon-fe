@@ -1,43 +1,43 @@
 <template>
-	<div>
+	<div class="user-style">
 	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
 	  position:absolute;left:0;top:0;z-index:100;">
-	      <div slot="overwrite-left">
-	      	<img src="../../static/img/消息.svg"/>
+	      <div slot="overwrite-left" @click="linkMessage()">
+	      	<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message.png"/>
 	      </div>
 		  <!-- 下面这个div用来触发特效 -->
 		  <div>
 			  <font size="2" color="#888888">——已来到岛遇XX天——</font>
 		  </div>
 		  <div slot="right" @click="linkSetup()">
-			<img src="../../static/img/设置.svg"/>
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/settings.svg"/>
 		  </div>
 		  </x-header>
 	  <div class="main-info">
 		  <br />
-		  <img style="height: 3.5rem;margin-left: 1rem;margin-top: -1rem;
-		  background-size: auto 100%;" align="left" src="../../static/img/头像.svg"/>
+		  <img style="height: 3.5rem;margin-left: 1rem;margin-top: -1rem;border-radius: 2rem;
+		  background-size: auto 100%;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg"/>
 		  <!-- 显示用户昵称 -->
 		  <div class="name-font-style">Refuel Island</div>
 		  <div class="normal-font-size">Refuel Island的个性签名</div>
 		  <div slot="content" class="card-demo-flex card-demo-content01">
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkHistory()">
-		  			  135
+		  			  120
 		  			  <br/>最近发布
 		  			</div>
 		    </div>
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkMyFocus()">
 		  			  <!-- <span>15</span> -->
-					  99
+					  15
 		  			  <br/>关注
 		  			</div>
 		    </div>
 		    <div class="vux-1px-r">
 		  			<div class="normal-font-size" @click="linkCollect()">
 		  			  <!-- <span>10</span> -->
-					  10
+					  8
 		  			  <br/>收藏
 		  			</div>
 		    </div>
@@ -62,14 +62,22 @@
 			</div>
 	      </grid> -->
       <group>
-		<cell-box is-link @click.native="linkFriend">我的好友</cell-box>
-		<cell-box is-link @click.native="linkAbility">我的属性</cell-box>
-		<cell-box is-link @click.native="linkIsland">秘密の岛</cell-box>
-		<cell-box is-link @click.native="linkSetup">内容发布</cell-box>
+		<cell-box is-link @click.native="linkFriend" style="margin-left: 1rem;">
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user1.png"/>&nbsp;&nbsp;我的好友		
+		</cell-box>
+		<cell-box is-link @click.native="linkAbility" style="margin-left: 1rem;">
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user2.png"/>&nbsp;&nbsp;我的属性
+		</cell-box>
+		<cell-box is-link @click.native="linkIsland" style="margin-left: 1rem;">
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user3.png"/>&nbsp;&nbsp;秘密の岛
+		</cell-box>
+		<cell-box is-link @click.native="linkTopic" style="margin-left: 1rem;">
+			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/user4.png"/>&nbsp;&nbsp;内容发布
+		</cell-box>
       </group>
 	<!--  <divider><font size="4">我的秘密岛</font></divider> -->
 	      <card>
-	        <img slot="header" src="../../static/img/island3.png" style="width:25%;">
+	        <img slot="header" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island3.png" style="width:25%;">
 	      </card>
 	  <!-- 之后再去用这个组件，具体方法还没写 -->
 	   <br />
@@ -120,6 +128,11 @@ export default {
 			path:'/Setup'
 		})
 	},
+	linkMessage(){
+		this.$router.push({
+			path:'/Message'
+		})
+	},
 	linkAbility(){
 		this.$router.push({
 			path:'/Ability'
@@ -128,6 +141,11 @@ export default {
 	linkIsland(){
 		this.$router.push({
 			path:'/Island3'
+		})
+	},
+	linkTopic(){
+		this.$router.push({
+			path:'/CreateTopic'
 		})
 	}
   },
@@ -167,8 +185,11 @@ export default {
 </style>
 
 <style scoped>
+.user-style{
+	font-family: zzgf, Arial !important;
+}
 .main-info{
-	background: url(../../static/img/frank.svg)no-repeat;
+	background: url(https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/frank.svg)no-repeat;
 	background-size:100% auto;
 }
 .name-font-style{

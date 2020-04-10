@@ -1,7 +1,11 @@
 <template>
   <div class="background-color">
-	  <x-header :left-options="{showBack: false}" style="width:100%;
-	  position:absolute;left:0;top:0;z-index:100;">岛屿</x-header>
+	  <x-header :left-options="{showBack: false}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+	  position:absolute;left:0;top:0;z-index:100;">
+	  		<div slot="overwrite-left" @click="linkMessage()">
+	  			<img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/message.png"/>
+	  		</div>
+	  </x-header>
 	  <br />
 	  <island-slider></island-slider>
 	  <br />
@@ -21,6 +25,13 @@ export default {
 	  XHeader,
 	  Masker,
 	  IslandSlider
+  },
+  methods:{
+	  linkMessage(){
+	  	this.$router.push({
+	  		path:'/Message'
+	  	})
+	  }
   },
   // 接受App.vue传递过来的reload方法
   inject:	['reload'],
@@ -48,6 +59,7 @@ export default {
 .normal-font-size{
   color: #888888;
   font-size: 0.5rem;
+	font-family: zzgf, Arial !important;
 }
 </style>
 
