@@ -23,7 +23,18 @@
         >
         <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/search.png" style="width: 0.8rem;height: 0.8rem;margin-right: 0.2rem;margin-top: 0.05rem;" slot="right"></search>
       </div>
-    </x-header>好友
+    </x-header>
+    <div class="friend-container">
+      <ul class="friend-list">
+        <li v-for="(item) in friendList" :key="item.id">
+          <div class="friend-avatar">
+            <img v-bind:src="item.avatarSrc">
+          </div>
+          <div class="friend-title">{{item.nickname}}</div>
+          <div class="friend-msg">{{item.lastMsg}}</div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -64,7 +75,33 @@ export default {
   data() {
     return {
       friendResults: [],
-      value: ""
+      value: "",
+      friendList: [
+        {
+          nickname: '我不是前端',
+          id: 0,
+          avatarSrc: 'https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar-0.png',
+          lastMsg: '何地之鲲 几时化鹏扶摇而上 为万里行'
+        },
+        {
+          nickname: '我怀疑这情头是一个人',
+          id: 1,
+          avatarSrc: 'https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar-1.png',
+          lastMsg: '情头就是一个人的情头哈哈哈'
+        },
+        {
+          nickname: '小楠设计狗',
+          id: 2,
+          avatarSrc: 'https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar-2.png',
+          lastMsg: '希望做完这个设计我还是小可爱'
+        },
+        {
+          nickname: '咕咕咕咕组',
+          id: 3,
+          avatarSrc: 'https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/avatar-3.png',
+          lastMsg: '我在我在你在你在加油加油！！'
+        }
+      ]
     };
   }
 };
@@ -132,5 +169,36 @@ export default {
 }
 .weui-icon-clear {
   top: -6px !important;
+}
+</style>
+<style>
+.friend-container {
+  margin-top: 3rem;
+  text-align: left;
+}
+.friend-list li {
+  border-bottom: solid 1px #ebebeb;
+  height: 2.4rem;
+}
+.friend-avatar {
+  position: absolute;
+  display: inline-block;
+  left: 0.3rem;
+  margin-top: 0.5rem;
+}
+.friend-avatar img {
+  height: 1.6rem;
+}
+.friend-title {
+  width: 5rem;
+  font-size: 0.43rem;
+  font-weight: 600;
+  margin-left: 2.3rem;
+}
+.friend-msg {
+  font-size: 0.31rem;
+  margin-left: 2.3rem;
+  margin-top: 0.15rem;
+  color: rgb(126, 126, 126);
 }
 </style>
