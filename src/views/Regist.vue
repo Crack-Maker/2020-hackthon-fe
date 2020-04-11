@@ -22,11 +22,14 @@
           placeholder="给自己取个昵称吧"
           v-model="nickname"
           keyboard="number"
-          is-type="china-mobile"
           class="border"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg"
+            class="logo"
+          />
         </x-input>
       </group>
       <group class="no-border">
@@ -40,12 +43,20 @@
           class="border"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/phone.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/phone.svg"
+            class="logo"
+          />
         </x-input>
       </group>
       <group class="no-border">
         <x-input title type="text" placeholder="请输入验证码" v-model="code" class="border" required>
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/code.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/code.svg"
+            class="logo"
+          />
           <x-button
             slot="right"
             type="primary"
@@ -66,16 +77,17 @@
           :max="16"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg"
+            class="logo"
+          />
         </x-input>
       </group>
     </div>
     <div class="normal-font-size">
       <span>注册后，您的微信账号和手机号都可以登录</span>
     </div>
-    <!--    <p>
-      <span>注册后，您的微信账号和手机号都可以登录</span>
-    </p>-->
     <box gap="10px 25px">
       <x-button type="primary" @click.native="handleRegist">注册</x-button>
     </box>
@@ -87,6 +99,7 @@
 
 <script>
 import { XInput, Box, Group, XButton } from "vux";
+import axios from "axios";
 
 export default {
   name: "regist",
@@ -104,10 +117,23 @@ export default {
     };
   },
   methods: {
+    checkPhone() {
+      axios
+        .post("http://47.99.58.131:8080/api/regist", {
+          phone: phone
+        })
+        .then(function(response) {
+          console.log(response);
+        })
+        .catch(function(error) {
+          console.log(error);
+        });
+    },
     handleGetCode() {
       if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
+        this.$options.methods.checkPhone();
         let seconds = 60;
         let self = this;
         let time = setInterval(function() {
@@ -134,7 +160,7 @@ export default {
     },
     handleBack() {
       this.$router.go(-1);
-    }
+    },
   },
   created() {
     window.document.title = "注册";

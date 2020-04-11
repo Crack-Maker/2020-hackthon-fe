@@ -32,7 +32,7 @@
       <group class="no-border">
         <x-input
           title="锁头 |"
-          type="text"
+          type="password"
           placeholder="请输入密码"
           class="passwd border"
           v-model="password"
@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     change(val) {
-      console.log("on change", val);
     },
     //暂时设置回到user.vue界面
     handleLogin() {
