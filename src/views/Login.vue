@@ -19,6 +19,7 @@
         <x-input
           title="头像 |"
           name="phone"
+          ref="phone"
           placeholder="请输入手机号码"
           class="phone border"
           v-model="phone"
