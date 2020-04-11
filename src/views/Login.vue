@@ -99,6 +99,9 @@ export default {
             console.log(response)
             if (response.data.statuse === "success") {
               that.$vux.toast.text("登录成功~");
+              that.$router.push({
+              path: "/User"
+            });
               that.phone = "response.data.phone",
               that.password = "response.data.password",
               that.token = "response.data.token",
