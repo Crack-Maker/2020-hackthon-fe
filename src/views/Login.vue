@@ -97,20 +97,20 @@ export default {
           })
           .then(function(response) {
             console.log(response)
-            if (response.data.status === "success") {
+            if (response.data.statuse === "success") {
               that.$vux.toast.text("登录成功~");
               that.phone = "response.data.phone",
               that.password = "response.data.password",
               that.token = "response.data.token",
-              that.userid = "response.data.userid",
+              that.userid = response.data.userid,
               that.nickname = "response.data.nickname"
             }
-            if (response.data.status === "wname") {
+            if (response.data.statuse === "wname") {
               that.$vux.toast.text(
                 "还没有注册哦~"
               );
             }
-            if (response.data.status === "wpaswd") {
+            if (response.data.statuse === "wpaswd") {
               that.$vux.toast.text(
                 "密码错误哦~"
               );
