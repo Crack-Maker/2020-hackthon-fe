@@ -125,7 +125,7 @@ export default {
         let that = this
         axios
           .post("http://47.99.58.131:8080/api/regist", {
-            phone: phoneNum
+            phone: that.phone
           })
           .then(function(response) {
             if (response.data.status === "sms_success") {
