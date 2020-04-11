@@ -109,19 +109,22 @@ export default {
               that.nickname = "response.data.nickname"
               that.isLogin = true
             }
-            else if (response.status == 422) {
+          })
+          .catch(function(error) {
+            const {errCode,errMsg} = getErrMsg(error);
+            if (errCode == 422) {
               that.$vux.toast.text(
                 "还没有注册哦~"
               );
             }
-            else if (response.status == 400) {
+            else if (errCode == 400) {
               that.$vux.toast.text(
                 "密码错误哦~"
               );
             }
-          })
-          .catch(function(error) {
+            else {
             that.$vux.toast.text("网络异常，请稍后重试");
+            }
             console.log(error);
           });
       } else if (!this.$refs.phone.valid) {
