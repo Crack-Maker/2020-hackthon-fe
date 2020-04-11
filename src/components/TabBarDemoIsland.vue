@@ -11,7 +11,7 @@
 		  <img slot="icon" v-if="showImageIsland" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island2.svg"/>
           <span slot="label">岛屿</span>
         </tabbar-item>
-        <tabbar-item @on-item-click="changeImageMine" :link="{path:'/User'}">
+        <tabbar-item @on-item-click="changeImageMine">
           <img slot="icon" v-if="!showImageMine" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/mine1.svg" />
 		  <img slot="icon" v-if="showImageMine" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/mine2.svg" />
           <span slot="label">我的</span>
@@ -29,7 +29,7 @@ export default {
 	  showImageHome:false,
 	  showImageIsland:true,
 	  showImageMine:false,
-      isLogin: false,
+    isLogin: false,
     }
   },
   components: {
@@ -44,12 +44,22 @@ export default {
 		this.showImageMine = false;
     },
 	changeImageIsland () {
-	    this.showImageIsland = true;
+    this.showImageIsland = true;
 		this.showImageHome = false;
 		this.showImageMine = false;
 	},
 	changeImageMine () {
-	    this.showImageMine = true;
+    if (localStorage.getItem("isLogin")) {
+      this.$router.push({
+        path: "/User"
+      });
+    } else {
+      this.$vux.toast.text("未登录，正在前往登录页");
+      this.$router.push({
+        path: "/Login"
+      });
+    }
+    this.showImageMine = true;
 		this.showImageHome = false;
 		this.showImageIsland = false;
 	}
