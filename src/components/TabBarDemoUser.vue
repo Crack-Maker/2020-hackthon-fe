@@ -11,7 +11,7 @@
 		  <img slot="icon" v-if="showImageIsland" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/island2.svg"/>
           <span slot="label">岛屿</span>
         </tabbar-item>
-        <tabbar-item @on-item-click="changeImageMine" :link="{path:'/User'}" badge="1">
+        <tabbar-item @on-item-click="changeImageMine" :link="{path:'/User'}">
           <img slot="icon" v-if="!showImageMine" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/mine1.svg" />
 		  <img slot="icon" v-if="showImageMine" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/mine2.svg" />
           <span slot="label">我的</span>
