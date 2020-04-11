@@ -65,6 +65,7 @@
 
 <script>
 import { XInput, Box, Group, XButton } from "vux";
+import axios from "axios";
 export default {
   name: "login",
   data() {
@@ -73,7 +74,8 @@ export default {
       password: "",
       token: "",
       userid: "",
-      nickname: ""
+      nickname: "",
+      isLogin: false
     };
   },
   components: {
