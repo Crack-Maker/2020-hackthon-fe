@@ -88,8 +88,6 @@ export default {
     //暂时设置回到user.vue界面
     handleLogin() {
       if (this.$refs.phone.valid) {
-        this.getCode.disabled = true;
-        this.getCode.txt = "获取中...";
         let that = this;
         axios
           .post("http://47.99.58.131:8080/api/login", {
@@ -119,7 +117,7 @@ export default {
             that.$vux.toast.text("网络异常，请稍后重试");
             console.log(error);
           });
-      } else if (this.phone && !this.$refs.phone.valid) {
+      } else if (!this.$refs.phone.valid) {
         this.$vux.toast.text("手机号码格式不对哦~");
       } else if (!this.phone) {
         this.$vux.toast.text("请先填写手机号哦~");
