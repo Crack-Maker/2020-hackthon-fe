@@ -118,30 +118,28 @@ export default {
     };
   },
   methods: {
-    checkPhone(phoneNum) {
-      var thats = this;
-      axios
-        .post("http://47.99.58.131:8080/api/regist", {
-          phone: phoneNum
-        })
-        .then(function(response) {
-          if (response.data.status = "sms_success") {
-            thats.$vux.toast.text("已发送至你的手机，请注意查收");
-            that.trueCode = response.data.Msg
-          }
-          if (response.data.status = "wphone") {
-            thats.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
-          }
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    },
     handleGetCode() {
       if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
-        this.$options.methods.checkPhone(this.phone);
+        let that = this
+        axios
+          .post("http://47.99.58.131:8080/api/regist", {
+            phone: phoneNum
+          })
+          .then(function(response) {
+            if (response.data.status === "sms_success") {
+              that.$vux.toast.text("已发送至你的手机，请注意查收");
+              that.trueCode = response.data.Msg
+            }
+            if (response.data.status === "wphone") {
+              that.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
+            }
+          })
+          .catch(function(error) {
+            that.$vux.toast.text("已发送至你的手机，请注意查收");
+            console.log(error);
+          });
         let seconds = 60;
         let self = this;
         let time = setInterval(function() {
@@ -155,6 +153,7 @@ export default {
         }, 1000);
       } else {
         this.$vux.toast.text("请先填写手机号");
+        console.log(this)
       }
     },
     handleRegist() {
