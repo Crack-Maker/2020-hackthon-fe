@@ -74,7 +74,7 @@ export default {
       password: "",
       token: "",
       userid: "",
-      nickname: "",
+      nickname: "未登录",
       isLogin: false
     };
   },
