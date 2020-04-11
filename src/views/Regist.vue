@@ -119,17 +119,18 @@ export default {
   },
   methods: {
     checkPhone(phoneNum) {
+      let that = this
       axios
         .post("http://47.99.58.131:8080/api/regist", {
           phone: phoneNum
         })
-        .then((response) => {
+        .then((response) {
           if (response.data.status = "sms_success") {
-            this.$vux.toast.text("已发送至你的手机，请注意查收");
-            this.trueCode = response.data.Msg
+            that.$vux.toast.text("已发送至你的手机，请注意查收");
+            that.trueCode = response.data.Msg
           }
           if (response.data.status = "wphone") {
-            this.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
+            that.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
           }
         })
         .catch(function(error) {
