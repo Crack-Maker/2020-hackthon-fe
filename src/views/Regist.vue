@@ -147,7 +147,7 @@ export default {
               that.$vux.toast.text(
                 "手机号已注册，可直接登录或者更换手机号注册"
               );
-              that.getCode.disabled = fales;
+              that.getCode.disabled = false;
               that.getCode.txt = "获取验证码";
             }
           })
