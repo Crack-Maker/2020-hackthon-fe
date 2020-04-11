@@ -123,6 +123,8 @@ export default {
         this.$vux.toast.text("手机号码格式不对哦~");
       } else if (!this.phone) {
         this.$vux.toast.text("请先填写手机号哦~");
+      } else if (!this.password) {
+        this.$vux.toast.text("请先填密码哦~");
       }
     },
     handleRegist() {
