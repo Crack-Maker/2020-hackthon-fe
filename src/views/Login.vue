@@ -102,12 +102,11 @@ export default {
               that.$router.push({
               path: "/User"
             });
-              that.phone = "response.data.phone",
-              that.password = "response.data.password",
-              that.token = "response.data.token",
-              that.userid = response.data.userid,
-              that.nickname = "response.data.nickname"
-              that.isLogin = true
+              localStorage.setItem('phone', response.data.phone)
+              localStorage.setItem('token', response.data.token)
+              localStorage.setItem('userid', response.data.userid)
+              localStorage.setItem('nickname', response.data.nickname)
+              localStorage.setItem('isLogin', true)
             }
           })
           .catch(function(error) {
