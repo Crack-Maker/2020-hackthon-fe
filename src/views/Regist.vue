@@ -117,10 +117,10 @@ export default {
     };
   },
   methods: {
-    checkPhone() {
+    checkPhone(phoneNum) {
       axios
         .post("http://47.99.58.131:8080/api/regist", {
-          phone: phone
+          phone: phoneNum
         })
         .then(function(response) {
           console.log(response);
@@ -133,7 +133,7 @@ export default {
       if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
-        this.$options.methods.checkPhone();
+        this.$options.methods.checkPhone(this.phone);
         let seconds = 60;
         let self = this;
         let time = setInterval(function() {
