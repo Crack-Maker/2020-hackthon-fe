@@ -99,14 +99,12 @@ export default {
             console.log(response)
             if (response.data.statuse === "success") {
               that.$vux.toast.text("登录成功~");
-              that.$router.push({
-              path: "/User"
-            });
-              localStorage.setItem('phone', response.data.phone)
-              localStorage.setItem('token', response.data.token)
-              localStorage.setItem('userid', response.data.userid)
-              localStorage.setItem('nickname', response.data.nickname)
-              localStorage.setItem('isLogin', true)
+              that.$router.push({path: "/User"});
+              localStorage.setItem("phone", response.data.phone)
+              localStorage.setItem("token", response.data.token)
+              localStorage.setItem("userid", response.data.userid)
+              localStorage.setItem("nickname", response.data.nickname)
+              localStorage.setItem("isLogin", true)
             }
           })
           .catch(function(error) {
@@ -117,7 +115,7 @@ export default {
             }
             else if (error.response.status == 400) {
               that.$vux.toast.text(
-                "密码错误惹！"
+                "密码错误惹~"
               );
             }
             else {
