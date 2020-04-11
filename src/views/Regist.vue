@@ -119,12 +119,12 @@ export default {
   },
   methods: {
     checkPhone(phoneNum) {
-      let that = this
+      let that = this;
       axios
         .post("http://47.99.58.131:8080/api/regist", {
           phone: phoneNum
         })
-        .then((response) {
+        .then(function(response) {
           if (response.data.status = "sms_success") {
             that.$vux.toast.text("已发送至你的手机，请注意查收");
             that.trueCode = response.data.Msg
