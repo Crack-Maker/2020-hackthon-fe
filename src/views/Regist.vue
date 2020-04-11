@@ -132,6 +132,16 @@ export default {
             if (response.data.status === "sms_success") {
               that.$vux.toast.text("已发送至你的手机，请注意查收");
               that.trueCode = response.data.Msg;
+              let seconds = 60;
+              let time = setInterval(function() {
+                --seconds;
+                that.getCode.txt = seconds + "s";
+                if (seconds <= 0) {
+                  clearInterval(time);
+                  that.getCode.disabled = false;
+                  that.getCode.txt = "获取验证码";
+                }
+              }, 1000);
             }
             if (response.data.status === "wphone") {
               that.$vux.toast.text(
@@ -143,17 +153,6 @@ export default {
             that.$vux.toast.text("网络异常，请稍后重试");
             console.log(error);
           });
-        let seconds = 60;
-        let self = this;
-        let time = setInterval(function() {
-          --seconds;
-          self.getCode.txt = seconds + "s";
-          if (seconds <= 0) {
-            clearInterval(time);
-            self.getCode.disabled = false;
-            self.getCode.txt = "获取验证码";
-          }
-        }, 1000);
       } else if (this.phone && !this.$refs.phone.valid) {
         this.$vux.toast.text("手机号码格式不对哦~");
       } else if (!this.phone) {
