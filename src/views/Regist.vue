@@ -119,7 +119,6 @@ export default {
   },
   methods: {
     checkPhone(phoneNum) {
-      let that = this;
       axios
         .post("http://47.99.58.131:8080/api/regist", {
           phone: phoneNum
@@ -138,6 +137,7 @@ export default {
         });
     },
     handleGetCode() {
+      var that = this;
       if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
