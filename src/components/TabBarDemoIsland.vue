@@ -53,15 +53,15 @@ export default {
       this.$router.push({
         path: "/User"
       });
+      this.showImageMine = true;
+      this.showImageHome = false;
+      this.showImageIsland = false;
     } else {
-      this.$vux.toast.text("未登录，正在前往登录页");
+      this.$vux.toast.text("未登录，请登录后查看");
       this.$router.push({
         path: "/Login"
       });
     }
-    this.showImageMine = true;
-		this.showImageHome = false;
-		this.showImageIsland = false;
 	}
   }
 };
