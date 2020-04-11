@@ -36,6 +36,7 @@
         <x-input
           title="手机 |"
           name="phone"
+          ref="phone"
           placeholder="请输入手机号码"
           v-model="phone"
           keyboard="number"
@@ -119,10 +120,10 @@ export default {
   },
   methods: {
     handleGetCode() {
-      if (this.phone) {
+      if (this.$refs.phone.valid) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
-        let that = this
+        let that = this;
         axios
           .post("http://47.99.58.131:8080/api/regist", {
             phone: that.phone
@@ -130,45 +131,65 @@ export default {
           .then(function(response) {
             if (response.data.status === "sms_success") {
               that.$vux.toast.text("已发送至你的手机，请注意查收");
-              that.trueCode = response.data.Msg
+              that.trueCode = response.data.Msg;
+              let seconds = 60;
+              let time = setInterval(function() {
+                --seconds;
+                that.getCode.txt = seconds + "s";
+                if (seconds <= 0) {
+                  clearInterval(time);
+                  that.getCode.disabled = false;
+                  that.getCode.txt = "获取验证码";
+                }
+              }, 1000);
             }
             if (response.data.status === "wphone") {
-              that.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
+              that.$vux.toast.text(
+                "手机号已注册，可直接登录或者更换手机号注册"
+              );
+              that.getCode.disabled = false;
+              that.getCode.txt = "获取验证码";
             }
           })
           .catch(function(error) {
-            that.$vux.toast.text("已发送至你的手机，请注意查收");
+            that.$vux.toast.text("网络异常，请稍后重试");
             console.log(error);
           });
-        let seconds = 60;
-        let self = this;
-        let time = setInterval(function() {
-          --seconds;
-          self.getCode.txt = seconds + "s";
-          if (seconds <= 0) {
-            clearInterval(time);
-            self.getCode.disabled = false;
-            self.getCode.txt = "获取验证码";
-          }
-        }, 1000);
-      } else {
-        this.$vux.toast.text("请先填写手机号");
-        console.log(this)
+      } else if (this.phone && !this.$refs.phone.valid) {
+        this.$vux.toast.text("手机号码格式不对哦~");
+      } else if (!this.phone) {
+        this.$vux.toast.text("请先填写手机号哦~");
       }
     },
     handleRegist() {
+      let that = this;
       if (!this.phone || !this.code || !this.password) {
-        this.$vux.toast.text("您有未填项，不能注册");
+        this.$vux.toast.text("您有未填项，不完成能注册");
       } else if (this.code != this.trueCode) {
         this.$vux.toast.text("验证码有误");
-      } else if (this.code == this.trueCode)
-      {
-        this.$vux.toast.text("注册成功");
+      } else if (this.code == this.trueCode) {
+        axios
+          .post("http://47.99.58.131:8080/api/regist_confirm", {
+            phone: that.phone,
+            nickname: that.nickname,
+            password: that.password
+          })
+          .then(function(response) {
+            console.log(response);
+            that.$vux.toast.text("注册成功 正在前往登录页");
+            that.$router.push({
+              path: "/Login"
+            });
+          })
+          .catch(function(error) {
+            that.$vux.toast.text("网络异常，请稍后重试");
+            console.log(error);
+          });
       }
     },
     handleBack() {
       this.$router.go(-1);
-    },
+    }
   },
   created() {
     window.document.title = "注册";
