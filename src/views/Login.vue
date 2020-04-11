@@ -89,13 +89,14 @@ export default {
     },
     //暂时设置回到user.vue界面
     handleLogin() {
-      if (this.$refs.phone.valid) {
+      if (this.$refs.phone.valid && this.password) {
         let that = this;
         axios
           .post("http://47.99.58.131:8080/api/login", {
             phone: that.phone, password: that.password
           })
           .then(function(response) {
+            console.log(response)
             if (response.data.status === "success") {
               that.$vux.toast.text("登录成功~");
               that.phone = "response.data.phone",
