@@ -104,13 +104,14 @@ export default {
               that.token = "response.data.token",
               that.userid = response.data.userid,
               that.nickname = "response.data.nickname"
+              that.isLogin = true
             }
-            if (response.data.statuse === "wname") {
+            else if (response.status == 422) {
               that.$vux.toast.text(
                 "还没有注册哦~"
               );
             }
-            if (response.data.statuse === "wpaswd") {
+            else if (response.status == 400) {
               that.$vux.toast.text(
                 "密码错误哦~"
               );
