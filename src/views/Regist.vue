@@ -123,7 +123,8 @@ export default {
           phone: phoneNum
         })
         .then(function(response) {
-          console.log(response);
+          console.log(response.data.Msg);
+          console.log(response.data.status);
         })
         .catch(function(error) {
           console.log(error);
