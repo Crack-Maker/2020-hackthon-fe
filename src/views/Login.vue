@@ -26,7 +26,11 @@
           is-type="china-mobile"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg"
+            class="logo"
+          />
         </x-input>
       </group>
       <group class="no-border">
@@ -42,7 +46,11 @@
           @on-click-clear-icon="password = null"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg"
+            class="logo"
+          />
         </x-input>
       </group>
     </div>
@@ -60,8 +68,11 @@ export default {
   name: "login",
   data() {
     return {
-      phone: "", //用户手机号
-      password: "" //用户密码
+      phone: "",
+      password: "",
+      token: "",
+      userid: "",
+      nickname: ""
     };
   },
   components: {
@@ -75,9 +86,43 @@ export default {
     },
     //暂时设置回到user.vue界面
     handleLogin() {
-      this.$router.push({
-        path: "/User"
-      });
+      if (this.$refs.phone.valid) {
+        this.getCode.disabled = true;
+        this.getCode.txt = "获取中...";
+        let that = this;
+        axios
+          .post("http://47.99.58.131:8080/api/login", {
+            phone: that.phone, password: that.password
+          })
+          .then(function(response) {
+            if (response.data.status === "success") {
+              that.$vux.toast.text("登录成功~");
+              that.phone = "response.data.phone",
+              that.password = "response.data.password",
+              that.token = "response.data.token",
+              that.userid = "response.data.userid",
+              that.nickname = "response.data.nickname"
+            }
+            if (response.data.status === "wname") {
+              that.$vux.toast.text(
+                "还没有注册哦~"
+              );
+            }
+            if (response.data.status === "wpaswd") {
+              that.$vux.toast.text(
+                "密码错误哦~"
+              );
+            }
+          })
+          .catch(function(error) {
+            that.$vux.toast.text("网络异常，请稍后重试");
+            console.log(error);
+          });
+      } else if (this.phone && !this.$refs.phone.valid) {
+        this.$vux.toast.text("手机号码格式不对哦~");
+      } else if (!this.phone) {
+        this.$vux.toast.text("请先填写手机号哦~");
+      }
     },
     handleRegist() {
       this.$router.push({
