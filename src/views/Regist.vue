@@ -108,6 +108,7 @@ export default {
       nickname: "", //昵称
       phone: "", //手机号
       code: "", //验证码
+      trueCode: "", //验证码
       password: "", //密码
       // passwordC: "", //确认密码
       getCode: {
@@ -117,23 +118,28 @@ export default {
     };
   },
   methods: {
-    checkPhone(phoneNum) {
-      axios
-        .post("http://47.99.58.131:8080/api/regist", {
-          phone: phoneNum
-        })
-        .then(function(response) {
-          console.log(response);
-        })
-        .catch(function(error) {
-          console.log(error);
-        });
-    },
     handleGetCode() {
       if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
-        this.$options.methods.checkPhone(this.phone);
+        let that = this
+        axios
+          .post("http://47.99.58.131:8080/api/regist", {
+            phone: that.phone
+          })
+          .then(function(response) {
+            if (response.data.status === "sms_success") {
+              that.$vux.toast.text("已发送至你的手机，请注意查收");
+              that.trueCode = response.data.Msg
+            }
+            if (response.data.status === "wphone") {
+              that.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
+            }
+          })
+          .catch(function(error) {
+            that.$vux.toast.text("已发送至你的手机，请注意查收");
+            console.log(error);
+          });
         let seconds = 60;
         let self = this;
         let time = setInterval(function() {
@@ -147,14 +153,16 @@ export default {
         }, 1000);
       } else {
         this.$vux.toast.text("请先填写手机号");
+        console.log(this)
       }
     },
     handleRegist() {
-      if (!this.phone || !this.code || !this.password || !this.passwordC) {
+      if (!this.phone || !this.code || !this.password) {
         this.$vux.toast.text("您有未填项，不能注册");
-      } else if (this.password != this.passwordC) {
-        this.$vux.toast.text("两次输入的密码不一致");
-      } else {
+      } else if (this.code != this.trueCode) {
+        this.$vux.toast.text("验证码有误");
+      } else if (this.code == this.trueCode)
+      {
         this.$vux.toast.text("注册成功");
       }
     },
