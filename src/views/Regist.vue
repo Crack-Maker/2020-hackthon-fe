@@ -123,7 +123,7 @@ export default {
         .post("http://47.99.58.131:8080/api/regist", {
           phone: phoneNum
         })
-        .then(function(response) {
+        .then((response) => {
           if (response.data.status = "sms_success") {
             this.$vux.toast.text("已发送至你的手机，请注意查收");
             this.trueCode = response.data.Msg
