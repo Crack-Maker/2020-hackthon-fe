@@ -108,6 +108,7 @@ export default {
       nickname: "", //昵称
       phone: "", //手机号
       code: "", //验证码
+      trueCode: "", //验证码
       password: "", //密码
       // passwordC: "", //确认密码
       getCode: {
@@ -123,8 +124,13 @@ export default {
           phone: phoneNum
         })
         .then(function(response) {
-          console.log(response.data.Msg);
-          console.log(response.data.status);
+          if (response.data.status = "sms_success") {
+            this.$vux.toast.text("已发送至你的手机，请注意查收");
+            this.trueCode = response.data.Msg
+          }
+          if (response.data.status = "wphone") {
+            this.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
+          }
         })
         .catch(function(error) {
           console.log(error);
@@ -151,11 +157,12 @@ export default {
       }
     },
     handleRegist() {
-      if (!this.phone || !this.code || !this.password || !this.passwordC) {
+      if (!this.phone || !this.code || !this.password) {
         this.$vux.toast.text("您有未填项，不能注册");
-      } else if (this.password != this.passwordC) {
-        this.$vux.toast.text("两次输入的密码不一致");
-      } else {
+      } else if (this.code != this.trueCode) {
+        this.$vux.toast.text("验证码有误");
+      } else if (this.code == this.trueCode)
+      {
         this.$vux.toast.text("注册成功");
       }
     },
