@@ -111,13 +111,12 @@ export default {
             }
           })
           .catch(function(error) {
-            const {errCode,errMsg} = getErrMsg(error);
-            if (errCode == 422) {
+            if (error.response.status == 422) {
               that.$vux.toast.text(
                 "还没有注册哦~"
               );
             }
-            else if (errCode == 400) {
+            else if (error.response.status == 400) {
               that.$vux.toast.text(
                 "密码错误哦~"
               );
