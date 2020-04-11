@@ -113,12 +113,12 @@ export default {
           .catch(function(error) {
             if (error.response.status == 422) {
               that.$vux.toast.text(
-                "还没有注册哦~"
+                "该号码还没有注册哦~"
               );
             }
             else if (error.response.status == 400) {
               that.$vux.toast.text(
-                "密码错误哦~"
+                "密码错误惹！"
               );
             }
             else {
