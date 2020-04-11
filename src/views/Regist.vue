@@ -36,6 +36,7 @@
         <x-input
           title="手机 |"
           name="phone"
+          ref="phone"
           placeholder="请输入手机号码"
           v-model="phone"
           keyboard="number"
@@ -119,7 +120,7 @@ export default {
   },
   methods: {
     handleGetCode() {
-      if (this.phone) {
+      if (this.$refs.phone.valid) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
         let that = this
@@ -137,7 +138,7 @@ export default {
             }
           })
           .catch(function(error) {
-            that.$vux.toast.text("已发送至你的手机，请注意查收");
+            that.$vux.toast.text("网络异常，请稍后重试");
             console.log(error);
           });
         let seconds = 60;
@@ -151,19 +152,34 @@ export default {
             self.getCode.txt = "获取验证码";
           }
         }, 1000);
-      } else {
-        this.$vux.toast.text("请先填写手机号");
-        console.log(this)
+      }
+      else if (this.phone && !this.$refs.phone.valid) {
+        this.$vux.toast.text("手机号码格式不对哦~");
+      }
+      else if (!this.phone){
+        this.$vux.toast.text("请先填写手机号哦~");
       }
     },
     handleRegist() {
+      let that = this
       if (!this.phone || !this.code || !this.password) {
-        this.$vux.toast.text("您有未填项，不能注册");
+        this.$vux.toast.text("您有未填项，不完成能注册");
       } else if (this.code != this.trueCode) {
         this.$vux.toast.text("验证码有误");
       } else if (this.code == this.trueCode)
       {
-        this.$vux.toast.text("注册成功");
+        axios
+          .post("http://47.99.58.131:8080/api/regist_confirm", {
+            phone: that.phone, nickname: that.nickname, password: that.password
+          })
+          .then(function(response) {
+            console.log(response)
+            this.$vux.toast.text("注册成功");
+          })
+          .catch(function(error) {
+            that.$vux.toast.text("网络异常，请稍后重试");
+            console.log(error);
+          });
       }
     },
     handleBack() {
