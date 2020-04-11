@@ -125,11 +125,11 @@ export default {
         })
         .then(function(response) {
           if (response.data.status = "sms_success") {
-            that.$vux.toast.text("已发送至你的手机，请注意查收");
+            thats.$vux.toast.text("已发送至你的手机，请注意查收");
             that.trueCode = response.data.Msg
           }
           if (response.data.status = "wphone") {
-            that.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
+            thats.$vux.toast.text("手机号已注册，可直接登录或者更换手机号注册");
           }
         })
         .catch(function(error) {
@@ -137,7 +137,7 @@ export default {
         });
     },
     handleGetCode() {
-      var that = this;
+      var thats = this;
       if (this.phone) {
         this.getCode.disabled = true;
         this.getCode.txt = "获取中...";
