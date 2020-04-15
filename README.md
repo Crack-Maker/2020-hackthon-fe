@@ -13,6 +13,10 @@
 组件文件名, 路由, name属性 采用帕斯卡（Pascal）命名法，首字母全大写  
 CSS class名称为全小写 用短横线 "-" 连接
 
+## 演示地址
+
+[island.hellosun.net.cn](https://island.hellosun.net.cn)
+
 
 ## Build Setup
 
@@ -40,3 +44,10 @@ npm test
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## 迭代计划  
+
+- [ ] 类似QQ的升级版Drawer  
+- [ ] 实时聊天  
+- [ ] 下滑显示信息页
