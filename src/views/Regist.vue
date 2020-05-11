@@ -175,7 +175,6 @@ export default {
             password: that.password
           })
           .then(function(response) {
-            console.log(response);
             that.$vux.toast.text("注册成功 正在前往登录页");
             that.$router.push({
               path: "/Login"
