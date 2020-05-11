@@ -6,11 +6,11 @@
 <script>
 export default {
   mounted() {
-    setTimeout(() => {
-      this.$router.push({
-        path: "/"
-      });
-    }, 6200);
+    // setTimeout(() => {
+    //   this.$router.push({
+    //     path: "/"
+    //   });
+    // }, 6200);
     localStorage.setItem("isOpened", true);
   }
 };
@@ -22,4 +22,7 @@ img {
   top: 0;
   left: 0;
 }
+
+* { touch-action: none}
+
 </style>
