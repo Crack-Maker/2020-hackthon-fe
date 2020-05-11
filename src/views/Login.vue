@@ -92,7 +92,7 @@ export default {
       if (this.$refs.phone.valid && this.password) {
         let that = this;
         axios
-          .post("http://47.99.58.131:8080/api/login", {
+          .post("https://api.hellosun.net.cn/api/login", {
             phone: that.phone, password: that.password
           })
           .then(function(response) {

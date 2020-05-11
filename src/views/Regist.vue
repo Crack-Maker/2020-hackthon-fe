@@ -125,7 +125,7 @@ export default {
         this.getCode.txt = "获取中...";
         let that = this;
         axios
-          .post("http://47.99.58.131:8080/api/regist", {
+          .post("https://api.hellosun.net.cn/api/regist", {
             phone: that.phone
           })
           .then(function(response) {
@@ -169,7 +169,7 @@ export default {
         this.$vux.toast.text("验证码有误");
       } else if (this.code == this.trueCode) {
         axios
-          .post("http://47.99.58.131:8080/api/regist_confirm", {
+          .post("https://api.hellosun.net.cn/api/regist_confirm", {
             phone: that.phone,
             nickname: that.nickname,
             password: that.password
