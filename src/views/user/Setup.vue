@@ -1,6 +1,6 @@
 <template>
 	<div class="main-body">
-		<x-header :left-options="{showBack: true}" :right-options="{showMore: false}"style="width:100%;background-color:#FFFFFF ;
+		<x-header :left-options="{showBack: true}" :right-options="{showMore: false}" style="width:100%;background-color:#FFFFFF ;
 			  position:absolute;left:0;top:0;z-index:100;">
 			  			<div slot="overwrite-left" @click="handleBack()">
 			  				<x-icon type="ios-arrow-back" size="30"></x-icon>
@@ -13,11 +13,11 @@
 			background-size: auto 100%;border-radius: 2rem;" align="left" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/aiji.jpg"/>
 		  </div>
 		  <!-- 显示用户昵称 -->
-		  <div class="name-font-style"><p>Refuel Island</p>
+		  <div class="name-font-style"><p>{{nickname}}</p>
 		  <div @click="linkToChangeName()" style="position: relative;right: -2.5rem;top: -1rem;">
 			  <img src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/static/img/modify.png" /></div>
 		  </div>
-		  <div class="normal-font-size">Refuel Island的个性签名</div>
+		  <div class="normal-font-size">{{nickname}}的个性签名</div>
 		  <div style="position: relative;left: -2.8rem;top: -1rem;">
 			  <font size="2" color="#888888">换头像</font>
 		  </div>
@@ -54,7 +54,15 @@ export default {
 	Divider,
 	Box,
 	XButton
-  },
+	},
+	data() {
+    return {
+			nickname: "未登录",
+		}
+	},
+	mounted(){
+		this.nickname = localStorage.getItem("nickname")
+	},
   methods:{
   	//页面跳转方法
   	linkToLogin(){

@@ -15,7 +15,7 @@ CSS class名称为全小写 用短横线 "-" 连接
 
 ## 演示地址
 
-[island.hellosun.net.cn](https://island.hellosun.net.cn)
+[island.hellosun.net.cn](http://island.hellosun.net.cn)
 
 
 ## Build Setup

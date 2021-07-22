@@ -28,6 +28,7 @@ import JoinStory from '@/views/island/story/JoinStory.vue'
 import RemarkStory from '@/views/island/story/RemarkStory.vue'
 import RemarkShare from '@/views/island/shareAndSecret/RemarkShare.vue'
 import RemarkSecret from '@/views/island/shareAndSecret/RemarkSecret.vue'
+import Opening from '@/views/Opening.vue'
 
 Vue.use(Router)
 
@@ -179,6 +180,11 @@ export default new Router({
 	  name: 'RemarkSecret',
 	  component: RemarkSecret
 	},
+	{
+	  path: '/Opening',
+	  name: 'Opening',
+	  component: Opening
+	}
     // {
     //   path: '/',
     //   name: '',

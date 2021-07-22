@@ -19,6 +19,7 @@
         <x-input
           title="头像 |"
           name="phone"
+          ref="phone"
           placeholder="请输入手机号码"
           class="phone border"
           v-model="phone"
@@ -26,7 +27,11 @@
           is-type="china-mobile"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/me.svg"
+            class="logo"
+          />
         </x-input>
       </group>
       <group class="no-border">
@@ -42,7 +47,11 @@
           @on-click-clear-icon="password = null"
           required
         >
-          <img slot="label" src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg" class="logo" />
+          <img
+            slot="label"
+            src="https://is-1254441798.cos.ap-shanghai.myqcloud.com/assets/imgs/lock.svg"
+            class="logo"
+          />
         </x-input>
       </group>
     </div>
@@ -56,12 +65,17 @@
 
 <script>
 import { XInput, Box, Group, XButton } from "vux";
+import axios from "axios";
 export default {
   name: "login",
   data() {
     return {
-      phone: "", //用户手机号
-      password: "" //用户密码
+      phone: "",
+      password: "",
+      token: "",
+      userid: "",
+      nickname: "未登录",
+      isLogin: false
     };
   },
   components: {
@@ -75,9 +89,46 @@ export default {
     },
     //暂时设置回到user.vue界面
     handleLogin() {
-      this.$router.push({
-        path: "/User"
-      });
+      if (this.$refs.phone.valid && this.password) {
+        let that = this;
+        axios
+          .post("https://api.hellosun.net.cn/api/login", {
+            phone: that.phone, password: that.password
+          })
+          .then(function(response) {
+            if (response.data.statuse === "success") {
+              that.$vux.toast.text("登录成功~");
+              that.$router.push({path: "/User"});
+              localStorage.setItem("phone", response.data.phone)
+              localStorage.setItem("token", response.data.token)
+              localStorage.setItem("userid", response.data.userid)
+              localStorage.setItem("nickname", response.data.nickname)
+              localStorage.setItem("isLogin", true)
+            }
+          })
+          .catch(function(error) {
+            if (error.response.status == 422) {
+              that.$vux.toast.text(
+                "该号码还没有注册哦~"
+              );
+            }
+            else if (error.response.status == 400) {
+              that.$vux.toast.text(
+                "密码错误惹~"
+              );
+            }
+            else {
+            that.$vux.toast.text("网络异常，请稍后重试");
+            }
+            console.log(error);
+          });
+      } else if (!this.$refs.phone.valid) {
+        this.$vux.toast.text("手机号码格式不对哦~");
+      } else if (!this.phone) {
+        this.$vux.toast.text("请先填写手机号哦~");
+      } else if (!this.password) {
+        this.$vux.toast.text("请先填密码哦~");
+      }
     },
     handleRegist() {
       this.$router.push({
